@@ -1,0 +1,2851 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>62 Коммерческих Предложения & Расценки | Глобал Плюс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0B0E14;
+            --bg-surface: #121721;
+            --bg-card: #18202E;
+            --gold: #C5A059;
+            --gold-light: #E0C07A;
+            --red: #D32F2F;
+            --green: #10B981;
+            --white: #F8FAFC;
+            --text-dim: #94A3B8;
+            --border: rgba(197, 160, 89, 0.2);
+            --border-card: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            color: var(--gold);
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn-back:hover {
+            background: var(--gold);
+            color: #000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+        }
+        p.subtitle {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin-bottom: 35px;
+        }
+        
+        .pitches-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .pitch-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 28px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .pitch-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .pitch-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 1px solid var(--border-card);
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+        }
+        .region-tag {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+        .sector-tag {
+            background: rgba(197, 160, 89, 0.15);
+            color: var(--gold-light);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .company-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #fff;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        .focus-text {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+        .pricing-box {
+            text-align: right;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+        .price-val {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+        .price-sub {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+        
+        .pitch-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+        .body-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 16px;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 768px) {
+            .body-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+        .row-label {
+            color: var(--text-dim);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .row-val {
+            color: #E2E8F0;
+        }
+        .text-pain {
+            color: #F87171;
+        }
+        .text-trojan {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+        .text-roi {
+            color: #34D399;
+            font-weight: 500;
+        }
+
+        .pitch-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .btn-demo-link {
+            color: #6EE7B7;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .btn-demo-link:hover {
+            color: #fff;
+        }
+        .deck-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-tool {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-deck {
+            background: var(--gold);
+            color: #000;
+        }
+        .btn-deck:hover {
+            background: var(--gold-light);
+        }
+        .btn-pager {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-card);
+            color: #fff;
+        }
+        .btn-pager:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
+    <div style="font-size: 0.85rem; color: var(--gold);">62 готовых коммерческих расчета</div>
+</div>
+
+<div class="container">
+    <h1>🔍 Каталог 62 Коммерческих Предложений</h1>
+    <p class="subtitle">Персонализированные пакеты внедрения, ценообразование, абонентская плата и экономическое обоснование (ROI)</p>
+
+    <div class="pitches-list">
+        
+    <div class="pitch-card" id="sveza-sinichikha">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">НАО «СВЕЗА Верхняя Синячиха»</h3>
+                <div class="focus-text">Крупнейшее производство березовой и ламинированной фанеры (ФК, ФСФ)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">380 000 ₽</div>
+                <div class="price-sub">+ 65 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор комбината / Директор по персоналу и логистике</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Кадровый голод на моногороде, ручной документооборот с оптовыми дилерами, долгий онбординг рабочих смен.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-портал оптовых дилеров с онлайн-калькулятором партий + HR-бот в Telegram для автонайма и тестирования рабочих.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Экономия до 120 часов работы отдела кадров в месяц, сокращение времени оформления B2B-отгрузок в 3 раза.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sveza-sinichikha" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sveza-sinichikha" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="lestech-sinichikha">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">ООО «Лестех» (Верхняя Синячиха)</h3>
+                <div class="focus-text">Глубокая переработка древесины, погонаж, евровагонка, пеллеты</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">240 000 ₽</div>
+                <div class="price-sub">+ 45 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Собственник</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Отсутствие современного цифрового каталога продукции для строительных сетей и оптовиков из других регионов РФ.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный B2B-каталог пиломатериалов с калькулятором кубатуры и автогенерацией коммерческих предложений за 10 секунд.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост конверсии оптовых заявок на 35%, выход на новых дистрибьюторов в Екатеринбурге, Тюмени и ХМАО.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=lestech-sinichikha" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=lestech-sinichikha" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="leshim-sinichikha">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">Верхнесинячихинский лесохимический сектор</h3>
+                <div class="focus-text">Лесопиление, смолы, техническая древесина</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">180 000 ₽</div>
+                <div class="price-sub">+ 35 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Технический директор / Начальник сбыта</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Заявки принимаются по звонкам и почте, менеджеры теряют оптовых покупателей во внерабочее время.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Умная воронка приема заявок 24/7 с автоквалификацией объема поставки в Telegram и интеграцией с 1С.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Нулевая потеря входящих лидов в выходные и ночные смены, окупаемость за первую крупную отгрузку.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=leshim-sinichikha" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=leshim-sinichikha" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="fok-orion">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Туризм, Спорт & Услуги</span>
+                <h3 class="company-title">ФОК «Орион» (Верхняя Синячиха)</h3>
+                <div class="focus-text">Главный спортивный комплекс района (бассейн, тренажерный зал, секции)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">120 000 ₽</div>
+                <div class="price-sub">+ 25 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Руководитель комплекса</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Бумажные абонементы, очереди в кассу, отсутствие напоминаний клиентам о продлении абонементов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Telegram-бот онлайн-расписания, покупки абонементов через СБП и авторассылки напоминаний о занятиях.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Снижение оттока клиентов на 25%, 100% предоплата абонементов онлайн без очередей у стойки администратора.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=fok-orion" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=fok-orion" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="nizhnyaya-sinichikha-museum">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Туризм, Спорт & Услуги</span>
+                <h3 class="company-title">Музей деревянного зодчества (Нижняя Синячиха)</h3>
+                <div class="focus-text">Уникальный музей-заповедник под открытым небом, памятник федерального значения</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">190 000 ₽</div>
+                <div class="price-sub">+ 30 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор музея / Руководитель туристического отдела</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Слабый охват туристов из Екатеринбурга и других регионов РФ, отсутствие интерактивных цифровых аудиогидов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный туристический лендинг + Telegram-аудиогид по экспозициям с QR-кодами на объектах зодчества.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение турпотока из Екатеринбурга на 40%, дополнительный доход от платных цифровых экскурсий.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="sinichikha-les-trans">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">ООО «Синячиха-Лес»</h3>
+                <div class="focus-text">Лесозаготовительные работы, вывозка круглого леса, лесотранспорт</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">160 000 ₽</div>
+                <div class="price-sub">+ 35 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Главный инженер / Директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Сложность контроля путевых листов, заявок на лесовозы и ремонты лесозаготовительной техники.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Мобильный диспетчерский бот учета рейсов лесовозов, фиксации простоев и заявок на запчасти для механиков.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение простоев лесовозной техники на 18%, прозрачный учет топлива и рейсов.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sinichikha-les-trans" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sinichikha-les-trans" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="mup-energoresurs-sinichikha">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Туризм, Спорт & Услуги</span>
+                <h3 class="company-title">МУП «Энергоресурс» / ЖКХ Синячихи</h3>
+                <div class="focus-text">Теплоснабжение, водоснабжение и коммунальная инфраструктура поселка</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">150 000 ₽</div>
+                <div class="price-sub">+ 25 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор МУП / Главный инженер</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Перегруженная телефонная линия диспетчерской при авариях, медленный сбор показаний счетчиков от населения.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Telegram-приемная ЖКХ: автоматический сбор показаний, регистрация заявок жителей и экстренные оповещения.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Разгрузка оператора диспетчерской на 70%, сокращение времени локализации коммунальных аварий.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="sinichikha-autotech">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Верхняя Синячиха</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">СТО и сервис спецтехники (Верхняя Синячиха)</h3>
+                <div class="focus-text">Ремонт грузовых автомобилей, лесовозов, тракторов и спецтехники</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">130 000 ₽</div>
+                <div class="price-sub">+ 25 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник СТО</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Хаотичная запись в боксы, задержки в согласовании смет на запчасти с клиентами-предприятиями.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Электронный журнал загрузки постов ремонта + отправка фотоотчетов дефектовки и актов в WhatsApp/Telegram.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Повышение пропускной способности ремзоны на 20%, рост среднего чека за счет прозрачных согласований.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sinichikha-autotech" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sinichikha-autotech" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="stroydormash-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Стройдормаш»</h3>
+                <div class="focus-text">Флагман РФ: бурильно-крановые, строительные бурильные и копровые машины</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">550 000 ₽</div>
+                <div class="price-sub">+ 95 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Генеральный директор / Директор по продажам и маркетингу</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая стоимость привлечения крупных заказчиков (нефтегаз, энергетика, мостостроение), долгий цикл согласования ТЗ.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный 3D-конфигуратор бурильных установок + система автоматической генерации ТЗ и коммерческих предложений.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение цикла сделки с 6 месяцев до 45 дней, увеличение числа первичных обращений от энергостроителей на 30%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=stroydormash-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=stroydormash-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="zist-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «ЗИСТ» (Завод инструмента строительной техники)</h3>
+                <div class="focus-text">Проектирование и производство бурильного инструмента (шнеки, буры, резцы)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">260 000 ₽</div>
+                <div class="price-sub">+ 45 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по сбыту / Собственник</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Клиенты путаются в подборе диаметра и типов резцов под разные грунты; менеджеры тратят часы на консультации.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Умный онлайн-подборщик бурового инструмента по типу грунта и модели машины с моментальной выгрузкой счета.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение повторных заказов расходного инструмента на 40%, разгрузка инженеров по продажам.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=zist-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=zist-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="burmash-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «Бурмаш»</h3>
+                <div class="focus-text">Капитальный ремонт, модернизация и запчасти бурильно-крановых машин</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">210 000 ₽</div>
+                <div class="price-sub">+ 40 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Клиенты из регионов долго ждут оценки стоимости капремонта техники по фото и дефектовочным ведомостям.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Цифровой экспресс-сервис оценки ремонта бурилок по фото/видео через бота с интеграцией в CRM.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Скорость выдачи предварительного расчета клиенту за 15 минут вместо 3 суток, рост конверсии заявок в 2 раза.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=burmash-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=burmash-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="adoz-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">ООО «Алапаевский ДОЗ» (АДОЗ)</h3>
+                <div class="focus-text">Производство деревянной тары спецназначения, ящиков, мебельного щита</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">220 000 ₽</div>
+                <div class="price-sub">+ 40 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Генеральный директор / Собственник</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Потребность в крупных контрактах с оборонными и машиностроительными заводами Екатеринбурга и Урала.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-презентация спецтары по ГОСТу для промышленных предприятий с калькулятором партий и гарантией сроков.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Прямой выход на снабженцев оборонных и приборостроительных холдингов, контракт на десятки миллионов рублей.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=adoz-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=adoz-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="alh-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Лесопромышленность & Деревообработка</span>
+                <h3 class="company-title">Алапаевский лесопромышленный холдинг (АЛХ)</h3>
+                <div class="focus-text">Производство деревянных шпал, брусьев для РЖД, экспортные пиломатериалы</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">290 000 ₽</div>
+                <div class="price-sub">+ 55 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Непрозрачная логистика отгрузок для коммерческих заказчиков железнодорожной инфраструктуры.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Клиентский кабинет B2B-заказчика шпалопродукции с трекингом партий, сертификатов и железнодорожных накладных.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Повышение лояльности контрагентов, заключение годовых прямых договоров без посредников.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=alh-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=alh-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="asm-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «Алапаевские сплавы и металлы» (АСМ)</h3>
+                <div class="focus-text">Цветной металлопрокат (медь, латунь, бронза, проволока, трубы, лигатуры)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">280 000 ₽</div>
+                <div class="price-sub">+ 50 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по продажам цветного проката</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Постоянные колебания биржевых цен на медь и сплавы требуют ежедневного ручного пересчета прайс-листов менеджерами.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Динамический онлайн-прайс с автоматической привязкой формулы цен к котировкам металлов и онлайн-бронированием слитков/партий.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Исключение ошибок менеджеров при расчете цен, повышение маржинальности на 3-5% на тонну металла.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=asm-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=asm-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="amk-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Пищепром & Агро</span>
+                <h3 class="company-title">ООО «Алапаевский молочный комбинат» (АМК)</h3>
+                <div class="focus-text">Молочная продукция из уральского сырья: молоко, творог, масло, сметана</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">250 000 ₽</div>
+                <div class="price-sub">+ 45 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Начальник отдела ритейла</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Конкуренция с гигантами в федеральных сетях Екатеринбурга, необходимость расширения поставок в HoReCa и школьное питание.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-портал для ресторанов, пекарен и локальных магазинов с заказом свежих молочных партий напрямую с комбината.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение высокомаржинальных прямых B2B-продаж на 25%, прямая связь со 100+ заведениями общепита.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=amk-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=amk-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="kotel-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «Алапаевский котельный завод»</h3>
+                <div class="focus-text">Блочно-модульные котельные, водогрейные промышленные котлы</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">320 000 ₽</div>
+                <div class="price-sub">+ 60 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Генеральный директор / Главный конструктор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Опросные листы на котельные заполняются заказчиками некорректно, что удлиняет подготовку ТКП на недели.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный цифровой мастер подбора мощности котельной и генерации предпроектного решения за 5 минут.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение конверсии входящих опросных листов в контракты на 40%, сокращение времени проектировщиков.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=kotel-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=kotel-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="svai-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «Завод винтовых свай» (Алапаевск)</h3>
+                <div class="focus-text">Винтовые сваи, фундаменты, металлоконструкции для ИЖС и промсектора</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">160 000 ₽</div>
+                <div class="price-sub">+ 30 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник / Директор по развитию</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Частные застройщики и прорабы уходят к конкурентам из-за задержек с расчетом смет фундамента.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Калькулятор фундамента по габаритам дома с моментальным расчетом количества свай и бронированием монтажа.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост потока заказов от частников и строительных бригад на 50%, автоматический сбор лидов с рекламы.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=svai-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=svai-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="zhbi-shpaly-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">Алапаевский завод железобетонных шпал</h3>
+                <div class="focus-text">Железобетонные конструкции, шпалы для путевого хозяйства</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">270 000 ₽</div>
+                <div class="price-sub">+ 50 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Консервативный отдел сбыта, пропуск коммерческих тендеров от промышленных путей необщего пользования.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Парсинг и мониторинг коммерческих тендеров на ЖБИ шпалы + цифровое портфолио завода для промышленных карьеров.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Выход на прямые контракты с горнорудными и металлургическими предприятиями Урала.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="hotel-metallurg-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Гостиница «Металлург» (Алапаевск)</h3>
+                <div class="focus-text">Гостиничный комплекс для командировочных инженеров, аудиторов и туристов</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">150 000 ₽</div>
+                <div class="price-sub">+ 25 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Управляющий гостиницей</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Зависимость от звонков администраторам, комиссии сервисов бронирования, отсутствие корпоративных договоров онлайн.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Модуль прямого бронирования номеров без комиссии + корпоративный раздел для быстрой безналичной оплаты предприятиями.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Экономия до 15% комиссий агрегаторов, увеличение загрузки номеров в низкий сезон на 20%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="hermitage-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Отель & Ресторан «Эрмитаж» (Алапаевск)</h3>
+                <div class="focus-text">Премиальное размещение, банкетный зал, ресторанная кухня в центре Алапаевска</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">180 000 ₽</div>
+                <div class="price-sub">+ 30 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник / Управляющий</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Слабая презентация банкетных возможностей для корпоративов заводов и свадеб; потеря заявок в соцсетях.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Элегантный сайт с 3D-туром банкетного зала и Telegram-ботом предварительного расчета меню на банкет.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост бронирований банкетных мероприятий на 30%, окупаемость за 2 проведенных корпоратива.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=hermitage-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=hermitage-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="auzhd-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Туризм, Спорт & Услуги</span>
+                <h3 class="company-title">Алапаевская узкоколейная ж/д (АУЖД)</h3>
+                <div class="focus-text">Крупнейшая действующая пассажирская узкоколейка в мире, международный бренд</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">240 000 ₽</div>
+                <div class="price-sub">+ 40 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор туристических программ / Администрация</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Туристам со всей России и мира сложно купить билет на туристический поезд онлайн, нет качественного путеводителя.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Цифровая платформа продажи турпакетов на ретропоезд АУЖД с выбором вагона, гида и ночевки на маршруте.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост продаж туристических билетов в 2.5 раза, приток платежеспособных туристов из Екатеринбурга и Москвы.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=auzhd-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=auzhd-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="chistye-prudy-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">База отдыха «Чистые пруды»</h3>
+                <div class="focus-text">Загородный отдых, коттеджи, бани, рыбалка, беседки в Алапаевском районе</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">160 000 ₽</div>
+                <div class="price-sub">+ 30 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Владелец базы отдыха</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Клиенты звонят в вечернее время, когда администратор занят, и уходят на другие базы отдыха.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Автоматизированная шахматка бронирования коттеджей с мгновенной онлайн-оплатой задатка и WhatsApp-подтверждением.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">100% предоплата бронирований без срывов заездов, заполняемость в будние дни +35%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="autolider-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">Автоцентр «АвтоЛидер Алапаевск»</h3>
+                <div class="focus-text">Комплексное СТО, развал-схождение, шиномонтаж, магазин автозапчастей</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">150 000 ₽</div>
+                <div class="price-sub">+ 25 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник автоцентра</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Отсутствие единой базы постоянных клиентов, ручные звонки с напоминанием о замене масла и ТО.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">CRM-система с Telegram-ботом автосервиса: запись на подъемник за 3 клика + автоматические напоминания о сезонном ТО.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Повторные визиты автовладельцев вырастают на 45%, полная загрузка постов ТО в будни.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=autolider-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=autolider-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="zdorovie-denta-alapaevsk">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Алапаевск и район</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Клиника «Здоровье» & Стоматология «Дента-Люкс»</h3>
+                <div class="focus-text">Частные медицинские консультации, стоматология, имплантация, УЗИ</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">190 000 ₽</div>
+                <div class="price-sub">+ 35 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Главный врач / Собственник</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Пациенты боятся высоких цен на имплантацию, нет прозрачного калькулятора лечения, потеря записей администраторами.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный калькулятор плана лечения зубов + автозапись к профильным докторам с напоминаниями за 24 часа.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Снижение неявок пациентов на 60%, рост продаж высокочековых услуг (имплантация, протезирование).</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="uralmashplant">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ПАО «Уралмашзавод»</h3>
+                <div class="focus-text">Тяжелое машиностроение: дробильно-размольное, подъемно-транспортное оборудование, экскаваторы</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">1 200 000 ₽</div>
+                <div class="price-sub">+ 190 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по цифровизации / Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Сложность презентации масштабных инжиниринговых комплексов иностранным и российским горнодобытчикам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный цифровой портал оборудования с 3D-демонстрацией узлов и закрытым кабинетом заказа оригинальных запчастей.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение времени на согласование заказной спецификации тяжелой техники, защита от контрафактных запчастей.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=uralmashplant" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=uralmashplant" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="uzga-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Уральский завод гражданской авиации» (УЗГА)</h3>
+                <div class="focus-text">Самолетостроение (ЛМС-901 «Байкал»), авиадвигатели, ремонт авиатехники</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">750 000 ₽</div>
+                <div class="price-sub">+ 120 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по коммуникациям / HR-директор завода</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Острейший дефицит инженеров-конструкторов, технологов и станочников ЧПУ; высокая конкуренция за кадры.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Высокотехнологичный карьерный портал УЗГА с геймифицированным тестированием компетенций молодых инженеров.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Привлечение лучших выпускников технических вузов со всей страны, снижение стоимости найма инженера на 35%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=uzga-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=uzga-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="sinara-transport-machines">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Синара – Транспортные Машины» (СТМ)</h3>
+                <div class="focus-text">Производство локомотивов, скоростных электропоездов, путевой техники</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">950 000 ₽</div>
+                <div class="price-sub">+ 160 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу и клиентскому сервису</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Необходимость предиктивного сервисного обслуживания подвижного состава и быстрого доступа к ремонтной документации.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Сервисный AI-ассистент сервисных бригад для мгновенного поиска регламентов обслуживания локомотивов на путях.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение времени простоя железнодорожной техники на техническом обслуживании на 22%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sinara-transport-machines" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sinara-transport-machines" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="pnevmostroymashina-psm">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Пневмостроймашина» (PSM-Hydraulics)</h3>
+                <div class="focus-text">Лидер РФ в производстве аксиально-поршневой гидравлики и гидромоторов</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">480 000 ₽</div>
+                <div class="price-sub">+ 85 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Начальник управления сбыта</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Заказчики импортозамещают гидравлику Bosch Rexroth / Danfoss и нуждаются в быстром кросс-подборе аналогов PSM.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Онлайн-сервис подбора отечественных гидравлических аналогов импортных гидронасосов по артикулу и параметрам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение импортозамещающих продаж гидравлики на 50 000 000+ ₽ за счет автоматического кросс-подбора.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=pnevmostroymashina-psm" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=pnevmostroymashina-psm" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="ural-turbine-plant">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Уральский турбинный завод»</h3>
+                <div class="focus-text">Проектирование и производство паровых турбин для ТЭЦ и атомной энергетики</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">800 000 ₽</div>
+                <div class="price-sub">+ 130 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по продажам энергетического оборудования</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Тяжеловесные каталоги, длительное формирование предпроектных решений для генерирующих компаний.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Цифровая презентационная платформа для проектных институтов энергетики с расчетными модулями тепловой мощности.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Включение турбин УТЗ в проектную документацию ТЭЦ на самых ранних стадиях тендерных процедур.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=ural-turbine-plant" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=ural-turbine-plant" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="tmk-sintz">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ПАО «Северский трубный завод» (ТМК)</h3>
+                <div class="focus-text">Бесшовные и электросварные стальные трубы для нефтегазового сектора</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">890 000 ₽</div>
+                <div class="price-sub">+ 150 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Руководитель B2B-направления</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Сложность контроля вторичных региональных дилеров и учета потребности промышленных строек Урала.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интеллектуальная система верификации и подбора складских остатков трубной продукции для срочных поставок.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Ускорение оборачиваемости складских запасов трубного проката на 15%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=tmk-sintz" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=tmk-sintz" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="viz-steel">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">ООО «ВИЗ-Сталь»</h3>
+                <div class="focus-text">Один из мировых лидеров по производству трансформаторной стали</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">650 000 ₽</div>
+                <div class="price-sub">+ 110 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по стратегическому маркетингу</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Необходимость демонстрации экологических и физико-магнитных преимуществ продукции мировым покупателям.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный интерактивный портал стали высших марок с калькулятором снижения энергопотерь трансформаторов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Укрепление премиального ценового позиционирования стали высших марок.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=viz-steel" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=viz-steel" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="alma-ceramica">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Машиностроение & Металл</span>
+                <h3 class="company-title">АО «Завод керамических изделий» (Alma Ceramica)</h3>
+                <div class="focus-text">Крупнейший производитель керамической плитки и керамогранита на Урале</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">580 000 ₽</div>
+                <div class="price-sub">+ 95 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Директор по работе с застройщиками</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Дизайнеры и строительные подрядчики долго ждут образцы и 3D-раскладки коллекций керамогранита.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-платформа для девелоперов и архитекторов: моментальная 3D-примерка керамогранита в интерьере + заказ образцов в 1 клик.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост объемов комплектации строящихся жилых комплексов Екатеринбурга и Тюмени плиткой Alma Ceramica на 28%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=alma-ceramica" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=alma-ceramica" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="brusnika-developer">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">Девелопер «Брусника»</h3>
+                <div class="focus-text">Федеральный девелопер новой городской среды и европейской архитектуры</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">950 000 ₽</div>
+                <div class="price-sub">+ 180 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по цифровому маркетингу / Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая конкуренция за покупателей жилья бизнес-класса, перегрузка брокеров рутинными вопросами об ипотеке и отделке.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">AI-брокер по подбору планировок под сценарии жизни клиента (работа из дома, дети, террасы) с расчетом платежей.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост конверсии из визита сайта в бронирование квартиры на 24%, сокращение стоимости привлеченного покупателя на 3 200 ₽.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=brusnika-developer" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=brusnika-developer" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="atomstroykomplex">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">Холдинг «Атомстройкомплекс»</h3>
+                <div class="focus-text">Крупнейший строительный холдинг полного цикла в Свердловской области</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">850 000 ₽</div>
+                <div class="price-sub">+ 160 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор агентства недвижимости АТОМ</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Огромный портфель проектов в разных районах города; покупателю сложно сориентироваться без менеджера.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивная карта жилых кварталов с умным фильтром инфраструктуры (школы, парки, транспорт) и бронированием онлайн.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение вовлеченности покупателей на сайте в 2 раза, рост числа онлайн-броней квартир на 30%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=atomstroykomplex" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=atomstroykomplex" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="ugmk-zastroyschik">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">«УГМК-Застройщик»</h3>
+                <div class="focus-text">Элитная недвижимость: ЖК «Макаровский», Башня «Исеть», ЖК «Нагорный», клубные дома</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">1 100 000 ₽</div>
+                <div class="price-sub">+ 210 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по продажам элитной недвижимости</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Состоятельные покупатели пентхаусов требуют приватного, безупречного сервиса и кинематографичной подачи каждого метра.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный портал клубного дома с видеотурами 4K, консьерж-ботом закрытого доступа и приватными показами.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Продажа 2 дополнительных пентхаусов за счет безупречной цифровой презентации (чек сделки от 45 000 000 ₽).</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=ugmk-zastroyschik" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=ugmk-zastroyschik" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="forum-group-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">Девелопер «Forum Group»</h3>
+                <div class="focus-text">Клубный дом «Тихвинъ», масштабный проект «Солнечный», многофункциональные комплексы</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">780 000 ₽</div>
+                <div class="price-sub">+ 140 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по развитию и продажам</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Необходимость объединить презентацию премиум-жилья и коммерческой недвижимости в единую экосистему бренда.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Единая экосистема жителя/арендатора с интерактивной витриной свободных коммерческих и жилых площадей.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Ускорение сдачи коммерческих площадей первым этажам на 35%, повышение капитализации объектов.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=forum-group-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=forum-group-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="prinzip-developer">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">Девелоперская компания «PRINZIP»</h3>
+                <div class="focus-text">Яркие архитектурные проекты (ЖК «Мельница», «Ленинский Парк», «Парковый Квартал»)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">690 000 ₽</div>
+                <div class="price-sub">+ 130 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая стоимость клика в контекстной рекламе недвижимости; низкая конверсия посадочных страниц типовых ЖК.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный скролл-лендинг с эмоциональным повествованием об архитектуре и виртуальным тест-драйвом планировок.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Снижение стоимости квалифицированного лида в отдел продаж на 28%, увеличение глубины просмотра сайта.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=prinzip-developer" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=prinzip-developer" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="kortros-akademichesky">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">ГК «КОРТРОС» (Район Академический)</h3>
+                <div class="focus-text">Крупнейший градостроительный проект Европы — Академический район Екатеринбурга</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">720 000 ₽</div>
+                <div class="price-sub">+ 135 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор проекта</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Массовый поток обращений молодых семей с однотипными вопросами по маткапиталу, семейной ипотеке и школам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Автоматизированный семейный ипотечный консультант в Telegram с расчетом субсидированных ставок и подбором квартир.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Автоматическая квалификация до 1 500 входящих обращений в месяц без раздувания штата колл-центра.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=kortros-akademichesky" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=kortros-akademichesky" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="sinara-development">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Девелопмент & Недвижимость</span>
+                <h3 class="company-title">«Синара-Девелопмент»</h3>
+                <div class="focus-text">ЖК «Новокольцовский», конгресс-центры, объекты Универсиады, общественные пространства</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">650 000 ₽</div>
+                <div class="price-sub">+ 120 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Сложность донесения преимуществ комплексного развития территории Новокольцовского для студентов и специалистов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный 3D-генплан района с таймлайном запуска спортивных, университетских и транспортных объектов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост доверия покупателей к перспективам локации, увеличение темпов предварительных продаж квартир.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/real-estate-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sinara-development" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sinara-development" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="hyatt-regency-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Отель «Hyatt Regency Ekaterinburg» (5*)</h3>
+                <div class="focus-text">Главный 5-звездочный отель Урала, рестораны Cucina, Noble House, бальное пространство</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">450 000 ₽</div>
+                <div class="price-sub">+ 85 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Генеральный менеджер / F&B Director</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Зарубежные гости и VIP-клиенты требуют мгновенной двуязычной координации банкетных и спа-запросов 24/7.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Двуязычный VIP-консьерж бот в Telegram/WhatsApp для бронирования столиков, СПА-услуг и согласования меню банкетов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост выручки ресторанов и СПА отеля на 20% за счет моментального допродажи услуг постояльцам.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=hyatt-regency-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=hyatt-regency-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="hyatt-place-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Отель «Hyatt Place Ekaterinburg»</h3>
+                <div class="focus-text">Международный бизнес-отель рядом с Екатеринбург Ареной</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">320 000 ₽</div>
+                <div class="price-sub">+ 60 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Управляющий отелем</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая доля рутинных звонков на ресепшн от участников спортивных и деловых форумов по конференц-залам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Цифровой калькулятор аренды залов с кейтерингом и мгновенной выгрузкой счета для юрлиц.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение времени обработки B2B-заявок на конференции с 4 часов до 3 минут, рост загрузки залов.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=hyatt-place-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=hyatt-place-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="troekurov-restaurant">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Ресторан «Троекуровъ»</h3>
+                <div class="focus-text">Легендарный ресторан дворянской русской кухни высшего класса, исторический особняк</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">380 000 ₽</div>
+                <div class="price-sub">+ 65 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник / Управляющий</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Устаревший сайт не передает величие интерьеров особняка и не позволяет VIP-гостям выбрать зал для закрытого обеда.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный сайт-музей ресторана с виртуальным гидом по залам и закрытой системой бронирования VIP-кабинетов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Привлечение статусных гостей из Москвы и зарубежных делегаций, увеличение среднего чека банкетов на 30%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=troekurov-restaurant" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=troekurov-restaurant" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="kitchen-restaurant-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Панорамный ресторан «Kitchen»</h3>
+                <div class="focus-text">Панорамный вид на город с 24 этажа, авторская гастрономия, винная карта</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">280 000 ₽</div>
+                <div class="price-sub">+ 50 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Бренд-шеф / Управляющий</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Перегрузка хостес звонками в пиковые часы пятницы и субботы, потеря гостей, желающих столик у панорамного окна.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивная карта рассадки с выбором конкретного панорамного столика и онлайн-депозитом для гарантии явки.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Снижение неявок по броням (no-show) до 0%, дополнительная выручка от депозитной системы в выходные дни.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="soyka-restaurant-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Ресторан «Сойка»</h3>
+                <div class="focus-text">Премиальная паназиатская кухня, авторские коктейли, трендовая аудитория</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">240 000 ₽</div>
+                <div class="price-sub">+ 45 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Управляющий партнер</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Гости хотят оперативно видеть актуальное сезонное спешл-меню и коктейли, бумажное меню быстро устаревает.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичное мобильное меню с видеопрезентацией подачи блюд шефом и предзаказом к определенному времени.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение заказа высокомаржинальных авторских коктейлей и десертов на 25%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=soyka-restaurant-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=soyka-restaurant-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="gastroli-restaurant-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Ресторан «Гастроли»</h3>
+                <div class="focus-text">Культовое гастрономическое заведение с открытой кухней, печью и вином</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">230 000 ₽</div>
+                <div class="price-sub">+ 40 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Владелец / Шеф-повар</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Постоянный ажиотаж и очереди; сложно организовать лист ожидания без постоянного стресса для персонала.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Умный цифровой лист ожидания: гость получает уведомление в Telegram, когда освобождается столик, и гуляет по центру.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Удержание 90% гостей из очереди ожидания, повышение лояльности постоянных гостей.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="momo-pan-asian">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Ресторан «Momo Pan Asian Kitchen»</h3>
+                <div class="focus-text">Изысканная паназия, роллы премиум-класса, бизнес-ланчи для топ-менеджеров</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">290 000 ₽</div>
+                <div class="price-sub">+ 55 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Управляющий рестораном</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая комиссия сервисов доставки еды (до 35%), забирающая всю прибыль от доставки постоянным клиентам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Собственное мобильное приложение и веб-витрина премиум-доставки с бонусной программой и нулевой комиссией агрегаторам.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Экономия более 200 000 ₽ в месяц на комиссиях агрегаторов, рост базы лояльных клиентов на доставку.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=momo-pan-asian" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=momo-pan-asian" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="vysotsky-complex">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">HoReCa & Отели</span>
+                <h3 class="company-title">Небоскреб «Высоцкий» (Отель, Спа, Смотровая)</h3>
+                <div class="focus-text">Самый известный небоскреб Урала: 54 этажа, открытый бассейн на крыше, отель 5*, музей В.Высоцкого</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">590 000 ₽</div>
+                <div class="price-sub">+ 95 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Генеральный директор комплекса</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Очереди в кассы на смотровую площадку и спа-бассейн на крыше; туристы теряются между разными службами небоскреба.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Единый туристический портал 'Высоцкий SuperApp' с онлайн-покупкой билетов на смотровую по тайм-слотам и бронью спа.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение пропускной способности смотровой площадки и бассейна на 30%, ликвидация очередей на первом этаже.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/horeca-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=vysotsky-complex" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=vysotsky-complex" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="ugmk-health-clinic">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Европейский медицинский центр «УГМК-Здоровье»</h3>
+                <div class="focus-text">Крупнейший частный медицинский комплекс: хирургия, роддом, детская клиника, диагностика</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">980 000 ₽</div>
+                <div class="price-sub">+ 190 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Главный врач</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Высокая нагрузка на колл-центр в утренние часы (до 4 000 звонков); потеря пациентов при долгом ожидании ответа оператора.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Многоканальный AI-триаж в Telegram и на сайте: распознавание симптомов пациента и мгновенная запись к свободному доктору.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Разгрузка операторов колл-центра на 45%, устранение потерь пациентов в часы пик, рост записей на 18%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=ugmk-health-clinic" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=ugmk-health-clinic" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="nudelman-plastic-center">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">«Центр косметологии и пластической хирургии им. Нудельмана»</h3>
+                <div class="focus-text">Флагман пластической хирургии России, пациенты со всей страны и зарубежья</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">540 000 ₽</div>
+                <div class="price-sub">+ 90 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по развитию / Главный врач</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Иногородние пациенты боятся лететь в Екатеринбург без предварительного детального консилиума и расчета стоимости операции.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Защищенный сервис дистанционной предоперационной консультации: безопасная загрузка фото, заключение хирурга и бронь палаты.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост потока иногородних пациентов на пластические операции на 35% (средний чек операции от 250 000 ₽).</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=nudelman-plastic-center" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=nudelman-plastic-center" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="zdorovie-365">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Сеть клиник «Здоровье 365»</h3>
+                <div class="focus-text">Разветвленная сеть многопрофильных клиник, лабораторная диагностика, профосмотры</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">480 000 ₽</div>
+                <div class="price-sub">+ 85 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу сети</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Пациенты забывают повторно записаться после сдачи анализов; потеря LTV медицинского обслуживания.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интеллектуальная система оповещения о готовности результатов анализов с предложением консультации врача в 1 клик.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение повторных обращений к профильным врачам на 40%, рост пожизненной ценности пациента (LTV).</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=zdorovie-365" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=zdorovie-365" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="linline-clinics">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Сеть клиник лазерной косметологии «Линлайн»</h3>
+                <div class="focus-text">Лидер лазерной косметологии, омоложения и дерматологии</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">390 000 ₽</div>
+                <div class="price-sub">+ 70 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по цифровому развитию</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Клиентки сравнивают цены лазерных процедур и не понимают технологических отличий оригинального оборудования от дешевых китайских аналогов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный атлас эстетических результатов 'До / После' с фильтром по возрасту и типу кожи, доказывающий ценность методики.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Повышение конверсии из консультации в оплату курса лазерных процедур на 32%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=linline-clinics" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=linline-clinics" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="paracels-clinic">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Многопрофильная клиника «Парацельс»</h3>
+                <div class="focus-text">Круглосуточный хирургический стационар, эндоскопия, гинекология, урология</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">350 000 ₽</div>
+                <div class="price-sub">+ 65 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Главный врач клиники</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Пациенты затягивают с плановыми операциями из-за страха наркоза и долгого сбора предоперационных анализов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Цифровой персональный трекер подготовки к операции: пошаговый чеклист анализов с датами и напоминаниями в Telegram.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Снижение срывов плановых операций из-за неполных анализов до нуля, рост доверия пациентов.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=paracels-clinic" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=paracels-clinic" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="megadenta-clinic">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Медицина & Эстетика</span>
+                <h3 class="company-title">Премиум-стоматология «Мегадента Клиник»</h3>
+                <div class="focus-text">Имплантация, ортодонтия, лечение под микроскопом, детская седация</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">340 000 ₽</div>
+                <div class="price-sub">+ 60 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Управляющий / Главный врач</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Планы комплексного лечения на сумму 500 000 - 1 500 000 ₽ требуют наглядной визуализации для согласования семьей пациента.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивный цифровой паспорт улыбки: 3D-моделирование итогового прикуса и пошаговый финансовый график оплат.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост согласий пациентов на тотальные планы лечения на 38%, окупаемость за 1 закрытый сложный кейс.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/medical-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=megadenta-clinic" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=megadenta-clinic" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="avtoban-group">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">ГК «Автобан» (Екатеринбург)</h3>
+                <div class="focus-text">Один из крупнейших автохолдингов Урала: новые авто, трейд-ин, кузовной ремонт, сервис</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">680 000 ₽</div>
+                <div class="price-sub">+ 130 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу автохолдинга</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Покупатели уходят на классифайды (Авито/Авто.ру), автохолдинг платит миллионы за лиды, теряя прямой контакт.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Собственный мобильный автомолл с AI-оценщиком трейд-ин по VIN-номеру и мгновенным бронированием авто с гарантией цены.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Увеличение доли прямых выкупов и продаж авто с пробегом на 22%, экономия на классифайдах до 300 000 ₽/мес.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=avtoban-group" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=avtoban-group" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="planeta-avto-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">Автохолдинг «Планета Авто»</h3>
+                <div class="focus-text">Мультибрендовые автосалоны, запчасти, коммерческий транспорт</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">420 000 ₽</div>
+                <div class="price-sub">+ 75 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Владельцы китайских брендов (Chery, Geely, Haval, Changan) жалуются на медленный подбор запчастей для ТО.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Умный онлайн-подборщик оригинальных запчастей и расходников по китайским брендам с записью в сервис за минуту.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост загрузки сервисных станций гарантийным и постгарантийным обслуживанием на 30%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=planeta-avto-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=planeta-avto-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="porsche-center-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">«Порше Центр Екатеринбург»</h3>
+                <div class="focus-text">Продажи и премиальный сервис спорткаров Porsche (911, Cayenne, Panamera, Macan)</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">390 000 ₽</div>
+                <div class="price-sub">+ 75 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Руководитель отдела продаж / Сервис-директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Владельцы Porsche не хотят ждать звонка мастера-приемщика; им требуется мгновенный консьерж-сервис уровня люкс.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Закрытый Telegram-клуб владельцев Porsche: бронь сервиса, подменный автомобиль к порогу и история обслуживания спорткара.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">100% удержание клиентов на фирменное техническое обслуживание, рост продажи оригинального тюнинга Tequipment.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=porsche-center-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=porsche-center-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="detailing-alarm-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">Студия «Detailing Alarm Ekb»</h3>
+                <div class="focus-text">Премиальный детейлинг, керамика, бронепленки SunTek, реставрация салона</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">190 000 ₽</div>
+                <div class="price-sub">+ 35 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Собственник студии</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Владельцы дорогих автомобилей откладывают оклейку, не видя разницы между пленками разной толщины и шагрени.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Кинематографичный сайт с макросъемкой гидрофобного эффекта и онлайн-калькулятором зон оклейки под модель авто.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Рост среднего чека оклейки до 180 000 ₽, заполнение боксов на 2 месяца вперед.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=detailing-alarm-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=detailing-alarm-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="restyle-detailing-ekb">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Авто & Детейлинг</span>
+                <h3 class="company-title">Детейлинг-центр «Restyle»</h3>
+                <div class="focus-text">Стайлинг, антигравийная защита, полировка и шумоизоляция премиум-авто</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">160 000 ₽</div>
+                <div class="price-sub">+ 30 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Владелец детейлинг-центра</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Клиенты долго переписываются в директ и WhatsApp, отвлекая мастеров от работы; потеря контактов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Telegram-бот автоматического расчета стоимости полировки/пленки по марке авто с внесением предоплаты за слот.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Освобождение 3 часов рабочего времени управляющего в день, фиксация броней с гарантированным депозитом.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=restyle-detailing-ekb" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=restyle-detailing-ekb" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="cherkashin-meat">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Пищепром & Агро</span>
+                <h3 class="company-title">Мясокомбинат «Черкашин и Партнеры»</h3>
+                <div class="focus-text">Флагман колбас и мясных деликатесов премиального сегмента на Урале</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">380 000 ₽</div>
+                <div class="price-sub">+ 70 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор / Директор по маркетингу</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Необходимость развивать прямые контракты с ресторанами, отелями и кейтеринговыми компаниями без наценок дистрибьюторов.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-витрина для рестораторов 'Черкашин HoReCa': заказ стейков, ветчин и деликатесов со специальными калибрами и фасовкой.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Прямые регулярные поставки в 150+ ресторанов Екатеринбурга и области, увеличение маржи на 12%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=cherkashin-meat" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=cherkashin-meat" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="smak-bakery">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Пищепром & Агро</span>
+                <h3 class="company-title">ПАО «СМАК» (Хлебокомбинат)</h3>
+                <div class="focus-text">Старейший и крупнейший хлебопекарный завод Урала, новая ультрасовременная площадка «Логопарк Кольцовский»</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">620 000 ₽</div>
+                <div class="price-sub">+ 110 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по сбыту / Директор по логистике</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Управление заказами от тысяч мелких торговых точек и пекарен; пиковые нагрузки на операторов ранним утром.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">B2B-система автоматического подтверждения суточных заявок на свежую выпечку через бота с интеграцией в систему отгрузки 1С.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Устранение ошибок ручного ввода в 1С при формировании утренних рейсов хлебовозов, сокращение возвратов на 10%.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=smak-bakery" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=smak-bakery" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="talitskoe-moloko">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Пищепром & Агро</span>
+                <h3 class="company-title">Молочный завод «Талицкое молоко»</h3>
+                <div class="focus-text">Любимый уральский бренд натуральной фермерской молочной продукции и термостатных йогуртов</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">340 000 ₽</div>
+                <div class="price-sub">+ 60 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Директор по маркетингу и продажам</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Лояльная аудитория хочет знать адреса свежих поставок в магазины у дома; кофейни ищут поставщика молока для капучино.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Интерактивная карта 'Где купить свежее сегодня' + специальный оптовый портал для кофеен 'Талицкое Бариста' с автозаказом.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Захват сегмента кофеен Екатеринбурга (300+ точек), рост оптовых отгрузок специального молока для латте-арта.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=talitskoe-moloko" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=talitskoe-moloko" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pitch-card" id="sverdlovskaya-pticefabrika">
+        <div class="pitch-header">
+            <div>
+                <span class="region-tag">Екатеринбург</span>
+                <span class="sector-tag">Пищепром & Агро</span>
+                <h3 class="company-title">АО «Птицефабрика Свердловская»</h3>
+                <div class="focus-text">Крупнейший производитель куриного яйца и мяса птицы в Уральском регионе</div>
+            </div>
+            <div class="pricing-box">
+                <div class="price-val">460 000 ₽</div>
+                <div class="price-sub">+ 80 000 ₽/мес</div>
+            </div>
+        </div>
+
+        <div class="pitch-body">
+            <div class="body-row">
+                <span class="row-label">Целевой ЛПР:</span>
+                <span class="row-val">Коммерческий директор</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Критическая боль:</span>
+                <span class="row-val text-pain">Тяжелый документооборот с оптовыми региональными дилерами ХМАО, ЯНАО и Тюмени при распределении суточных партий.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Оффер "Троянского коня":</span>
+                <span class="row-val text-trojan">Личный кабинет оптового закупщика птицефабрики: бронирование партий, ветеринарные свидетельства 'Меркурий' онлайн.</span>
+            </div>
+            <div class="body-row">
+                <span class="row-label">Окупаемость (ROI):</span>
+                <span class="row-val text-roi">Сокращение времени оформления оптовой отгрузки с 50 минут до 2 минут, ликвидация очередей рефрижераторов на КПП.</span>
+            </div>
+        </div>
+
+        <div class="pitch-footer">
+            <a href="demos/service-demo/index.html" target="_blank" class="btn-demo-link">🌐 Открыть Живое Демо</a>
+            <div class="deck-actions">
+                <a href="Dynamic_Pitch_Deck.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-tool btn-deck">📊 Интерактивный Deck</a>
+                <a href="Dynamic_One_Pager.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-tool btn-pager">📄 КП-Одностраничник</a>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+</body>
+</html>

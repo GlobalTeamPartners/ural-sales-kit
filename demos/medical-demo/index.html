@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Инновационной Медицины & Эстетики | Екатеринбург</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0EA5E9;
+            --dark: #0A0F1D;
+            --surface: #131B2E;
+            --text: #F8FAFC;
+            --gray: #94A3B8;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--dark); color: var(--text); }
+        .header { background: #070B14; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 18px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .container { max-width: 1050px; margin: 40px auto; padding: 0 20px; }
+        .hero { text-align: center; margin-bottom: 45px; }
+        .hero h1 { font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; margin-bottom: 12px; }
+        .triage-card { background: var(--surface); border: 1px solid rgba(14,165,233,0.3); border-radius: 16px; padding: 36px; box-shadow: 0 20px 45px rgba(0,0,0,0.4); }
+        .step-label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 700; margin-bottom: 12px; }
+        .question-title { font-size: 1.4rem; font-weight: 600; color: #fff; margin-bottom: 20px; }
+        .options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 25px; }
+        .option-btn { background: #0A0F1D; border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 16px; border-radius: 10px; text-align: left; cursor: pointer; transition: 0.2s; font-size: 14px; font-weight: 500; }
+        .option-btn:hover, .option-btn.selected { border-color: var(--primary); background: rgba(14,165,233,0.1); color: #fff; }
+        .btn-confirm { background: var(--primary); color: #000; border: none; padding: 14px 30px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div style="font-weight: 700; font-size: 18px; color: #fff;">МЕДИЦИНСКИЙ ЦЕНТР ЭКСПЕРТНОГО КЛАССА</div>
+    <div style="font-size: 12px; background: rgba(14,165,233,0.15); border: 1px solid var(--primary); color: #38bdf8; padding: 4px 12px; border-radius: 20px; font-weight: 600;">AI-ТРИАЖ ДЛЯ КЛИНИК</div>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <h1>Интеллектуальный Подбор Врача &amp; Онлайн-Запись</h1>
+        <p style="color: var(--gray); font-size: 1.1rem; max-width: 650px; margin: 0 auto;">Пациент отвечает на 3 вопроса, система определяет профиль специалиста и бронирует время без очередей в регистратуре.</p>
+    </div>
+
+    <div class="triage-card">
+        <div class="step-label">Шаг 1 из 3: Симптомы и Цель Обращения</div>
+        <div class="question-title">Какое направление вас интересует?</div>
+
+        <div class="options-grid">
+            <button class="option-btn selected" onclick="selectOpt(this)">🩺 Экспертная диагностика &amp; Чек-ап</button>
+            <button class="option-btn" onclick="selectOpt(this)">✨ Лазерная эстетика &amp; Омоложение</button>
+            <button class="option-btn" onclick="selectOpt(this)">🦷 Имплантация &amp; Реставрация зубов</button>
+            <button class="option-btn" onclick="selectOpt(this)">🔬 Пластическая хирургия &amp; Консультация</button>
+        </div>
+
+        <div class="step-label">Шаг 2: Удобное Время</div>
+        <div class="question-title">Когда планируете визит?</div>
+        <div class="options-grid">
+            <button class="option-btn selected" onclick="selectOpt(this)">Сегодня (Срочный прием)</button>
+            <button class="option-btn" onclick="selectOpt(this)">Завтра утро (09:00 – 12:00)</button>
+            <button class="option-btn" onclick="selectOpt(this)">Выходные дни</button>
+            <button class="option-btn" onclick="selectOpt(this)">Онлайн-консультация по видео</button>
+        </div>
+
+        <button class="btn-confirm" onclick="alert('Запись зафиксирована! Пациенту мгновенно отправлена памятка о подготовке к приему в WhatsApp.')">Подтвердить Запись и Получить Направление</button>
+    </div>
+</div>
+
+<script>
+    function selectOpt(el) {
+        el.parentElement.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        el.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>

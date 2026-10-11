@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База 62 Целевых Предприятий | Глобал Плюс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0B0E14;
+            --bg-surface: #121721;
+            --bg-card: #18202E;
+            --gold: #C5A059;
+            --gold-light: #E0C07A;
+            --red: #D32F2F;
+            --green: #10B981;
+            --white: #F8FAFC;
+            --text-dim: #94A3B8;
+            --border: rgba(197, 160, 89, 0.2);
+            --border-card: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            padding: 30px 20px;
+            line-height: 1.5;
+        }
+        .top-nav {
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            color: var(--gold);
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn-back:hover {
+            background: var(--gold);
+            color: #000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        p.subtitle {
+            color: var(--text-dim);
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+
+        /* ФИЛЬТРЫ И ПОИСК */
+        .controls-panel {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .search-box {
+            width: 100%;
+        }
+        .search-box input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-card);
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-box input:focus {
+            border-color: var(--gold);
+        }
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .filter-label {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            color: var(--text-dim);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* ТАБЛИЦА */
+        .table-responsive {
+            overflow-x: auto;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        th {
+            background: #18202E;
+            color: var(--gold-light);
+            padding: 14px 16px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: middle;
+        }
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .bg-wood { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .bg-machine { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .bg-realestate { background: rgba(234, 179, 8, 0.15); color: #FACC15; border: 1px solid rgba(234, 179, 8, 0.3); }
+        .bg-horeca { background: rgba(217, 70, 239, 0.15); color: #E879F9; border: 1px solid rgba(217, 70, 239, 0.3); }
+        .bg-medical { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .bg-auto { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border: 1px solid rgba(20, 184, 166, 0.3); }
+        .bg-food { background: rgba(249, 115, 22, 0.15); color: #FB923C; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .bg-service { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        .region-pill {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        .persona-tag {
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .btn-action {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 4px;
+            transition: all 0.2s;
+        }
+        .btn-deck {
+            background: rgba(197, 160, 89, 0.2);
+            color: var(--gold-light);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+        }
+        .btn-deck:hover {
+            background: var(--gold);
+            color: #000;
+        }
+        .btn-pager {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid var(--border-card);
+        }
+        .btn-pager:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
+    <div style="font-size: 0.85rem; color: var(--gold);">Региональный охват: 62 ключевых предприятия</div>
+</div>
+
+<div class="container">
+    <h1>📋 Единая База 62 Целевых Предприятий</h1>
+    <p class="subtitle">Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург | Готовые точки входа, ЛПР и персонализированные предложения</p>
+
+    <!-- ПАНЕЛЬ ПОИСКА И ФИЛЬТРАЦИИ -->
+    <div class="controls-panel">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Быстрый поиск по названию, специализации или предложению...">
+        </div>
+        
+        <div class="filter-group">
+            <span class="filter-label">Локация:</span>
+            <button class="filter-btn active" data-filter="all-region">Все локации (62)</button>
+            <button class="filter-btn" data-filter="Верхняя Синячиха">Верхняя Синячиха (8)</button>
+            <button class="filter-btn" data-filter="Алапаевск и район">Алапаевск и район (16)</button>
+            <button class="filter-btn" data-filter="Екатеринбург">Екатеринбург (38)</button>
+        </div>
+
+        <div class="filter-group">
+            <span class="filter-label">Отрасль:</span>
+            <button class="filter-btn active" data-sector="all-sector">Все отрасли</button>
+            <button class="filter-btn" data-sector="Лесопромышленность & Деревообработка">Деревообработка & Лес</button>
+            <button class="filter-btn" data-sector="Машиностроение & Металл">Машиностроение & Металл</button>
+            <button class="filter-btn" data-sector="Девелопмент & Недвижимость">Девелопмент</button>
+            <button class="filter-btn" data-sector="HoReCa & Отели">HoReCa & Отели</button>
+            <button class="filter-btn" data-sector="Медицина & Эстетика">Медицина</button>
+            <button class="filter-btn" data-sector="Авто & Детейлинг">Авто & Спецтехника</button>
+            <button class="filter-btn" data-sector="Пищепром & Агро">Пищепром & Агро</button>
+        </div>
+    </div>
+
+    <!-- ТАБЛИЦА БАЗЫ ДАННЫХ -->
+    <div class="table-responsive">
+        <table id="leadsTable">
+            <thead>
+                <tr>
+                    <th style="min-width: 240px;">Предприятие / Бренд</th>
+                    <th>Локация</th>
+                    <th>Отрасль</th>
+                    <th>Целевое ЛПР</th>
+                    <th style="min-width: 300px;">Питч "Троянского коня"</th>
+                    <th>Инструменты Димы</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+    <tr data-region="Верхняя Синячиха" data-sector="Лесопромышленность & Деревообработка" data-id="sveza-sinichikha">
+        <td>
+            <strong>НАО «СВЕЗА Верхняя Синячиха»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейшее производство березовой и ламинированной фанеры (ФК, ФСФ)</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Директор комбината / Директор по персоналу и логистике</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-портал оптовых дилеров с онлайн-калькулятором партий + HR-бот в Telegram для автонайма и тестирования рабочих.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sveza-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sveza-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Лесопромышленность & Деревообработка" data-id="lestech-sinichikha">
+        <td>
+            <strong>ООО «Лестех» (Верхняя Синячиха)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Глубокая переработка древесины, погонаж, евровагонка, пеллеты</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Собственник</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный B2B-каталог пиломатериалов с калькулятором кубатуры и автогенерацией коммерческих предложений за 10 секунд.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=lestech-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=lestech-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Лесопромышленность & Деревообработка" data-id="leshim-sinichikha">
+        <td>
+            <strong>Верхнесинячихинский лесохимический сектор</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Лесопиление, смолы, техническая древесина</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Технический директор / Начальник сбыта</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Умная воронка приема заявок 24/7 с автоквалификацией объема поставки в Telegram и интеграцией с 1С.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=leshim-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=leshim-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Туризм, Спорт & Услуги" data-id="fok-orion">
+        <td>
+            <strong>ФОК «Орион» (Верхняя Синячиха)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Главный спортивный комплекс района (бассейн, тренажерный зал, секции)</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
+        <td><span class="persona-tag">Руководитель комплекса</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-бот онлайн-расписания, покупки абонементов через СБП и авторассылки напоминаний о занятиях.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=fok-orion" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=fok-orion" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Туризм, Спорт & Услуги" data-id="nizhnyaya-sinichikha-museum">
+        <td>
+            <strong>Музей деревянного зодчества (Нижняя Синячиха)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Уникальный музей-заповедник под открытым небом, памятник федерального значения</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
+        <td><span class="persona-tag">Директор музея / Руководитель туристического отдела</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный туристический лендинг + Telegram-аудиогид по экспозициям с QR-кодами на объектах зодчества.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Лесопромышленность & Деревообработка" data-id="sinichikha-les-trans">
+        <td>
+            <strong>ООО «Синячиха-Лес»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Лесозаготовительные работы, вывозка круглого леса, лесотранспорт</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Главный инженер / Директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Мобильный диспетчерский бот учета рейсов лесовозов, фиксации простоев и заявок на запчасти для механиков.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-les-trans" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sinichikha-les-trans" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Туризм, Спорт & Услуги" data-id="mup-energoresurs-sinichikha">
+        <td>
+            <strong>МУП «Энергоресурс» / ЖКХ Синячихи</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Теплоснабжение, водоснабжение и коммунальная инфраструктура поселка</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
+        <td><span class="persona-tag">Директор МУП / Главный инженер</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-приемная ЖКХ: автоматический сбор показаний, регистрация заявок жителей и экстренные оповещения.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Верхняя Синячиха" data-sector="Авто & Детейлинг" data-id="sinichikha-autotech">
+        <td>
+            <strong>СТО и сервис спецтехники (Верхняя Синячиха)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Ремонт грузовых автомобилей, лесовозов, тракторов и спецтехники</span>
+        </td>
+        <td><span class="region-pill">Верхняя Синячиха</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Собственник СТО</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Электронный журнал загрузки постов ремонта + отправка фотоотчетов дефектовки и актов в WhatsApp/Telegram.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-autotech" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sinichikha-autotech" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="stroydormash-alapaevsk">
+        <td>
+            <strong>АО «Стройдормаш»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Флагман РФ: бурильно-крановые, строительные бурильные и копровые машины</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Генеральный директор / Директор по продажам и маркетингу</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный 3D-конфигуратор бурильных установок + система автоматической генерации ТЗ и коммерческих предложений.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=stroydormash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=stroydormash-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="zist-alapaevsk">
+        <td>
+            <strong>ООО «ЗИСТ» (Завод инструмента строительной техники)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Проектирование и производство бурильного инструмента (шнеки, буры, резцы)</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по сбыту / Собственник</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Умный онлайн-подборщик бурового инструмента по типу грунта и модели машины с моментальной выгрузкой счета.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=zist-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=zist-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="burmash-alapaevsk">
+        <td>
+            <strong>ООО «Бурмаш»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Капитальный ремонт, модернизация и запчасти бурильно-крановых машин</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой экспресс-сервис оценки ремонта бурилок по фото/видео через бота с интеграцией в CRM.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=burmash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=burmash-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Лесопромышленность & Деревообработка" data-id="adoz-alapaevsk">
+        <td>
+            <strong>ООО «Алапаевский ДОЗ» (АДОЗ)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Производство деревянной тары спецназначения, ящиков, мебельного щита</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Генеральный директор / Собственник</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-презентация спецтары по ГОСТу для промышленных предприятий с калькулятором партий и гарантией сроков.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=adoz-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=adoz-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Лесопромышленность & Деревообработка" data-id="alh-alapaevsk">
+        <td>
+            <strong>Алапаевский лесопромышленный холдинг (АЛХ)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Производство деревянных шпал, брусьев для РЖД, экспортные пиломатериалы</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
+        <td><span class="persona-tag">Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Клиентский кабинет B2B-заказчика шпалопродукции с трекингом партий, сертификатов и железнодорожных накладных.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=alh-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=alh-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="asm-alapaevsk">
+        <td>
+            <strong>ООО «Алапаевские сплавы и металлы» (АСМ)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Цветной металлопрокат (медь, латунь, бронза, проволока, трубы, лигатуры)</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по продажам цветного проката</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Динамический онлайн-прайс с автоматической привязкой формулы цен к котировкам металлов и онлайн-бронированием слитков/партий.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=asm-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=asm-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Пищепром & Агро" data-id="amk-alapaevsk">
+        <td>
+            <strong>ООО «Алапаевский молочный комбинат» (АМК)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Молочная продукция из уральского сырья: молоко, творог, масло, сметана</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-food">Пищепром & Агро</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Начальник отдела ритейла</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-портал для ресторанов, пекарен и локальных магазинов с заказом свежих молочных партий напрямую с комбината.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=amk-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=amk-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="kotel-alapaevsk">
+        <td>
+            <strong>ООО «Алапаевский котельный завод»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Блочно-модульные котельные, водогрейные промышленные котлы</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Генеральный директор / Главный конструктор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой мастер подбора мощности котельной и генерации предпроектного решения за 5 минут.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=kotel-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=kotel-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="svai-alapaevsk">
+        <td>
+            <strong>ООО «Завод винтовых свай» (Алапаевск)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Винтовые сваи, фундаменты, металлоконструкции для ИЖС и промсектора</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Собственник / Директор по развитию</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Калькулятор фундамента по габаритам дома с моментальным расчетом количества свай и бронированием монтажа.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=svai-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=svai-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Машиностроение & Металл" data-id="zhbi-shpaly-alapaevsk">
+        <td>
+            <strong>Алапаевский завод железобетонных шпал</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Железобетонные конструкции, шпалы для путевого хозяйства</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Парсинг и мониторинг коммерческих тендеров на ЖБИ шпалы + цифровое портфолио завода для промышленных карьеров.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="HoReCa & Отели" data-id="hotel-metallurg-alapaevsk">
+        <td>
+            <strong>Гостиница «Металлург» (Алапаевск)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Гостиничный комплекс для командировочных инженеров, аудиторов и туристов</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Управляющий гостиницей</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Модуль прямого бронирования номеров без комиссии + корпоративный раздел для быстрой безналичной оплаты предприятиями.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="HoReCa & Отели" data-id="hermitage-alapaevsk">
+        <td>
+            <strong>Отель & Ресторан «Эрмитаж» (Алапаевск)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Премиальное размещение, банкетный зал, ресторанная кухня в центре Алапаевска</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Собственник / Управляющий</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Элегантный сайт с 3D-туром банкетного зала и Telegram-ботом предварительного расчета меню на банкет.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=hermitage-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=hermitage-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Туризм, Спорт & Услуги" data-id="auzhd-alapaevsk">
+        <td>
+            <strong>Алапаевская узкоколейная ж/д (АУЖД)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейшая действующая пассажирская узкоколейка в мире, международный бренд</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
+        <td><span class="persona-tag">Директор туристических программ / Администрация</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровая платформа продажи турпакетов на ретропоезд АУЖД с выбором вагона, гида и ночевки на маршруте.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=auzhd-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=auzhd-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="HoReCa & Отели" data-id="chistye-prudy-alapaevsk">
+        <td>
+            <strong>База отдыха «Чистые пруды»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Загородный отдых, коттеджи, бани, рыбалка, беседки в Алапаевском районе</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Владелец базы отдыха</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Автоматизированная шахматка бронирования коттеджей с мгновенной онлайн-оплатой задатка и WhatsApp-подтверждением.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Авто & Детейлинг" data-id="autolider-alapaevsk">
+        <td>
+            <strong>Автоцентр «АвтоЛидер Алапаевск»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Комплексное СТО, развал-схождение, шиномонтаж, магазин автозапчастей</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Собственник автоцентра</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">CRM-система с Telegram-ботом автосервиса: запись на подъемник за 3 клика + автоматические напоминания о сезонном ТО.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=autolider-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=autolider-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Алапаевск и район" data-sector="Медицина & Эстетика" data-id="zdorovie-denta-alapaevsk">
+        <td>
+            <strong>Клиника «Здоровье» & Стоматология «Дента-Люкс»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Частные медицинские консультации, стоматология, имплантация, УЗИ</span>
+        </td>
+        <td><span class="region-pill">Алапаевск и район</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Главный врач / Собственник</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный калькулятор плана лечения зубов + автозапись к профильным докторам с напоминаниями за 24 часа.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="uralmashplant">
+        <td>
+            <strong>ПАО «Уралмашзавод»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Тяжелое машиностроение: дробильно-размольное, подъемно-транспортное оборудование, экскаваторы</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по цифровизации / Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой портал оборудования с 3D-демонстрацией узлов и закрытым кабинетом заказа оригинальных запчастей.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=uralmashplant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=uralmashplant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="uzga-ekb">
+        <td>
+            <strong>АО «Уральский завод гражданской авиации» (УЗГА)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Самолетостроение (ЛМС-901 «Байкал»), авиадвигатели, ремонт авиатехники</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по коммуникациям / HR-директор завода</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Высокотехнологичный карьерный портал УЗГА с геймифицированным тестированием компетенций молодых инженеров.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=uzga-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=uzga-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="sinara-transport-machines">
+        <td>
+            <strong>АО «Синара – Транспортные Машины» (СТМ)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Производство локомотивов, скоростных электропоездов, путевой техники</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по маркетингу и клиентскому сервису</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Сервисный AI-ассистент сервисных бригад для мгновенного поиска регламентов обслуживания локомотивов на путях.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sinara-transport-machines" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sinara-transport-machines" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="pnevmostroymashina-psm">
+        <td>
+            <strong>АО «Пневмостроймашина» (PSM-Hydraulics)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Лидер РФ в производстве аксиально-поршневой гидравлики и гидромоторов</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Начальник управления сбыта</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Онлайн-сервис подбора отечественных гидравлических аналогов импортных гидронасосов по артикулу и параметрам.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=pnevmostroymashina-psm" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=pnevmostroymashina-psm" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="ural-turbine-plant">
+        <td>
+            <strong>АО «Уральский турбинный завод»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Проектирование и производство паровых турбин для ТЭЦ и атомной энергетики</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по продажам энергетического оборудования</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровая презентационная платформа для проектных институтов энергетики с расчетными модулями тепловой мощности.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=ural-turbine-plant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=ural-turbine-plant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="tmk-sintz">
+        <td>
+            <strong>ПАО «Северский трубный завод» (ТМК)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Бесшовные и электросварные стальные трубы для нефтегазового сектора</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Руководитель B2B-направления</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интеллектуальная система верификации и подбора складских остатков трубной продукции для срочных поставок.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=tmk-sintz" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=tmk-sintz" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="viz-steel">
+        <td>
+            <strong>ООО «ВИЗ-Сталь»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Один из мировых лидеров по производству трансформаторной стали</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Директор по стратегическому маркетингу</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный интерактивный портал стали высших марок с калькулятором снижения энергопотерь трансформаторов.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=viz-steel" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=viz-steel" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Машиностроение & Металл" data-id="alma-ceramica">
+        <td>
+            <strong>АО «Завод керамических изделий» (Alma Ceramica)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейший производитель керамической плитки и керамогранита на Урале</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Директор по работе с застройщиками</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-платформа для девелоперов и архитекторов: моментальная 3D-примерка керамогранита в интерьере + заказ образцов в 1 клик.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=alma-ceramica" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=alma-ceramica" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="brusnika-developer">
+        <td>
+            <strong>Девелопер «Брусника»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Федеральный девелопер новой городской среды и европейской архитектуры</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Директор по цифровому маркетингу / Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">AI-брокер по подбору планировок под сценарии жизни клиента (работа из дома, дети, террасы) с расчетом платежей.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=brusnika-developer" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=brusnika-developer" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="atomstroykomplex">
+        <td>
+            <strong>Холдинг «Атомстройкомплекс»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейший строительный холдинг полного цикла в Свердловской области</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Коммерческий директор агентства недвижимости АТОМ</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта жилых кварталов с умным фильтром инфраструктуры (школы, парки, транспорт) и бронированием онлайн.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=atomstroykomplex" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=atomstroykomplex" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="ugmk-zastroyschik">
+        <td>
+            <strong>«УГМК-Застройщик»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Элитная недвижимость: ЖК «Макаровский», Башня «Исеть», ЖК «Нагорный», клубные дома</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Директор по продажам элитной недвижимости</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный портал клубного дома с видеотурами 4K, консьерж-ботом закрытого доступа и приватными показами.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=ugmk-zastroyschik" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=ugmk-zastroyschik" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="forum-group-ekb">
+        <td>
+            <strong>Девелопер «Forum Group»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Клубный дом «Тихвинъ», масштабный проект «Солнечный», многофункциональные комплексы</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Директор по развитию и продажам</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Единая экосистема жителя/арендатора с интерактивной витриной свободных коммерческих и жилых площадей.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=forum-group-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=forum-group-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="prinzip-developer">
+        <td>
+            <strong>Девелоперская компания «PRINZIP»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Яркие архитектурные проекты (ЖК «Мельница», «Ленинский Парк», «Парковый Квартал»)</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Директор по маркетингу</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный скролл-лендинг с эмоциональным повествованием об архитектуре и виртуальным тест-драйвом планировок.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=prinzip-developer" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=prinzip-developer" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="kortros-akademichesky">
+        <td>
+            <strong>ГК «КОРТРОС» (Район Академический)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейший градостроительный проект Европы — Академический район Екатеринбурга</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Коммерческий директор проекта</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Автоматизированный семейный ипотечный консультант в Telegram с расчетом субсидированных ставок и подбором квартир.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=kortros-akademichesky" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=kortros-akademichesky" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Девелопмент & Недвижимость" data-id="sinara-development">
+        <td>
+            <strong>«Синара-Девелопмент»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">ЖК «Новокольцовский», конгресс-центры, объекты Универсиады, общественные пространства</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
+        <td><span class="persona-tag">Директор по маркетингу</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный 3D-генплан района с таймлайном запуска спортивных, университетских и транспортных объектов.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sinara-development" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sinara-development" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="hyatt-regency-ekb">
+        <td>
+            <strong>Отель «Hyatt Regency Ekaterinburg» (5*)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Главный 5-звездочный отель Урала, рестораны Cucina, Noble House, бальное пространство</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Генеральный менеджер / F&B Director</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Двуязычный VIP-консьерж бот в Telegram/WhatsApp для бронирования столиков, СПА-услуг и согласования меню банкетов.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=hyatt-regency-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=hyatt-regency-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="hyatt-place-ekb">
+        <td>
+            <strong>Отель «Hyatt Place Ekaterinburg»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Международный бизнес-отель рядом с Екатеринбург Ареной</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Управляющий отелем</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой калькулятор аренды залов с кейтерингом и мгновенной выгрузкой счета для юрлиц.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=hyatt-place-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=hyatt-place-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="troekurov-restaurant">
+        <td>
+            <strong>Ресторан «Троекуровъ»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Легендарный ресторан дворянской русской кухни высшего класса, исторический особняк</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Собственник / Управляющий</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный сайт-музей ресторана с виртуальным гидом по залам и закрытой системой бронирования VIP-кабинетов.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=troekurov-restaurant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=troekurov-restaurant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="kitchen-restaurant-ekb">
+        <td>
+            <strong>Панорамный ресторан «Kitchen»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Панорамный вид на город с 24 этажа, авторская гастрономия, винная карта</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Бренд-шеф / Управляющий</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта рассадки с выбором конкретного панорамного столика и онлайн-депозитом для гарантии явки.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="soyka-restaurant-ekb">
+        <td>
+            <strong>Ресторан «Сойка»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Премиальная паназиатская кухня, авторские коктейли, трендовая аудитория</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Управляющий партнер</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичное мобильное меню с видеопрезентацией подачи блюд шефом и предзаказом к определенному времени.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=soyka-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=soyka-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="gastroli-restaurant-ekb">
+        <td>
+            <strong>Ресторан «Гастроли»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Культовое гастрономическое заведение с открытой кухней, печью и вином</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Владелец / Шеф-повар</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Умный цифровой лист ожидания: гость получает уведомление в Telegram, когда освобождается столик, и гуляет по центру.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="momo-pan-asian">
+        <td>
+            <strong>Ресторан «Momo Pan Asian Kitchen»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Изысканная паназия, роллы премиум-класса, бизнес-ланчи для топ-менеджеров</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Управляющий рестораном</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Собственное мобильное приложение и веб-витрина премиум-доставки с бонусной программой и нулевой комиссией агрегаторам.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=momo-pan-asian" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=momo-pan-asian" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="HoReCa & Отели" data-id="vysotsky-complex">
+        <td>
+            <strong>Небоскреб «Высоцкий» (Отель, Спа, Смотровая)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Самый известный небоскреб Урала: 54 этажа, открытый бассейн на крыше, отель 5*, музей В.Высоцкого</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
+        <td><span class="persona-tag">Генеральный директор комплекса</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Единый туристический портал 'Высоцкий SuperApp' с онлайн-покупкой билетов на смотровую по тайм-слотам и бронью спа.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=vysotsky-complex" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=vysotsky-complex" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="ugmk-health-clinic">
+        <td>
+            <strong>Европейский медицинский центр «УГМК-Здоровье»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейший частный медицинский комплекс: хирургия, роддом, детская клиника, диагностика</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Главный врач</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Многоканальный AI-триаж в Telegram и на сайте: распознавание симптомов пациента и мгновенная запись к свободному доктору.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=ugmk-health-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=ugmk-health-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="nudelman-plastic-center">
+        <td>
+            <strong>«Центр косметологии и пластической хирургии им. Нудельмана»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Флагман пластической хирургии России, пациенты со всей страны и зарубежья</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Директор по развитию / Главный врач</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Защищенный сервис дистанционной предоперационной консультации: безопасная загрузка фото, заключение хирурга и бронь палаты.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=nudelman-plastic-center" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=nudelman-plastic-center" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="zdorovie-365">
+        <td>
+            <strong>Сеть клиник «Здоровье 365»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Разветвленная сеть многопрофильных клиник, лабораторная диагностика, профосмотры</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Директор по маркетингу сети</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интеллектуальная система оповещения о готовности результатов анализов с предложением консультации врача в 1 клик.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-365" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=zdorovie-365" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="linline-clinics">
+        <td>
+            <strong>Сеть клиник лазерной косметологии «Линлайн»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Лидер лазерной косметологии, омоложения и дерматологии</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Директор по цифровому развитию</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный атлас эстетических результатов 'До / После' с фильтром по возрасту и типу кожи, доказывающий ценность методики.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=linline-clinics" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=linline-clinics" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="paracels-clinic">
+        <td>
+            <strong>Многопрофильная клиника «Парацельс»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Круглосуточный хирургический стационар, эндоскопия, гинекология, урология</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Главный врач клиники</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой персональный трекер подготовки к операции: пошаговый чеклист анализов с датами и напоминаниями в Telegram.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=paracels-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=paracels-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Медицина & Эстетика" data-id="megadenta-clinic">
+        <td>
+            <strong>Премиум-стоматология «Мегадента Клиник»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Имплантация, ортодонтия, лечение под микроскопом, детская седация</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
+        <td><span class="persona-tag">Управляющий / Главный врач</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой паспорт улыбки: 3D-моделирование итогового прикуса и пошаговый финансовый график оплат.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=megadenta-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=megadenta-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Авто & Детейлинг" data-id="avtoban-group">
+        <td>
+            <strong>ГК «Автобан» (Екатеринбург)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Один из крупнейших автохолдингов Урала: новые авто, трейд-ин, кузовной ремонт, сервис</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Директор по маркетингу автохолдинга</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Собственный мобильный автомолл с AI-оценщиком трейд-ин по VIN-номеру и мгновенным бронированием авто с гарантией цены.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=avtoban-group" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=avtoban-group" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Авто & Детейлинг" data-id="planeta-avto-ekb">
+        <td>
+            <strong>Автохолдинг «Планета Авто»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Мультибрендовые автосалоны, запчасти, коммерческий транспорт</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Умный онлайн-подборщик оригинальных запчастей и расходников по китайским брендам с записью в сервис за минуту.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=planeta-avto-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=planeta-avto-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Авто & Детейлинг" data-id="porsche-center-ekb">
+        <td>
+            <strong>«Порше Центр Екатеринбург»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Продажи и премиальный сервис спорткаров Porsche (911, Cayenne, Panamera, Macan)</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Руководитель отдела продаж / Сервис-директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Закрытый Telegram-клуб владельцев Porsche: бронь сервиса, подменный автомобиль к порогу и история обслуживания спорткара.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=porsche-center-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=porsche-center-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Авто & Детейлинг" data-id="detailing-alarm-ekb">
+        <td>
+            <strong>Студия «Detailing Alarm Ekb»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Премиальный детейлинг, керамика, бронепленки SunTek, реставрация салона</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Собственник студии</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный сайт с макросъемкой гидрофобного эффекта и онлайн-калькулятором зон оклейки под модель авто.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=detailing-alarm-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=detailing-alarm-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Авто & Детейлинг" data-id="restyle-detailing-ekb">
+        <td>
+            <strong>Детейлинг-центр «Restyle»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Стайлинг, антигравийная защита, полировка и шумоизоляция премиум-авто</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
+        <td><span class="persona-tag">Владелец детейлинг-центра</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-бот автоматического расчета стоимости полировки/пленки по марке авто с внесением предоплаты за слот.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=restyle-detailing-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=restyle-detailing-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Пищепром & Агро" data-id="cherkashin-meat">
+        <td>
+            <strong>Мясокомбинат «Черкашин и Партнеры»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Флагман колбас и мясных деликатесов премиального сегмента на Урале</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-food">Пищепром & Агро</span></td>
+        <td><span class="persona-tag">Коммерческий директор / Директор по маркетингу</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-витрина для рестораторов 'Черкашин HoReCa': заказ стейков, ветчин и деликатесов со специальными калибрами и фасовкой.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=cherkashin-meat" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=cherkashin-meat" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Пищепром & Агро" data-id="smak-bakery">
+        <td>
+            <strong>ПАО «СМАК» (Хлебокомбинат)</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Старейший и крупнейший хлебопекарный завод Урала, новая ультрасовременная площадка «Логопарк Кольцовский»</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-food">Пищепром & Агро</span></td>
+        <td><span class="persona-tag">Директор по сбыту / Директор по логистике</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-система автоматического подтверждения суточных заявок на свежую выпечку через бота с интеграцией в систему отгрузки 1С.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=smak-bakery" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=smak-bakery" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Пищепром & Агро" data-id="talitskoe-moloko">
+        <td>
+            <strong>Молочный завод «Талицкое молоко»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Любимый уральский бренд натуральной фермерской молочной продукции и термостатных йогуртов</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-food">Пищепром & Агро</span></td>
+        <td><span class="persona-tag">Директор по маркетингу и продажам</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта 'Где купить свежее сегодня' + специальный оптовый портал для кофеен 'Талицкое Бариста' с автозаказом.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=talitskoe-moloko" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=talitskoe-moloko" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+    <tr data-region="Екатеринбург" data-sector="Пищепром & Агро" data-id="sverdlovskaya-pticefabrika">
+        <td>
+            <strong>АО «Птицефабрика Свердловская»</strong><br>
+            <span style="font-size:0.8rem; color:#94A3B8;">Крупнейший производитель куриного яйца и мяса птицы в Уральском регионе</span>
+        </td>
+        <td><span class="region-pill">Екатеринбург</span></td>
+        <td><span class="badge bg-food">Пищепром & Агро</span></td>
+        <td><span class="persona-tag">Коммерческий директор</span></td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">Личный кабинет оптового закупщика птицефабрики: бронирование партий, ветеринарные свидетельства 'Меркурий' онлайн.</td>
+        <td style="white-space:nowrap;">
+            <a href="Dynamic_Pitch_Deck.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_One_Pager.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+        </td>
+    </tr>
+    
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const rows = document.querySelectorAll('#leadsTable tbody tr');
+    let currentRegion = 'all-region';
+    let currentSector = 'all-sector';
+
+    function filterTable() {
+        const query = searchInput.value.toLowerCase().trim();
+
+        rows.forEach(row => {
+            const rowText = row.innerText.toLowerCase();
+            const rowRegion = row.getAttribute('data-region');
+            const rowSector = row.getAttribute('data-sector');
+
+            const matchesSearch = !query || rowText.includes(query);
+            const matchesRegion = (currentRegion === 'all-region') || (rowRegion === currentRegion);
+            const matchesSector = (currentSector === 'all-sector') || (rowSector === currentSector);
+
+            if (matchesSearch && matchesRegion && matchesSector) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', filterTable);
+
+    document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentRegion = btn.getAttribute('data-filter');
+            filterTable();
+        });
+    });
+
+    document.querySelectorAll('[data-sector]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('[data-sector]').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentSector = btn.getAttribute('data-sector');
+            filterTable();
+        });
+    });
+</script>
+
+</body>
+</html>

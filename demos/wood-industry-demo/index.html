@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>УралЛесПром | Цифровой B2B-Портал Оптовых Поставок Древесины и Фанеры</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #15803D;
+            --primary-dark: #166534;
+            --accent: #EAB308;
+            --dark: #0F172A;
+            --surface: #1E293B;
+            --light: #F8FAFC;
+            --gray: #94A3B8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background: var(--dark); color: var(--light); line-height: 1.6; }
+        .topbar { background: #022c22; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+        .hero { padding: 80px 24px; background: linear-gradient(180deg, #064e3b 0%, var(--dark) 100%); text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px; }
+        .hero p { max-width: 750px; margin: 0 auto 30px; color: #cbd5e1; font-size: 1.1rem; }
+        .container { max-width: 1180px; margin: 0 auto; padding: 40px 20px; }
+        .calc-card { background: var(--surface); border-radius: 16px; padding: 36px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 20px; }
+        .input-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #cbd5e1; }
+        .input-group select, .input-group input { width: 100%; background: #0f172a; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 8px; font-size: 15px; outline: none; }
+        .result-box { background: rgba(22, 101, 52, 0.3); border: 2px solid var(--primary); border-radius: 12px; padding: 24px; margin-top: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 20px; }
+        .price-total { font-size: 2rem; font-weight: 800; color: #4ade80; }
+        .btn-order { background: var(--primary); color: #fff; border: none; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: 0.2s; }
+        .btn-order:hover { background: #22c55e; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .feat-card { background: #182234; padding: 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+        .feat-icon { font-size: 28px; margin-bottom: 12px; }
+        .badge-demo { background: #eab308; color: #000; padding: 4px 10px; border-radius: 20px; font-weight: 800; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <div>🌲 <strong>Свердловский Лесопромышленный Комплекс</strong> &bull; Верхняя Синячиха &bull; Алапаевск</div>
+    <div><span class="badge-demo">ДЕМО ДЛЯ КЛИЕНТА ГЛОБАЛ ПЛЮС</span> &bull; 8 (800) 500-24-26</div>
+</div>
+
+<div class="hero">
+    <h1>Оптовые Поставки Фанеры и Пиломатериалов</h1>
+    <p>Автоматизированная B2B-система: моментальный расчет вагонных и фурных партий по ГОСТу с проверкой остатков на складах Верхней Синячихи.</p>
+</div>
+
+<div class="container">
+    <div class="calc-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 8px;">📊 Интерактивный Калькулятор Партии (ГОСТ 3916.1-96)</h2>
+        <p style="color: var(--gray); font-size: 14px;">Рассчитайте кубатуру, вес и точную оптовую стоимость отгрузки за 10 секунд:</p>
+
+        <div class="calc-grid">
+            <div class="input-group">
+                <label>Тип продукции:</label>
+                <select id="prodType" onchange="calc()">
+                    <option value="65000">Фанера березовая ФСФ 1525×1525 (сорт 2/4)</option>
+                    <option value="82000">Фанера ламинированная 1220×2440 (сетка/гладкая)</option>
+                    <option value="28000">Пиломатериал хвойный обрезной ГОСТ 8486-86</option>
+                    <option value="36000">Евровагонка сорт А (хвоя/осина)</option>
+                    <option value="12000">Пеллеты топливные древесные (биг-бэг 1 т)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Толщина / Калибр:</label>
+                <select id="thickness" onchange="calc()">
+                    <option value="1">18 мм (стандарт опалубки)</option>
+                    <option value="1.2">21 мм (усиленная)</option>
+                    <option value="0.8">12 мм (конструкционная)</option>
+                    <option value="0.6">9 мм (обшивочная)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Объем партии (м³ / тонн):</label>
+                <input type="number" id="volume" value="35" min="1" max="1000" oninput="calc()">
+            </div>
+            <div class="input-group">
+                <label>Способ доставки:</label>
+                <select id="delivery">
+                    <option value="auto">Автофура 20 тонн (до объекта)</option>
+                    <option value="rail">Крытый вагон 68 тонн (РЖД)</option>
+                    <option value="pickup">Самовывоз (склад Верхняя Синячиха)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div>
+                <div style="font-size: 14px; color: #cbd5e1;">Итоговая оптовая стоимость партии с НДС:</div>
+                <div class="price-total" id="totalPrice">2 275 000 ₽</div>
+                <div style="font-size: 12px; color: var(--gray);" id="weightText">Ориентировочный вес: 24.5 т &bull; Готовность к отгрузке: 48 ч</div>
+            </div>
+            <button class="btn-order" onclick="alert('Заявка сформирована! В боевой версии спецификация мгновенно уходит в 1С и WhatsApp коммерческого директора.')">📄 Сформировать Спецификацию и Счет</button>
+        </div>
+    </div>
+
+    <div class="features-grid">
+        <div class="feat-card">
+            <div class="feat-icon">⚡</div>
+            <h3>Мгновенная выгрузка счета</h3>
+            <p style="color: var(--gray); font-size: 14px; margin-top: 8px;">Снабженцы строительных холдингов получают готовый счет с печатью за 1 минуту вместо суточного ожидания ответа менеджера.</p>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon">🚂</div>
+            <h3>Прямой трекинг РЖД</h3>
+            <p style="color: var(--gray); font-size: 14px; margin-top: 8px;">Автоматическая интеграция с накладными РЖД по станции Синячиха / Алапаевск с SMS-оповещением клиента в пути.</p>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon">🤖</div>
+            <h3>ИИ-ассистент по ГОСТам</h3>
+            <p style="color: var(--gray); font-size: 14px; margin-top: 8px;">Нейросеть отвечает на любые технические вопросы клиентов по влажности, плотности и сертификатам в Telegram 24/7.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calc() {
+        const base = parseFloat(document.getElementById('prodType').value);
+        const thick = parseFloat(document.getElementById('thickness').value);
+        const vol = parseFloat(document.getElementById('volume').value) || 0;
+        const total = Math.round(base * thick * vol);
+        document.getElementById('totalPrice').innerText = total.toLocaleString('ru-RU') + " ₽";
+        document.getElementById('weightText').innerText = "Ориентировочный вес: " + (vol * 0.7).toFixed(1) + " т • Готовность к отгрузке: 48 ч";
+    }
+    calc();
+</script>
+
+</body>
+</html>

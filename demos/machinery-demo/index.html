@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>УралМашПром | Цифровой B2B Селектор Бурильной Техники и Гидравлики</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #F59E0B;
+            --dark: #0B0F19;
+            --surface: #111827;
+            --card: #1F2937;
+            --text: #F3F4F6;
+            --gray: #9CA3AF;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--dark); color: var(--text); }
+        .header { background: #000; border-bottom: 2px solid var(--accent); padding: 18px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #fff; }
+        .logo span { color: var(--accent); }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .hero { text-align: center; margin-bottom: 50px; }
+        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; margin-bottom: 12px; }
+        .hero p { color: var(--gray); font-size: 1.1rem; max-width: 750px; margin: 0 auto; }
+        .tabs { display: flex; gap: 12px; margin-bottom: 30px; border-bottom: 1px solid var(--card); padding-bottom: 12px; }
+        .tab { background: transparent; border: 1px solid var(--card); color: var(--gray); padding: 10px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+        .tab.active { background: var(--accent); color: #000; border-color: var(--accent); }
+        .grid-machinery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .machine-card { background: var(--surface); border: 1px solid var(--card); border-radius: 12px; overflow: hidden; transition: transform 0.2s; }
+        .machine-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card-img-placeholder { height: 180px; background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 50px; border-bottom: 1px solid var(--card); }
+        .card-body { padding: 24px; }
+        .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+        .spec-list { list-style: none; margin: 16px 0; font-size: 14px; color: var(--gray); }
+        .spec-list li { margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; }
+        .spec-list li strong { color: #fff; }
+        .btn-inquire { width: 100%; background: var(--accent); color: #000; border: none; padding: 12px; border-radius: 6px; font-weight: 700; cursor: pointer; }
+        .btn-inquire:hover { background: #d97706; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">УРАЛ<span>МАШ</span>ТЕХ &bull; Алапаевск &bull; Екатеринбург</div>
+    <div style="font-size: 13px; color: var(--accent);">⚡ ПРОТОТИП ГЛОБАЛ ПЛЮС | B2B СИСТЕМА ДЛЯ ЗАВОДОВ</div>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <h1>Интеллектуальный Каталог Бурильной Техники &amp; Инструмента</h1>
+        <p>Подбор бурильно-крановых машин (БКМ), шнеков и аксиально-поршневой гидравлики под категории грунтов I–VI с расчетом окупаемости.</p>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active">Бурильно-крановые машины (БКМ)</button>
+        <button class="tab">Буровой инструмент &amp; Шнеки (ЗИСТ)</button>
+        <button class="tab">Гидромоторы &amp; Насосы (PSM)</button>
+    </div>
+
+    <div class="grid-machinery">
+        <div class="machine-card">
+            <div class="card-img-placeholder">🏗️</div>
+            <div class="card-body">
+                <div class="card-title">БКМ-317-01 (Шасси ГАЗ-Садко)</div>
+                <p style="font-size: 13px; color: var(--gray);">Бурение скважин в немерзлых и мерзлых грунтах, установка опор ЛЭП 0.4–10 кВ.</p>
+                <ul class="spec-list">
+                    <li>Глубина бурения: <strong>до 3.0 м</strong></li>
+                    <li>Диаметр бурения: <strong>0.36 – 0.80 м</strong></li>
+                    <li>Грузоподъемность крана: <strong>1.25 т</strong></li>
+                    <li>Угол бурения: <strong>62° – 95°</strong></li>
+                </ul>
+                <button class="btn-inquire" onclick="alert('Технико-коммерческое предложение сформировано!')">Сформировать ТКП (PDF)</button>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="card-img-placeholder">🚜</div>
+            <div class="card-body">
+                <div class="card-title">БКМ-515 (Шасси УРАЛ 4320)</div>
+                <p style="font-size: 13px; color: var(--gray);">Тяжелая техника повышенной проходимости для энергетики и мостостроения в Сибири и ХМАО.</p>
+                <ul class="spec-list">
+                    <li>Глубина бурения: <strong>до 5.0 м</strong></li>
+                    <li>Диаметр бурения: <strong>0.36 – 1.0 м</strong></li>
+                    <li>Грузоподъемность крана: <strong>2.0 т</strong></li>
+                    <li>Тип привода: <strong>Гидравлический</strong></li>
+                </ul>
+                <button class="btn-inquire" onclick="alert('Технико-коммерческое предложение сформировано!')">Сформировать ТКП (PDF)</button>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="card-img-placeholder">🔩</div>
+            <div class="card-body">
+                <div class="card-title">Шнеки скальные &amp; Резцы РБМ-35</div>
+                <p style="font-size: 13px; color: var(--gray);">Износостойкий инструмент для бурения скальных и вечномерзлых грунтов IV–VI категории.</p>
+                <ul class="spec-list">
+                    <li>Сталь шнека: <strong>09Г2С (упрочненная)</strong></li>
+                    <li>Тип замка: <strong>Шестигранник 55/70 мм</strong></li>
+                    <li>Ресурс резцов: <strong>+40% к стандарту</strong></li>
+                    <li>Склад: <strong>В наличии (Алапаевск)</strong></li>
+                </ul>
+                <button class="btn-inquire" onclick="alert('Счет на инструмент забронирован на 3 дня!')">Забронировать со склада</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
