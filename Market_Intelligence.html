@@ -4,55 +4,254 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Разведка Рынка Урала | Глобал Плюс</title>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Inter', sans-serif; background: #0B0E14; color: #F8FAFC; padding: 40px 20px; max-width: 860px; margin: 0 auto; line-height: 1.7; }
-  h1, h2, h3 { color: #C5A059; font-family: 'Playfair Display', serif; margin-top: 1.5em; margin-bottom: 0.5em; }
-  h1 { font-size: 2.3rem; line-height: 1.2; margin-top: 0; }
-  a { color: #2563EB; text-decoration: none; font-weight: bold; }
-  .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; padding: 10px 20px; background: #2563EB; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; transition: 0.2s; }
-  .btn-back:hover { background: #1D4ED8; }
-  hr { border: 0; height: 1px; background: rgba(197,160,89,0.25); margin: 35px 0; }
-  li { margin-bottom: 12px; color: #CBD5E1; }
-  strong { color: #fff; }
+  :root {
+    --bg-base: #0B0E14;
+    --bg-surface: #121721;
+    --bg-card: #18202E;
+    --gold: #C5A059;
+    --gold-light: #E0C07A;
+    --red: #D32F2F;
+    --green: #10B981;
+    --blue: #2563EB;
+    --white: #F8FAFC;
+    --text-dim: #94A3B8;
+    --border: rgba(197, 160, 89, 0.2);
+    --border-card: rgba(255, 255, 255, 0.08);
+    --accent: #2563EB;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-base);
+    color: var(--white);
+    padding: 40px 20px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-card);
+  }
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .btn-back:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+  }
+  .brand-badge {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  
+  /* ТИПОГРАФИКА СТАТИЧЕСКОГО КОНТЕНТА */
+  .doc-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    color: var(--gold);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .doc-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    color: var(--white);
+    margin-top: 45px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-card);
+  }
+  .doc-content h3 {
+    font-size: 1.25rem;
+    color: var(--gold-light);
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .doc-content p {
+    margin-bottom: 18px;
+    color: #CBD5E1;
+    font-size: 1.05rem;
+  }
+  .doc-content strong {
+    color: #fff;
+    font-weight: 600;
+  }
+  .doc-content em {
+    color: #E2E8F0;
+  }
+  .doc-content ul, .doc-content ol {
+    margin: 15px 0 25px 25px;
+  }
+  .doc-content li {
+    margin-bottom: 10px;
+    color: #CBD5E1;
+    font-size: 1.02rem;
+  }
+  .doc-content blockquote {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+    color: #F1F5F9;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  .doc-content hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-card);
+    margin: 40px 0;
+  }
+  .doc-content code {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--gold-light);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+  .doc-content pre {
+    background: #141A26;
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 25px 0;
+  }
+  .doc-content pre code {
+    background: transparent;
+    padding: 0;
+    color: #E2E8F0;
+  }
+  .doc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: var(--bg-surface);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .doc-content th, .doc-content td {
+    padding: 14px 18px;
+    border: 1px solid var(--border-card);
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .doc-content th {
+    background: #18202E;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .doc-content tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  /* КАРТОЧКА БЫСТРОГО ДЕЙСТВИЯ */
+  .action-banner {
+    background: linear-gradient(135deg, rgba(197,160,89,0.15) 0%, rgba(197,160,89,0.05) 100%);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .action-banner h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+  .action-banner p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .btn-banner {
+    background: var(--gold);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .btn-banner:hover {
+    background: var(--gold-light);
+  }
 </style>
 </head>
 <body>
-<a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
-<div id="content"></div>
-<script>
-  const markdownText = `# 🧠 Разведка Рынка Урала: Синячиха, Алапаевск, Екатеринбург
-### Экономический ландшафт, специфика менталитета ЛПР и точки входа
 
----
+<div class="top-nav">
+  <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
+  <div class="brand-badge">Глобал Плюс &times; GlobalTeamPartners</div>
+</div>
 
-## 📍 Пояс 1: Верхняя Синячиха (Моногород Лесопереработки)
-* **Экономический профиль:** Исторический центр глубокой деревообработки Свердловской области. Ключевой гигант — НАО «СВЕЗА Верхняя Синячиха» (мировые поставки березовой фанеры), крупное предприятие «Лестех», лесохимический сектор, лесозаготовительные артели.
-* **Специфика:** Моногород с выраженной рабочей специализацией. Главная боль директоров — **острейший дефицит рабочих кадров и специалистов ЧПУ**, а также необходимость ускорения B2B-отгрузок оптовым дилерам.
-* **Точки входа:**
-  1. HR-автоматизация найма и онбординга рабочих через Telegram-ботов для комбинатов.
-  2. B2B-калькуляторы кубатуры фанеры и пиломатериалов для оптовиков.
-  3. Социальные и сервисные сервисы (ФОК «Орион», Нижнесинячихинский музей зодчества — один из главных туристических объектов Урала).
+<div class="doc-content">
+<h1>🧠 Разведка Рынка Урала: Синячиха, Алапаевск, Екатеринбург</h1>
+<h3>Экономический ландшафт, специфика менталитета ЛПР и точки входа</h3>
+<hr />
+<h2>📍 Пояс 1: Верхняя Синячиха (Моногород Лесопереработки)</h2>
+<ul>
+<li><strong>Экономический профиль:</strong> Исторический центр глубокой деревообработки Свердловской области. Ключевой гигант — НАО «СВЕЗА Верхняя Синячиха» (мировые поставки березовой фанеры), крупное предприятие «Лестех», лесохимический сектор, лесозаготовительные артели.</li>
+<li><strong>Специфика:</strong> Моногород с выраженной рабочей специализацией. Главная боль директоров — <strong>острейший дефицит рабочих кадров и специалистов ЧПУ</strong>, а также необходимость ускорения B2B-отгрузок оптовым дилерам.</li>
+<li><strong>Точки входа:</strong></li>
+<li>HR-автоматизация найма и онбординга рабочих через Telegram-ботов для комбинатов.</li>
+<li>B2B-калькуляторы кубатуры фанеры и пиломатериалов для оптовиков.</li>
+<li>Социальные и сервисные сервисы (ФОК «Орион», Нижнесинячихинский музей зодчества — один из главных туристических объектов Урала).</li>
+</ul>
+<hr />
+<h2>📍 Пояс 2: Город Алапаевск и Район (Индустриально-Машиностроительный Узел)</h2>
+<ul>
+<li><strong>Экономический профиль:</strong> Исторический центр горнозаводского Урала. Лидер в масштабах всей РФ — завод «Стройдормаш» (бурильно-крановые машины для энергетики и мостостроения), завод «ЗИСТ» (буровой инструмент), «Бурмаш», «АДОЗ» (деревянная тара спецназначения), «Алапаевские сплавы и металлы» (медь, бронза, латунь), Молочный комбинат (АМК), Котельный завод.</li>
+<li><strong>Туристический потенциал:</strong> Всемирно известная <strong>Алапаевская узкоколейная железная дорога (АУЖД)</strong> — самая протяженная пассажирская узкоколейка планеты, притягивающая туристов со всего мира.</li>
+<li><strong>Специфика переговоров:</strong> Руководители заводов — производственники старой закалки или прагматичные коммерсанты. Не терпят пустословия. Любят цифры: сколько часов сэкономим, сколько новых заявок получим, как исключим ошибки в 1С.</li>
+</ul>
+<hr />
+<h2>📍 Пояс 3: Екатеринбург (Миллионник &amp; Столица Урала)</h2>
+<ul>
+<li><strong>Экономический профиль:</strong> 4-й по величине город России, колоссальная концентрация капитала, высококонкурентные рынки девелопмента, платной медицины, премиальной HoReCa и логистики.</li>
+<li><strong>Ключевые секторы с высокими чеками:</strong></li>
+<li><strong>Девелопмент:</strong> «Брусника», «Атомстройкомплекс», «УГМК-Застройщик», «Forum Group», «PRINZIP». Бьются за каждого покупателя квартир бизнес-класса. Им нужны 3D-планировки, AI-ипотечные боты и кинематографичные презентации.</li>
+<li><strong>Премиум HoReCa:</strong> Отели «Hyatt Regency», «Высоцкий», рестораны «Троекуров», «Kitchen», «Сойка», «Гастроли». Готовы платить за статус, ликвидацию no-show и автоматизацию банкетных депозитов.</li>
+<li><strong>Частная медицина:</strong> «УГМК-Здоровье», Клиника Нудельмана, «Здоровье 365», «Линлайн». Тратят миллионы на маркетинг, страдают от перегрузки колл-центров. Нуждаются в AI-триаже и удобной онлайн-записи.</li>
+<li><strong>Тяжелое машиностроение:</strong> «Уралмашзавод», «УЗГА», «Синара», «Пневмостроймашина». Нуждаются в цифровых каталогах импортозамещения и привлечении лучших технических кадров.</li>
+</ul>
+</div>
 
----
+<div class="action-banner">
+  <div>
+    <h4>Готов перейти к действиям?</h4>
+    <p>Открой базу 62 предприятий и начни отработку контактов с планшета.</p>
+  </div>
+  <a href="Leads_List.html" class="btn-banner">Открыть Базу Лидов &rarr;</a>
+</div>
 
-## 📍 Пояс 2: Город Алапаевск и Район (Индустриально-Машиностроительный Узел)
-* **Экономический профиль:** Исторический центр горнозаводского Урала. Лидер в масштабах всей РФ — завод «Стройдормаш» (бурильно-крановые машины для энергетики и мостостроения), завод «ЗИСТ» (буровой инструмент), «Бурмаш», «АДОЗ» (деревянная тара спецназначения), «Алапаевские сплавы и металлы» (медь, бронза, латунь), Молочный комбинат (АМК), Котельный завод.
-* **Туристический потенциал:** Всемирно известная **Алапаевская узкоколейная железная дорога (АУЖД)** — самая протяженная пассажирская узкоколейка планеты, притягивающая туристов со всего мира.
-* **Специфика переговоров:** Руководители заводов — производственники старой закалки или прагматичные коммерсанты. Не терпят пустословия. Любят цифры: сколько часов сэкономим, сколько новых заявок получим, как исключим ошибки в 1С.
-
----
-
-## 📍 Пояс 3: Екатеринбург (Миллионник & Столица Урала)
-* **Экономический профиль:** 4-й по величине город России, колоссальная концентрация капитала, высококонкурентные рынки девелопмента, платной медицины, премиальной HoReCa и логистики.
-* **Ключевые секторы с высокими чеками:**
-  * **Девелопмент:** «Брусника», «Атомстройкомплекс», «УГМК-Застройщик», «Forum Group», «PRINZIP». Бьются за каждого покупателя квартир бизнес-класса. Им нужны 3D-планировки, AI-ипотечные боты и кинематографичные презентации.
-  * **Премиум HoReCa:** Отели «Hyatt Regency», «Высоцкий», рестораны «Троекуров», «Kitchen», «Сойка», «Гастроли». Готовы платить за статус, ликвидацию no-show и автоматизацию банкетных депозитов.
-  * **Частная медицина:** «УГМК-Здоровье», Клиника Нудельмана, «Здоровье 365», «Линлайн». Тратят миллионы на маркетинг, страдают от перегрузки колл-центров. Нуждаются в AI-триаже и удобной онлайн-записи.
-  * **Тяжелое машиностроение:** «Уралмашзавод», «УЗГА», «Синара», «Пневмостроймашина». Нуждаются в цифровых каталогах импортозамещения и привлечении лучших технических кадров.
-`;
-  document.getElementById('content').innerHTML = marked.parse(markdownText);
-</script>
 </body>
 </html>
