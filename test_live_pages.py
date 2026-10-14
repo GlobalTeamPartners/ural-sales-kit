@@ -13,6 +13,7 @@ urls = [
     "https://globalteampartners.github.io/ural-sales-kit/Dynamic_Pitch_Deck.html?id=sveza-sinichikha",
     "https://globalteampartners.github.io/ural-sales-kit/Dynamic_One_Pager.html",
     "https://globalteampartners.github.io/ural-sales-kit/Dynamic_One_Pager.html?id=stroydormash-alapaevsk",
+    "https://globalteampartners.github.io/ural-sales-kit/Templates_Catalog.html",
     "https://globalteampartners.github.io/ural-sales-kit/Exclusive_Strategy.html",
     "https://globalteampartners.github.io/ural-sales-kit/Market_Intelligence.html",
     "https://globalteampartners.github.io/ural-sales-kit/demos/wood-industry-demo/index.html",
