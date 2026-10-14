@@ -26,9 +26,52 @@
         .option-btn { background: #0A0F1D; border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 16px; border-radius: 10px; text-align: left; cursor: pointer; transition: 0.2s; font-size: 14px; font-weight: 500; }
         .option-btn:hover, .option-btn.selected { border-color: var(--primary); background: rgba(14,165,233,0.1); color: #fff; }
         .btn-confirm { background: var(--primary); color: #000; border: none; padding: 14px 30px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; width: 100%; }
+    
+        /* КИНЕМАТОГРАФИЧЕСКИЙ ФОН GLOBAL PLUS */
+        .cinematic-bg-wrap {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .cinematic-video {
+            position: absolute;
+            top: 50%; left: 50%;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.35;
+            filter: brightness(0.72) contrast(1.15) saturate(1.1);
+        }
+        .cinematic-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(11, 15, 25, 0.72) 0%, rgba(10, 12, 16, 0.95) 100%);
+        }
+        .grain-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .topbar, .header, .hero, .container, footer, nav, .calc-card, .feat-card, .machine-card, .menu-card, .service-card, .catalog-card, .clinic-card {
+            position: relative;
+            z-index: 2;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- КИНЕМАТОГРАФИЧЕСКИЙ ВИДЕОФОН GLOBAL PLUS -->
+    <div class="cinematic-bg-wrap">
+        <video class="cinematic-video" autoplay muted loop playsinline src="../../assets/videos/clinic.mp4"></video>
+        <div class="cinematic-overlay"></div>
+        <div class="grain-overlay"></div>
+    </div>
+    
 
 <div class="header">
     <div style="font-weight: 700; font-size: 18px; color: #fff;">МЕДИЦИНСКИЙ ЦЕНТР ЭКСПЕРТНОГО КЛАССА</div>

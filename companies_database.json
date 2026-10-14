@@ -70,10 +70,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Снижение оттока клиентов на 25%, 100% предоплата абонементов онлайн без очередей у стойки администратора.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "Sports Fitness | Спортивный Комплекс & Фитнес",
-    "template_url": "https://globalteamgroup.github.io/sports-fitness-sample/",
-    "template_badge": "Расписание секций • Бассейн • Покупка абонементов",
-    "template_desc": "3D-тур по залам и бассейну, интерактивное расписание детских и взрослых секций, онлайн-оплата клубных карт."
+    "template_name": "Туристический & Спортивный Портал Урала",
+    "template_url": "https://globalteamgroup.github.io/tourism-sample/",
+    "template_badge": "Расписание секций • Бассейн • Бронь онлайн",
+    "template_desc": "Интерактивная экосистема спортивного комплекса, расписание детских и взрослых программ, онлайн-бронирование и абонементы."
   },
   {
     "id": "nizhnyaya-sinichikha-museum",
@@ -89,10 +89,10 @@
     "price_retainer": "30 000 ₽/мес",
     "roi_desc": "Увеличение турпотока из Екатеринбурга на 40%, дополнительный доход от платных цифровых экскурсий.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "VT-VIP — Туристический маршрут & онлайн-билеты",
-    "template_url": "https://globalteampartners.github.io/vt-vip/",
-    "template_badge": "Визуализированный туристический сервис",
-    "template_desc": "Онлайн-продажа туристических пакетов, выбор вагонов ретропоезда, бронь аудиогида и трансфера."
+    "template_name": "Туристический Портал & Заповедники Урала",
+    "template_url": "https://globalteamgroup.github.io/tourism-sample/",
+    "template_badge": "АУЖД туры • Музей Нижней Синячихи • Бронирование онлайн",
+    "template_desc": "Платформа бронирования экскурсий по Нижней Синячихе, аудиогиды по старинным избам и онлайн-продажа билетов."
   },
   {
     "id": "sinichikha-les-trans",
@@ -127,10 +127,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Разгрузка оператора диспетчерской на 70%, сокращение времени локализации коммунальных аварий.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "VT-VIP & Geotochka | Логистика, Туризм & Геоприсутствие",
-    "template_url": "https://globalteampartners.github.io/vt-vip/",
-    "template_badge": "Интерактивный туризм & представительский трансфер",
-    "template_desc": "Визуализированный выбор маршрутов и подвижного состава, продажа турпакетов онлайн, интеграция с Яндекс Картами."
+    "template_name": "B2B-Портал Диспетчеризации & Сервиса Спецтехники",
+    "template_url": "demos/service-demo/index.html",
+    "template_badge": "Диспетчерская • Сервис спецтехники • Онлайн-заявки",
+    "template_desc": "Система диспетчеризации коммунальных вызовов, учет спецтехники, онлайн-заявки и контроль ремонтов сетей."
   },
   {
     "id": "sinichikha-autotech",
@@ -393,10 +393,10 @@
     "price_retainer": "40 000 ₽/мес",
     "roi_desc": "Рост продаж туристических билетов в 2.5 раза, приток платежеспособных туристов из Екатеринбурга и Москвы.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "VT-VIP — Туристический маршрут & онлайн-билеты",
-    "template_url": "https://globalteampartners.github.io/vt-vip/",
-    "template_badge": "Визуализированный туристический сервис",
-    "template_desc": "Онлайн-продажа туристических пакетов, выбор вагонов ретропоезда, бронь аудиогида и трансфера."
+    "template_name": "Туристический Портал АУЖД & Заповедники Урала",
+    "template_url": "https://globalteamgroup.github.io/tourism-sample/",
+    "template_badge": "АУЖД ретропоезд • Экскурсии • Бронирование онлайн",
+    "template_desc": "Онлайн-продажа туристических пакетов, интерактивный выбор вагонов ретропоезда АУЖД, бронь аудиогида и трансфера."
   },
   {
     "id": "chistye-prudy-alapaevsk",

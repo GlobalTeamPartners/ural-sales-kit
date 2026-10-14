@@ -38,7 +38,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-zksk",
         "title": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
-        "category": "Тяжелая Промышленность, Металлоконструкции & Ангары",
+        "category": "Машиностроение & Металл",
         "badge": "3D-Каркасы • Расчет металлоемкости • 500K м²",
         "url": "https://globalteamgroup.github.io/zksk-sample/",
         "demo_type": "Кинематографичный портал завода металлоконструкций",
@@ -55,7 +55,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-machinery",
         "title": "B2B-Конфигуратор Буровых Машин & Спецтехники",
-        "category": "Машиностроение, Спецтехника & Гидравлика",
+        "category": "Машиностроение & Металл",
         "badge": "3D-Селектор бурилок • Подбор шнеков • Выгрузка КП",
         "url": "demos/machinery-demo/index.html",
         "demo_type": "B2B-конфигуратор промышленного оборудования",
@@ -72,7 +72,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-stroyka",
         "title": "Инженерно-Строительный Холдинг «Стройка-Про»",
-        "category": "Строительство, Генподряд & Промышленный Монтаж",
+        "category": "Девелопмент & Недвижимость",
         "badge": "Допуски СРО • Парк техники • Сметный калькулятор",
         "url": "https://globalteamgroup.github.io/stroyka-pro/",
         "demo_type": "Премиальный портал генерального подрядчика",
@@ -89,7 +89,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-estate",
         "title": "Девелопмент Клубных Кварталов «Luxury Estate»",
-        "category": "Девелопмент, Клубные Дома & Коттеджные Поселки",
+        "category": "Девелопмент & Недвижимость",
         "badge": "Интерактивный генплан • 3D-Виллы • Чат инвесторов",
         "url": "https://globalteamgroup.github.io/luxury-estate-sample/",
         "demo_type": "Кинематографичный портал элитного девелопмента",
@@ -106,7 +106,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-clinic",
         "title": "Многопрофильный Медицинский Центр «Клиника Европа»",
-        "category": "Медицина, Диагностика & Частные Клиники",
+        "category": "Медицина & Эстетика",
         "badge": "Видеоряд клиники • Онлайн-запись • AI-Триаж симптомов",
         "url": "https://globalteamgroup.github.io/europa-clinic/",
         "demo_type": "Кинематографичный портал многопрофильной клиники",
@@ -123,7 +123,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-lumiere",
         "title": "Клиника Эстетической Стоматологии & Косметологии «Люмьер»",
-        "category": "Стоматология, Имплантация & Эстетика",
+        "category": "Медицина & Эстетика",
         "badge": "3D-Улыбка • Имплантация All-on-4 • План лечения",
         "url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
         "demo_type": "Интерактивный портал эстетической стоматологии",
@@ -140,7 +140,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-detailing",
         "title": "Центр Премиального Автоухода «Elite Detailing»",
-        "category": "Автобизнес, Детейлинг & Автосалоны",
+        "category": "Авто & Детейлинг",
         "badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
         "url": "https://globalteamgroup.github.io/elite-detailing/",
         "demo_type": "Покадровый интерактивный скролл автокомплекса",
@@ -157,7 +157,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-service",
         "title": "Сервисный Центр Спецтехники & Автоколонн",
-        "category": "Сервис Спецтехники & Коммерческий Транспорт",
+        "category": "Авто & Детейлинг",
         "badge": "Парк спецтехники • Заказ запчастей • Выездные бригады",
         "url": "demos/service-demo/index.html",
         "demo_type": "B2B-портал сервисного обслуживания спецтехники",
@@ -174,7 +174,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-horeca",
         "title": "Загородный Курорт & Спа-Отель «HoReCa Grand»",
-        "category": "Премиум Отели, Загородные Клубы & Базы Отдыха",
+        "category": "HoReCa & Отели",
         "badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
         "url": "https://globalteamgroup.github.io/horeca-grand-sample/",
         "demo_type": "Кинематографичный портал загородного курорта",
@@ -191,7 +191,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-restaurant",
         "title": "Ресторан Авторской Кухни & Банкетный Комплекс",
-        "category": "Рестораны, Гастрономия & Банкеты",
+        "category": "HoReCa & Отели",
         "badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
         "url": "demos/horeca-demo/index.html",
         "demo_type": "Премиальный ресторанный портал",
@@ -206,128 +206,9 @@ TEMPLATES_CATALOG = [
         "pitch_talk": "«В пятничный вечер хостес теряет звонки, а гости не приходят. В нашей системе гость выбирает столик с панорамой заката, вносит депозит за 1 минуту и получает персональное приглашение»."
     },
     {
-        "id": "tpl-arch",
-        "title": "Архитектурно-Проектное Бюро «Arch-Design»",
-        "category": "Архитектура, BIM-Проектирование & Инжиниринг",
-        "badge": "BIM-моделирование • Расчет нагрузок • 3D-Визуализации",
-        "url": "https://globalteamgroup.github.io/arch-design/",
-        "demo_type": "Портал архитектурного и инженерного проектирования",
-        "desc": "Сайт проектной мастерской: 3D-модели зданий, инженерные чертежи, BIM-проекты промышленных цехов, общественных пространств и коттеджей.",
-        "features": [
-            "Интерактивное портфолио реализованных проектов с чертежами и 3D-турами",
-            "Презентация компетенций в BIM-проектировании и прохождении госэкспертизы",
-            "Калькулятор стоимости проектно-изыскательских работ (ПИР)",
-            "Онлайн-согласование эскизных проектов с заказчиком"
-        ],
-        "target_leads": "Архитектурные мастерские Екатеринбурга, проектные отделы заводов Урала, инжиниринговые компании, девелоперы",
-        "pitch_talk": "«Крупный инвестор оценивает проектную организацию по глубине проработки портфолио. Наш портал показывает проекты в деталях: от архитектурной концепции до рабочих узлов металлоконструкций»."
-    },
-    {
-        "id": "tpl-tech",
-        "title": "Инженерные IT-Системы & АСУ ТП «Tech Solutions»",
-        "category": "Промышленная автоматизация, SCADA & B2B-Инжиниринг",
-        "badge": "Диспетчеризация цехов • Телеметрия • 1С/ERP",
-        "url": "https://globalteamgroup.github.io/tech-solutions-sample/",
-        "demo_type": "Портал промышленной автоматизации и IT",
-        "desc": "Платформа для разработчиков и интеграторов автоматизированных систем: диспетчеризация производств, SCADA, телеметрия и цифровизация заводских контуров.",
-        "features": [
-            "Интерактивная схема промышленной автоматизации технологических линий",
-            "Презентация внедренных SCADA-систем на заводах региона",
-            "Калькулятор окупаемости внедрения датчиков и диспетчеризации",
-            "Интеграция телеметрии с системами 1С:Предприятие и ERP"
-        ],
-        "target_leads": "Инженерные службы заводов СВЕЗА, Стройдормаш, Уралмаш, Промэлектроника, УЦСБ, МУП Энергоресурс",
-        "pitch_talk": "«Директору завода важно видеть реальный экономический эффект: сколько часов простоя сократит АСУ ТП и как снизится расход сырья. Наш сайт наглядно это доказывает интерактивными схемами»."
-    },
-    {
-        "id": "tpl-legal",
-        "title": "Юридическое Бюро & Корпоративный Арбитраж «Legal Partners»",
-        "category": "Корпоративное право, Арбитраж & Защита Активов",
-        "badge": "Сопровождение ГОЗ 275-ФЗ • Налоговый аудит • Арбитраж",
-        "url": "https://globalteamgroup.github.io/legal-partners-sample/",
-        "demo_type": "Премиальный портал юридического партнерства",
-        "desc": "Сайт адвокатского бюро и правовой компании: защита бизнеса в арбитраже, юридическое сопровождение гособоронзаказа (275-ФЗ) и защита промышленных активов.",
-        "features": [
-            "Реестр выигранных судебных дел с суммами сохраненных активов",
-            "Презентация практики сопровождения контрактов ГОЗ и 223/44-ФЗ",
-            "Защищенный личный кабинет для конфиденциальной отправки документов",
-            "Экспресс-оценка судебных перспектив спора за 24 часа"
-        ],
-        "target_leads": "Юридические холдинги Екатеринбурга, адвокатские бюро, юр. отделы промышленных заводов и лесопромышленных холдингов Урала",
-        "pitch_talk": "«Уральские директора доверяют юристам только при железных доказательствах компетенций. Наш сайт структурирует выигранные споры и снимает страх судебных рисков»."
-    },
-    {
-        "id": "tpl-tourism",
-        "title": "Туристический Портал & Заповедники Урала",
-        "category": "Внутренний туризм, Экскурсии & Исторические Маршруты",
-        "badge": "АУЖД туры • Музей Нижней Синячихи • Бронирование онлайн",
-        "url": "https://globalteamgroup.github.io/tourism-sample/",
-        "demo_type": "Туристический региональный портал",
-        "desc": "Цифровая платформа бронирования путешествий по историческим местам Свердловской области: поездки по Алапаевской узкоколейке, Музей в Нижней Синячихе и самоцветные копи.",
-        "features": [
-            "Интерактивная карта туристических достопримечательностей с аудиогидами",
-            "Бронирование билетов на поезд АУЖД и групповых экскурсий онлайн",
-            "Календарь народных праздников и фестивалей в Нижней Синячихе",
-            "Готовые пакетные туры выходного дня из Екатеринбурга"
-        ],
-        "target_leads": "Алапаевская узкоколейная ж/д (АУЖД туризм), Музей деревянного зодчества (Нижняя Синячиха), Центр развития туризма Свердловской области",
-        "pitch_talk": "«Туристы из Москвы и Питера хотят приехать на АУЖД и в Синячиху, но не могут купить билет и заказать гида в интернете. Наша система дает им европейский сервис бронирования»."
-    },
-    {
-        "id": "tpl-cleaning",
-        "title": "Промышленный Клининг & Фасадный Сервис «Luxury Cleaning»",
-        "category": "Клининг Предприятий, Фасадные Работы & Склады",
-        "badge": "Обеспыливание цехов • Мойка остекления • Склады Класса А",
-        "url": "https://globalteamgroup.github.io/luxury-cleaning-sample/",
-        "demo_type": "Сайт индустриального и премиум клининга",
-        "desc": "Портал промышленного клининга: уборка производственных цехов, обеспыливание ферм и балок на высоте, мытье панорамных фасадов и складских терминалов.",
-        "features": [
-            "Интерактивный калькулятор клининга производственных и складских площадей",
-            "Презентация парка профессиональной уборочной техники и промальпинистов",
-            "Чек-листы стандартов санитарной чистоты для пищевых и фармацевтических производств",
-            "Заключение регулярных B2B-контрактов с постоплатой"
-        ],
-        "target_leads": "Службы клининга заводов Свеза, ВСЗ, логистические склады Екатеринбурга, ТРЦ и бизнес-центры",
-        "pitch_talk": "«Главный инженер завода требует строгих допусков к высотным работам в цехах. Наш сайт наглядно демонстрирует квалификацию бригад и специализированное оборудование»."
-    },
-    {
-        "id": "tpl-sports",
-        "title": "Премиальный Фитнес-Холдинг & Спорткомплекс «Sports Fitness»",
-        "category": "Спортивные Центры, Фитнес & Бассейны",
-        "badge": "3D-Тур по залам • Расписание онлайн • Продажа карт",
-        "url": "https://globalteamgroup.github.io/sports-fitness-sample/",
-        "demo_type": "Интерактивный портал спортивного комплекса",
-        "desc": "Цифровая экосистема фитнес-клуба и спорткомплекса: 3D-экскурсия по тренажерным залам и бассейну, расписание групповых программ и покупка абонементов.",
-        "features": [
-            "Интерактивное расписание тренировок с фильтром по направлениям и залам",
-            "Выбор и бронирование персонального тренера с видео-визитками",
-            "Онлайн-продажа клубных карт и заморозка абонементов через личный кабинет",
-            "3D-тур по бассейну, саунам и кардио-зонам"
-        ],
-        "target_leads": "ФОК «Орион» (Верхняя Синячиха), ДЮСШ Алапаевска, фитнес-сети Екатеринбурга (Drive Fitness, Bright Fit, World Class)",
-        "pitch_talk": "«Клиенты спортклубов привыкли всё делать со смартфона: посмотреть расписание, купить абонемент, забронировать дорожку в бассейне. Наш портал автоматизирует всю работу рецепции»."
-    },
-    {
-        "id": "tpl-beauty",
-        "title": "Студия Красоты & Эстетического Ухода «Beauty Studio»",
-        "category": "Индустрия Красоты, Салоны & Спа",
-        "badge": "Онлайн-запись к мастерам • Фотогалерея работ • Сертификаты",
-        "url": "https://globalteamgroup.github.io/beauty-studio-sample/",
-        "demo_type": "Элегантный сайт бьюти-студии",
-        "desc": "Премиальный портал для салонов красоты и спа: визуализированное портфолио работ стилистов, онлайн-запись в 2 клика и покупка подарочных сертификатов.",
-        "features": [
-            "Удобный виджет онлайн-записи к конкретному мастеру и на определенное время",
-            "Галерея образов с фильтрами по типам услуг (окрашивание, стрижки, уходы)",
-            "Онлайн-оплата подарочных сертификатов с отправкой в мессенджер",
-            "Интеграция с системой лояльности и напоминаниями о визите"
-        ],
-        "target_leads": "Салоны красоты Екатеринбурга и Алапаевска, спа-центры, косметологические кабинеты",
-        "pitch_talk": "«Девушки выбирают мастера по фотографиям его работ и удобству записи в один клик без звонков. Наш сайт превращает 85% посетителей в постоянных клиентов»."
-    },
-    {
         "id": "tpl-geotochka",
         "title": "Геоточка — Сеть Складов & Точек на Яндекс Картах",
-        "category": "Гео-Маркетинг, Сетевой Ритейл & Дилеры",
+        "category": "Пищепром & Агро",
         "badge": "Локальное SEO • Яндекс Карты • Сеть баз",
         "url": "https://globalteampartners.github.io/geotochka/",
         "demo_type": "Геолокационная платформа сети",
@@ -344,7 +225,7 @@ TEMPLATES_CATALOG = [
     {
         "id": "tpl-tentorium",
         "title": "Тенториум: Презентация Производства & B2B Сеть",
-        "category": "Франчайзинг, B2B-Дистрибуция & Фабрики",
+        "category": "Пищепром & Агро",
         "badge": "3D-Производство • Личный кабинет B2B • Франшиза",
         "url": "https://globalteampartners.github.io/tentorium-presentation/",
         "demo_type": "Презентация фабрики и партнерской сети",
@@ -359,26 +240,26 @@ TEMPLATES_CATALOG = [
         "pitch_talk": "«Когда крупный федеральный закупщик выбирает поставщика, ему мало прайса в Excel. Мы показываем ему цифровой интерактивный завод: мощности, контроль качества и форму заказа партии за 3 клика»."
     },
     {
-        "id": "tpl-vtvip",
-        "title": "Визуализированный Трансфер (VT-VIP)",
-        "category": "VIP-Транспорт, Туризм & Спецперевозки",
-        "badge": "Парк техники • Бронирование рейсов • Туризм",
-        "url": "https://globalteampartners.github.io/vt-vip/",
-        "demo_type": "Представительский транспорт & маршруты",
-        "desc": "Цифровая платформа заказа представительского трансфера, туристических маршрутов, спецтехники и экскурсионных пакетов с выбором класса обслуживания.",
+        "id": "tpl-tourism",
+        "title": "Туристический Портал & Заповедники Урала",
+        "category": "Туризм, Спорт & Услуги",
+        "badge": "АУЖД туры • Музей Нижней Синячихи • Бронирование онлайн",
+        "url": "https://globalteamgroup.github.io/tourism-sample/",
+        "demo_type": "Туристический региональный портал",
+        "desc": "Цифровая платформа бронирования путешествий по историческим местам Свердловской области: поездки по Алапаевской узкоколейке, Музей в Нижней Синячихе, спорткомплекс Орион и самоцветные копи.",
         "features": [
-            "Визуализированный каталог автопарка и подвижного состава",
-            "Конструктор туристических маршрутов с остановками и гидом",
-            "Моментальный расчет стоимости по километражу и классу комфорта",
-            "Онлайн-оплата билетов с получением посадочного талона в мессенджер"
+            "Интерактивная карта туристических достопримечательностей с аудиогидами",
+            "Бронирование билетов на поезд АУЖД и групповых экскурсий онлайн",
+            "Календарь народных праздников и фестивалей в Нижней Синячихе",
+            "Готовые пакетные туры выходного дня из Екатеринбурга"
         ],
-        "target_leads": "Алапаевская узкоколейная ж/д (АУЖД туризм), Музей деревянного зодчества (Нижняя Синячиха), ООО «Синячиха-Лес» (лесотранспорт), трансферные парки отелей",
-        "pitch_talk": "«На АУЖД и в музей Нижней Синячихи едут туристы со всей страны, но они не могут купить билет и выбрать вагон онлайн. Наша система позволяет москвичу или екатеринбуржцу забронировать ретропоезд с телефона за 1 минуту»."
+        "target_leads": "Алапаевская узкоколейная ж/д (АУЖД туризм), Музей деревянного зодчества (Нижняя Синячиха), ФОК «Орион», Центр развития туризма Свердловской области",
+        "pitch_talk": "«Туристы из Москвы и Питера хотят приехать на АУЖД и в Синячиху, но не могут купить билет и заказать гида в интернете. Наша система дает им европейский сервис бронирования»."
     },
     {
         "id": "tpl-globalplus",
         "title": "Global Plus | Премиальные Веб-Решения для Бизнеса",
-        "category": "Шоурил, Веб-Агентство & B2B-Кейсы",
+        "category": "Шоурил Global Plus",
         "badge": "Cinematic Scroll • Разработка за 48 часов • B2B-Лидогенерация",
         "url": "https://globalteamgroup.github.io/global-plus/",
         "demo_type": "Официальный презентационный портал агентства",
@@ -718,6 +599,13 @@ templates_page_html = f"""<!DOCTYPE html>
 </head>
 <body>
 
+<!-- КИНЕМАТОГРАФИЧЕСКИЙ ФОН GLOBAL PLUS -->
+<div class="cinematic-bg-wrap">
+    <video class="cinematic-video" autoplay muted loop playsinline src="assets/videos/machinery.mp4"></video>
+    <div class="cinematic-overlay"></div>
+    <div class="grain-overlay"></div>
+</div>
+
 <div class="top-nav">
     <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
     <div style="color: var(--gold); font-size: 0.85rem; font-weight: 600;">Global Plus &times; GlobalTeamPartners</div>
@@ -730,25 +618,18 @@ templates_page_html = f"""<!DOCTYPE html>
         <p class="subtitle">Кинематографичные сайты с видеофоном, 60fps-скроллом и ИИ-модулями, разработанные студией Global Plus. Открывай прямо на планшете перед уральскими директорами или отправляй ссылку в WhatsApp.</p>
     </div>
 
-        <!-- ФИЛЬТРЫ ПО ОТРАСЛЯМ -->
+        <!-- ФИЛЬТРЫ ПО ЦЕЛЕВЫМ ОТРАСЛЯМ УРАЛА -->
     <div class="filter-panel">
         <button class="filter-btn active" data-filter="all">Все шаблоны ({len(TEMPLATES_CATALOG)})</button>
         <button class="filter-btn" data-filter="Лесопромышленность & Деревообработка">🌲 Лес & Фанера</button>
-        <button class="filter-btn" data-filter="Тяжелая Промышленность, Металлоконструкции & Ангары">🏭 Металлоконструкции & Заводы</button>
-        <button class="filter-btn" data-filter="Машиностроение, Спецтехника & Гидравлика">⚙️ Спецтехника & Машиностроение</button>
-        <button class="filter-btn" data-filter="Строительство, Генподряд & Промышленный Монтаж">🏗️ Строительство & Генподряд</button>
-        <button class="filter-btn" data-filter="Девелопмент, Клубные Дома & Коттеджные Поселки">🏙️ Девелопмент & ЖК</button>
-        <button class="filter-btn" data-filter="Медицина, Диагностика & Частные Клиники">💉 Медицина & Клиники</button>
-        <button class="filter-btn" data-filter="Стоматология, Имплантация & Эстетика">🦷 Стоматология & Эстетика</button>
-        <button class="filter-btn" data-filter="Автобизнес, Детейлинг & Автосалоны">🏎️ Авто & Детейлинг</button>
-        <button class="filter-btn" data-filter="Премиум Отели, Загородные Клубы & Базы Отдыха">🏨 Отели & Базы Отдыха</button>
-        <button class="filter-btn" data-filter="Рестораны, Гастрономия & Банкеты">🍷 Рестораны & Банкеты</button>
-        <button class="filter-btn" data-filter="Промышленная автоматизация, SCADA & B2B-Инжиниринг">💻 IT & АСУ ТП</button>
-        <button class="filter-btn" data-filter="Корпоративное право, Арбитраж & Защита Активов">⚖️ Юриспруденция</button>
-        <button class="filter-btn" data-filter="Внутренний туризм, Экскурсии & Исторические Маршруты">🚂 Туризм & АУЖД</button>
-        <button class="filter-btn" data-filter="Гео-Маркетинг, Сетевой Ритейл & Дилеры">📍 Геоточка</button>
-        <button class="filter-btn" data-filter="Франчайзинг, B2B-Дистрибуция & Фабрики">🏭 Фабрики & Франшиза</button>
-        <button class="filter-btn" data-filter="Шоурил, Веб-Агентство & B2B-Кейсы">🌐 Шоурил Global Plus</button>
+        <button class="filter-btn" data-filter="Машиностроение & Металл">⚙️ Машиностроение & Заводы</button>
+        <button class="filter-btn" data-filter="Девелопмент & Недвижимость">🏙️ Девелопмент & Генподряд</button>
+        <button class="filter-btn" data-filter="Медицина & Эстетика">💉 Медицина & Эстетика</button>
+        <button class="filter-btn" data-filter="Авто & Детейлинг">🏎️ Авто & Детейлинг</button>
+        <button class="filter-btn" data-filter="HoReCa & Отели">🏨 HoReCa & Отели</button>
+        <button class="filter-btn" data-filter="Пищепром & Агро">🥛 Пищепром & Агро</button>
+        <button class="filter-btn" data-filter="Туризм, Спорт & Услуги">🚂 Туризм, Спорт & Услуги</button>
+        <button class="filter-btn" data-filter="Шоурил Global Plus">🌐 Шоурил Global Plus</button>
     </div>
 
     <!-- СЕТКА КАРТОЧЕК ШАБЛОНОВ -->
@@ -1097,6 +978,13 @@ index_html = f"""<!DOCTYPE html>
 </head>
 <body>
 
+<!-- КИНЕМАТОГРАФИЧЕСКИЙ ФОН GLOBAL PLUS -->
+<div class="cinematic-bg-wrap">
+    <video class="cinematic-video" autoplay muted loop playsinline src="assets/videos/machinery.mp4"></video>
+    <div class="cinematic-overlay"></div>
+    <div class="grain-overlay"></div>
+</div>
+
 <header>
     <div class="brand-pill">GLOBAL PLUS &times; GLOBAL TEAM PARTNERS</div>
     <h1>Уральский Центр Продаж <span class="cross">&times;</span> <span class="highlight">Штаб Димы</span></h1>
@@ -1298,6 +1186,16 @@ index_html = f"""<!DOCTYPE html>
             <div class="demo-subtitle">Detailing Alarm, Порше Центр, Автобан — 60fps скролл авто и бронепленка</div>
             <a href="https://globalteamgroup.github.io/elite-detailing/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Elite Detailing</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        
+        <div class="demo-card">
+            <div class="demo-title">🚜 Сервис Спецтехники &amp; Автоколонн</div>
+            <div class="demo-subtitle">СТО Синячихи, автобазы лесовозов — вызов мобильного механика и заказ запчастей</div>
+            <a href="demos/service-demo/index.html" class="demo-link" target="_blank">
+                <span>Открыть Сервисный Портал</span>
                 <span>&nearr;</span>
             </a>
         </div>
@@ -2034,6 +1932,13 @@ comprehensive_html = f"""<!DOCTYPE html>
 </head>
 <body>
 
+<!-- КИНЕМАТОГРАФИЧЕСКИЙ ФОН GLOBAL PLUS -->
+<div class="cinematic-bg-wrap">
+    <video class="cinematic-video" autoplay muted loop playsinline src="assets/videos/machinery.mp4"></video>
+    <div class="cinematic-overlay"></div>
+    <div class="grain-overlay"></div>
+</div>
+
 <div class="top-nav">
     <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
     <div style="font-size: 0.85rem; color: var(--gold);">62 готовых коммерческих расчета с шаблонами сайтов</div>
@@ -2273,6 +2178,13 @@ deck_html = f"""<!DOCTYPE html>
 </head>
 <body>
 
+<!-- ДИНАМИЧЕСКИЙ ОТРАСЛЕВОЙ ВИДЕОФОН GLOBAL PLUS -->
+<div class="cinematic-bg-wrap">
+    <video id="bgVideo" class="cinematic-video" autoplay muted loop playsinline src="assets/videos/machinery.mp4"></video>
+    <div class="cinematic-overlay"></div>
+    <div class="grain-overlay"></div>
+</div>
+
 <div class="watermark">
     <span>ГЛОБАЛ ПЛЮС &times; GLOBAL TEAM PARTNERS</span>
     <a href="Leads_List.html" class="btn-exit">&larr; В базу лидов</a>
@@ -2280,7 +2192,7 @@ deck_html = f"""<!DOCTYPE html>
 
 <!-- СЛАЙД 0: ТИТУЛ -->
 <div class="slide active" id="slide0">
-    <div class="pill-tag">СТРАТЕГИЧЕСКОЕ ПРЕДЛОЖЕНИЕ 2026</div>
+    <div class="pill-tag" id="d-sector-tag">СТРАТЕГИЧЕСКОЕ ПРЕДЛОЖЕНИЕ 2026</div>
     <h1 id="d-name">Название Компании</h1>
     <h2 id="d-focus">Специализация предприятия</h2>
     <p class="body-text">Персональная программа цифровой трансформации сбыта, ликвидации потерь и внедрения ИИ-инфраструктуры.</p>
@@ -2349,7 +2261,35 @@ deck_html = f"""<!DOCTYPE html>
     document.getElementById('d-template').title = currentCompany.template_name;
     document.getElementById('d-roi').innerText = currentCompany.roi_desc;
     document.getElementById('d-price').innerText = currentCompany.price_setup + " | Абонентка: " + currentCompany.price_retainer;
+    document.getElementById('d-sector-tag').innerText = "ИНДУСТРИЯ: " + currentCompany.sector.toUpperCase();
     document.title = currentCompany.name + " — Стратегическая Презентация";
+
+    // ДИНАМИЧЕСКИЙ ОТРАСЛЕВОЙ ВИДЕОФОН
+    const SECTOR_VIDEOS = {{
+        "Лесопромышленность & Деревообработка": "assets/videos/wood.mp4",
+        "Машиностроение & Металл": "assets/videos/machinery.mp4",
+        "Девелопмент & Недвижимость": "assets/videos/estate.mp4",
+        "Медицина & Эстетика": "assets/videos/clinic.mp4",
+        "Авто & Детейлинг": "assets/videos/auto.mp4",
+        "HoReCa & Отели": "assets/videos/horeca.mp4",
+        "Пищепром & Агро": "assets/videos/agro.mp4",
+        "Туризм, Спорт & Услуги": "assets/videos/tourism.mp4"
+    }};
+
+    let videoFile = SECTOR_VIDEOS[currentCompany.sector] || "assets/videos/machinery.mp4";
+    const cid = (currentCompany.id || "").toLowerCase();
+    const cfocus = (currentCompany.focus || "").toLowerCase();
+    if (cid.includes("denta") || cfocus.includes("стоматолог")) {{
+        videoFile = "assets/videos/dental.mp4";
+    }} else if (cid.includes("stroy") || cfocus.includes("генподряд") || cfocus.includes("монтаж") || cfocus.includes("строительств")) {{
+        videoFile = "assets/videos/stroyka.mp4";
+    }}
+
+    const bgVid = document.getElementById('bgVideo');
+    if (bgVid) {{
+        bgVid.src = videoFile;
+        bgVid.play().catch(e => console.log('Autoplay:', e));
+    }}
 
     // Слайдер
     let curSlide = 0;
@@ -2540,11 +2480,18 @@ pager_html = f"""<!DOCTYPE html>
     @media print {{
         body {{ background: #fff; padding: 0; }}
         .sheet {{ box-shadow: none; padding: 40px; }}
-        .btn-print {{ display: none; }}
+        .btn-print, .cinematic-bg-wrap {{ display: none !important; }}
     }}
 </style>
 </head>
 <body>
+
+<!-- ДИНАМИЧЕСКИЙ ОТРАСЛЕВОЙ ВИДЕОФОН GLOBAL PLUS -->
+<div class="cinematic-bg-wrap">
+    <video id="bgVideo" class="cinematic-video" autoplay muted loop playsinline src="assets/videos/machinery.mp4"></video>
+    <div class="cinematic-overlay"></div>
+    <div class="grain-overlay"></div>
+</div>
 
 <button class="btn-print" onclick="window.print()">🖨️ Печать / Сохранить в PDF</button>
 
@@ -2648,6 +2595,33 @@ pager_html = f"""<!DOCTYPE html>
     document.getElementById('d-p3').innerText = c.price_retainer;
     document.getElementById('d-roi').innerText = "✓ " + c.roi_desc;
     document.title = "КП: " + c.name + " | Глобал Плюс";
+
+    // ДИНАМИЧЕСКИЙ ОТРАСЛЕВОЙ ВИДЕОФОН
+    const SECTOR_VIDEOS = {{
+        "Лесопромышленность & Деревообработка": "assets/videos/wood.mp4",
+        "Машиностроение & Металл": "assets/videos/machinery.mp4",
+        "Девелопмент & Недвижимость": "assets/videos/estate.mp4",
+        "Медицина & Эстетика": "assets/videos/clinic.mp4",
+        "Авто & Детейлинг": "assets/videos/auto.mp4",
+        "HoReCa & Отели": "assets/videos/horeca.mp4",
+        "Пищепром & Агро": "assets/videos/agro.mp4",
+        "Туризм, Спорт & Услуги": "assets/videos/tourism.mp4"
+    }};
+
+    let videoFile = SECTOR_VIDEOS[c.sector] || "assets/videos/machinery.mp4";
+    const cid = (c.id || "").toLowerCase();
+    const cfocus = (c.focus || "").toLowerCase();
+    if (cid.includes("denta") || cfocus.includes("стоматолог")) {{
+        videoFile = "assets/videos/dental.mp4";
+    }} else if (cid.includes("stroy") || cfocus.includes("генподряд") || cfocus.includes("монтаж") || cfocus.includes("строительств")) {{
+        videoFile = "assets/videos/stroyka.mp4";
+    }}
+
+    const bgVid = document.getElementById('bgVideo');
+    if (bgVid) {{
+        bgVid.src = videoFile;
+        bgVid.play().catch(e => console.log('Autoplay:', e));
+    }}
 </script>
 
 </body>
@@ -2743,7 +2717,7 @@ solo_strategy_raw_md = """# 🐺 Плейбук Димы: Стратегия Н�
 | **Рестораны & Банкеты** (Троекуровъ, Kitchen, Сойка, Гастроли) | [Ресторанное Демо](demos/horeca-demo/index.html) | Интерактивная схема панорамных столиков, банкетный калькулятор меню и внесение депозита онлайн. |
 | **Ритейл & Молоко/Мясо** (Талицкое молоко, СМАК, Черкашин, АМК) | [Геоточка (Яндекс Карты)](https://globalteampartners.github.io/geotochka/) | Карта присутствия с автопоиском ближайшей фирменной точки свежей продукции для оптовиков и покупателей. |
 | **Фабрики & Франшизы** (Птицефабрика, Alma Ceramica, АДОЗ, АЛХ) | [Тенториум Фабрика](https://globalteampartners.github.io/tentorium-presentation/) | 3D-тур по цехам, лаборатории контроля чистоты ISO/HACCP и оптовый дистрибьюторский кабинет. |
-| **Туризм & АУЖД** (АУЖД узкоколейка, Музей Синячихи, отели) | [Туризм Урала](https://globalteamgroup.github.io/tourism-sample/) & [VT-VIP](https://globalteampartners.github.io/vt-vip/) | Онлайн-покупка билетов на ретропоезд и бронирование экскурсионных пакетов с выбором вагона и гида. |
+| **Туризм & АУЖД** (АУЖД узкоколейка, Музей Синячихи, отели) | [Туристический Портал Урала](https://globalteamgroup.github.io/tourism-sample/) | Онлайн-покупка билетов на ретропоезд и бронирование экскурсионных пакетов с выбором вагона и гида. |
 | **Шоурил Global Plus** (Визитка агентства для всех директоров) | [Global Plus (globalplus.tech)](https://globalteamgroup.github.io/global-plus/) | Презентация возможностей агентства: Cinematic Scroll, кейсы удвоения B2B-конверсий и запуск за 48 часов. |
 
 ---
