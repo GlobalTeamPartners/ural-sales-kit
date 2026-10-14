@@ -1,0 +1,4 @@
+scratch/
+obsidian_scan.txt
+*.pyc
+__pycache__/

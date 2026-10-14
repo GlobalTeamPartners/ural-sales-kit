@@ -13,10 +13,10 @@
     "price_retainer": "65 000 ₽/мес",
     "roi_desc": "Экономия до 120 часов работы отдела кадров в месяц, сокращение времени оформления B2B-отгрузок в 3 раза.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром B2B + Tentorium Фабрика",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "B2B-калькулятор партий + презентация производства",
-    "template_desc": "Интерактивный расчет вагонных партий фанеры/тары по ГОСТу, видеопрезентация производственных мощностей."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "lestech-sinichikha",
@@ -32,10 +32,10 @@
     "price_retainer": "45 000 ₽/мес",
     "roi_desc": "Рост конверсии оптовых заявок на 35%, выход на новых дистрибьюторов в Екатеринбурге, Тюмени и ХМАО.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром B2B + Tentorium Фабрика",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "B2B-калькулятор партий + презентация производства",
-    "template_desc": "Интерактивный расчет вагонных партий фанеры/тары по ГОСТу, видеопрезентация производственных мощностей."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "leshim-sinichikha",
@@ -51,10 +51,10 @@
     "price_retainer": "35 000 ₽/мес",
     "roi_desc": "Нулевая потеря входящих лидов в выходные и ночные смены, окупаемость за первую крупную отгрузку.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "Калькулятор партий фанеры и кубатуры по ГОСТ",
-    "template_desc": "Моментальный расчет вагонных и фурных партий фанеры (ФК/ФСФ) и пиломатериалов, автоматическая выписка спецификаций и счетов 24/7."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "fok-orion",
@@ -70,10 +70,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Снижение оттока клиентов на 25%, 100% предоплата абонементов онлайн без очередей у стойки администратора.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "VT-VIP & Geotochka | Логистика, Туризм & Геоприсутствие",
-    "template_url": "https://globalteampartners.github.io/vt-vip/",
-    "template_badge": "Интерактивный туризм & представительский трансфер",
-    "template_desc": "Визуализированный выбор маршрутов и подвижного состава, продажа турпакетов онлайн, интеграция с Яндекс Картами."
+    "template_name": "Sports Fitness | Спортивный Комплекс & Фитнес",
+    "template_url": "https://globalteamgroup.github.io/sports-fitness-sample/",
+    "template_badge": "Расписание секций • Бассейн • Покупка абонементов",
+    "template_desc": "3D-тур по залам и бассейну, интерактивное расписание детских и взрослых секций, онлайн-оплата клубных карт."
   },
   {
     "id": "nizhnyaya-sinichikha-museum",
@@ -108,10 +108,10 @@
     "price_retainer": "35 000 ₽/мес",
     "roi_desc": "Сокращение простоев лесовозной техники на 18%, прозрачный учет топлива и рейсов.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "Калькулятор партий фанеры и кубатуры по ГОСТ",
-    "template_desc": "Моментальный расчет вагонных и фурных партий фанеры (ФК/ФСФ) и пиломатериалов, автоматическая выписка спецификаций и счетов 24/7."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "mup-energoresurs-sinichikha",
@@ -146,10 +146,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Повышение пропускной способности ремзоны на 20%, рост среднего чека за счет прозрачных согласований.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Сервисный Центр Спецтехники & Автоколонн",
+    "template_url": "demos/service-demo/index.html",
+    "template_badge": "Парк спецтехники • Заказ запчастей • Выездные бригады",
+    "template_desc": "B2B-портал сервисного обслуживания лесовозов, кранов и спецтехники: вызов выездной бригады, заказ запчастей и сервисные B2B-договоры."
   },
   {
     "id": "stroydormash-alapaevsk",
@@ -222,10 +222,10 @@
     "price_retainer": "40 000 ₽/мес",
     "roi_desc": "Прямой выход на снабженцев оборонных и приборостроительных холдингов, контракт на десятки миллионов рублей.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром B2B + Tentorium Фабрика",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "B2B-калькулятор партий + презентация производства",
-    "template_desc": "Интерактивный расчет вагонных партий фанеры/тары по ГОСТу, видеопрезентация производственных мощностей."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "alh-alapaevsk",
@@ -241,10 +241,10 @@
     "price_retainer": "55 000 ₽/мес",
     "roi_desc": "Повышение лояльности контрагентов, заключение годовых прямых договоров без посредников.",
     "demo_link": "demos/wood-industry-demo/index.html",
-    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины",
+    "template_name": "УралЛесПром | Оптовый B2B-Портал Древесины & Фанеры",
     "template_url": "demos/wood-industry-demo/index.html",
-    "template_badge": "Калькулятор партий фанеры и кубатуры по ГОСТ",
-    "template_desc": "Моментальный расчет вагонных и фурных партий фанеры (ФК/ФСФ) и пиломатериалов, автоматическая выписка спецификаций и счетов 24/7."
+    "template_badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
+    "template_desc": "Автоматизированная B2B-система для оптовых комбинатов: моментальный расчет вагонных партий фанеры и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи."
   },
   {
     "id": "asm-alapaevsk",
@@ -355,10 +355,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Экономия до 15% комиссий агрегаторов, увеличение загрузки номеров в низкий сезон на 20%.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "hermitage-alapaevsk",
@@ -374,10 +374,10 @@
     "price_retainer": "30 000 ₽/мес",
     "roi_desc": "Рост бронирований банкетных мероприятий на 30%, окупаемость за 2 проведенных корпоратива.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "auzhd-alapaevsk",
@@ -412,10 +412,10 @@
     "price_retainer": "30 000 ₽/мес",
     "roi_desc": "100% предоплата бронирований без срывов заездов, заполняемость в будние дни +35%.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "autolider-alapaevsk",
@@ -431,10 +431,10 @@
     "price_retainer": "25 000 ₽/мес",
     "roi_desc": "Повторные визиты автовладельцев вырастают на 45%, полная загрузка постов ТО в будни.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "zdorovie-denta-alapaevsk",
@@ -450,10 +450,10 @@
     "price_retainer": "35 000 ₽/мес",
     "roi_desc": "Снижение неявок пациентов на 60%, рост продаж высокочековых услуг (имплантация, протезирование).",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Люмьер | Стоматология & Эстетическая Медицина",
+    "template_url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
+    "template_badge": "3D-Моделирование • Протоколы До/После • Запись VIP",
+    "template_desc": "Интерактивная демонстрация эстетических протоколов, 3D-моделирование улыбок, фотопротоколы До/После и запись на консультацию."
   },
   {
     "id": "uralmashplant",
@@ -469,10 +469,10 @@
     "price_retainer": "190 000 ₽/мес",
     "roi_desc": "Сокращение времени на согласование заказной спецификации тяжелой техники, защита от контрафактных запчастей.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "uzga-ekb",
@@ -488,10 +488,10 @@
     "price_retainer": "120 000 ₽/мес",
     "roi_desc": "Привлечение лучших выпускников технических вузов со всей страны, снижение стоимости найма инженера на 35%.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "sinara-transport-machines",
@@ -507,10 +507,10 @@
     "price_retainer": "160 000 ₽/мес",
     "roi_desc": "Сокращение времени простоя железнодорожной техники на техническом обслуживании на 22%.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "pnevmostroymashina-psm",
@@ -526,10 +526,10 @@
     "price_retainer": "85 000 ₽/мес",
     "roi_desc": "Увеличение импортозамещающих продаж гидравлики на 50 000 000+ ₽ за счет автоматического кросс-подбора.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "ural-turbine-plant",
@@ -545,10 +545,10 @@
     "price_retainer": "130 000 ₽/мес",
     "roi_desc": "Включение турбин УТЗ в проектную документацию ТЭЦ на самых ранних стадиях тендерных процедур.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "tmk-sintz",
@@ -564,10 +564,10 @@
     "price_retainer": "150 000 ₽/мес",
     "roi_desc": "Ускорение оборачиваемости складских запасов трубного проката на 15%.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "viz-steel",
@@ -583,10 +583,10 @@
     "price_retainer": "110 000 ₽/мес",
     "roi_desc": "Укрепление премиального ценового позиционирования стали высших марок.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "alma-ceramica",
@@ -602,10 +602,10 @@
     "price_retainer": "95 000 ₽/мес",
     "roi_desc": "Рост объемов комплектации строящихся жилых комплексов Екатеринбурга и Тюмени плиткой Alma Ceramica на 28%.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "B2B Heavy Machinery & Equipment Configurator",
-    "template_url": "demos/machinery-demo/index.html",
-    "template_badge": "3D-селектор техники & подбор инструмента",
-    "template_desc": "Интерактивный конфигуратор буровых установок и гидромоторов, подбор инструмента под тип грунта и выгрузка счетов за 15 секунд."
+    "template_name": "Завод Металлоконструкций ЗКСК (Промышленность & Металлообработка)",
+    "template_url": "https://globalteamgroup.github.io/zksk-sample/",
+    "template_badge": "3D-Каркасы • Расчет металлоемкости • Портфолио 500 000 м²",
+    "template_desc": "Интерактивный портал промышленного предприятия: 3D-моделирование каркасов, расчет стоимости тоннажа, портфолио сданных объектов и сертификаты качества."
   },
   {
     "id": "brusnika-developer",
@@ -621,10 +621,10 @@
     "price_retainer": "180 000 ₽/мес",
     "roi_desc": "Рост конверсии из визита сайта в бронирование квартиры на 24%, сокращение стоимости привлеченного покупателя на 3 200 ₽.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "atomstroykomplex",
@@ -640,10 +640,10 @@
     "price_retainer": "160 000 ₽/мес",
     "roi_desc": "Увеличение вовлеченности покупателей на сайте в 2 раза, рост числа онлайн-броней квартир на 30%.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "ugmk-zastroyschik",
@@ -659,10 +659,10 @@
     "price_retainer": "210 000 ₽/мес",
     "roi_desc": "Продажа 2 дополнительных пентхаусов за счет безупречной цифровой презентации (чек сделки от 45 000 000 ₽).",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "forum-group-ekb",
@@ -678,10 +678,10 @@
     "price_retainer": "140 000 ₽/мес",
     "roi_desc": "Ускорение сдачи коммерческих площадей первым этажам на 35%, повышение капитализации объектов.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "prinzip-developer",
@@ -697,10 +697,10 @@
     "price_retainer": "130 000 ₽/мес",
     "roi_desc": "Снижение стоимости квалифицированного лида в отдел продаж на 28%, увеличение глубины просмотра сайта.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "kortros-akademichesky",
@@ -716,10 +716,10 @@
     "price_retainer": "135 000 ₽/мес",
     "roi_desc": "Автоматическая квалификация до 1 500 входящих обращений в месяц без раздувания штата колл-центра.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "sinara-development",
@@ -735,10 +735,10 @@
     "price_retainer": "120 000 ₽/мес",
     "roi_desc": "Рост доверия покупателей к перспективам локации, увеличение темпов предварительных продаж квартир.",
     "demo_link": "demos/real-estate-demo/index.html",
-    "template_name": "Belgrade Waterfront | Premium Real Estate",
-    "template_url": "https://globalteampartners.github.io/belgrade-waterfront-demo/",
-    "template_badge": "Кинематографичный портал клубных домов & 3D-планировки",
-    "template_desc": "Презентация архитектурных проектов, виртуальный тур по видовым квартирам, AI-ипотечный калькулятор и бронирование."
+    "template_name": "Luxury Estate | Девелопмент Клубных Кварталов & Поселков",
+    "template_url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+    "template_badge": "Интерактивный генплан • 3D-Фасады • Чат инвесторов",
+    "template_desc": "Кинематографичный портал девелопера: интерактивный выбор планировок, видовые панорамы этажей, расчет ипотеки и закрытая бронь квартир."
   },
   {
     "id": "hyatt-regency-ekb",
@@ -754,10 +754,10 @@
     "price_retainer": "85 000 ₽/мес",
     "roi_desc": "Рост выручки ресторанов и СПА отеля на 20% за счет моментального допродажи услуг постояльцам.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "hyatt-place-ekb",
@@ -773,10 +773,10 @@
     "price_retainer": "60 000 ₽/мес",
     "roi_desc": "Сокращение времени обработки B2B-заявок на конференции с 4 часов до 3 минут, рост загрузки залов.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "troekurov-restaurant",
@@ -792,10 +792,10 @@
     "price_retainer": "65 000 ₽/мес",
     "roi_desc": "Привлечение статусных гостей из Москвы и зарубежных делегаций, увеличение среднего чека банкетов на 30%.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "Ресторан Авторской Кухни & Банкетный Комплекс",
+    "template_url": "demos/horeca-demo/index.html",
+    "template_badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
+    "template_desc": "Премиальный ресторанный портал: интерактивная карта столиков с видом, банкетный калькулятор меню и внесение депозита онлайн."
   },
   {
     "id": "kitchen-restaurant-ekb",
@@ -811,10 +811,10 @@
     "price_retainer": "50 000 ₽/мес",
     "roi_desc": "Снижение неявок по броням (no-show) до 0%, дополнительная выручка от депозитной системы в выходные дни.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "Ресторан Авторской Кухни & Банкетный Комплекс",
+    "template_url": "demos/horeca-demo/index.html",
+    "template_badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
+    "template_desc": "Премиальный ресторанный портал: интерактивная карта столиков с видом, банкетный калькулятор меню и внесение депозита онлайн."
   },
   {
     "id": "soyka-restaurant-ekb",
@@ -830,10 +830,10 @@
     "price_retainer": "45 000 ₽/мес",
     "roi_desc": "Увеличение заказа высокомаржинальных авторских коктейлей и десертов на 25%.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "Ресторан Авторской Кухни & Банкетный Комплекс",
+    "template_url": "demos/horeca-demo/index.html",
+    "template_badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
+    "template_desc": "Премиальный ресторанный портал: интерактивная карта столиков с видом, банкетный калькулятор меню и внесение депозита онлайн."
   },
   {
     "id": "gastroli-restaurant-ekb",
@@ -849,10 +849,10 @@
     "price_retainer": "40 000 ₽/мес",
     "roi_desc": "Удержание 90% гостей из очереди ожидания, повышение лояльности постоянных гостей.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "Ресторан Авторской Кухни & Банкетный Комплекс",
+    "template_url": "demos/horeca-demo/index.html",
+    "template_badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
+    "template_desc": "Премиальный ресторанный портал: интерактивная карта столиков с видом, банкетный калькулятор меню и внесение депозита онлайн."
   },
   {
     "id": "momo-pan-asian",
@@ -868,10 +868,10 @@
     "price_retainer": "55 000 ₽/мес",
     "roi_desc": "Экономия более 200 000 ₽ в месяц на комиссиях агрегаторов, рост базы лояльных клиентов на доставку.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "Ресторан Авторской Кухни & Банкетный Комплекс",
+    "template_url": "demos/horeca-demo/index.html",
+    "template_badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
+    "template_desc": "Премиальный ресторанный портал: интерактивная карта столиков с видом, банкетный калькулятор меню и внесение депозита онлайн."
   },
   {
     "id": "vysotsky-complex",
@@ -887,10 +887,10 @@
     "price_retainer": "95 000 ₽/мес",
     "roi_desc": "Увеличение пропускной способности смотровой площадки и бассейна на 30%, ликвидация очередей на первом этаже.",
     "demo_link": "demos/horeca-demo/index.html",
-    "template_name": "Salon 1905 | Fine Dining & Gastronomy",
-    "template_url": "https://globalteampartners.github.io/salon-1905-demo/",
-    "template_badge": "Премиальный ресторанный сайт & депозитное бронирование",
-    "template_desc": "Атмосферный видеоряд залов, интерактивное меню от шефа, выбор конкретных столиков и прием депозитов с нулевым no-show."
+    "template_name": "HoReCa Grand | Загородный Курорт & Спа-Отель",
+    "template_url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+    "template_badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
+    "template_desc": "Атмосферный кинематографичный видеоряд комплекса, бронирование номеров и коттеджей без комиссии агрегаторов, банный комплекс и ресторан."
   },
   {
     "id": "ugmk-health-clinic",
@@ -906,10 +906,10 @@
     "price_retainer": "190 000 ₽/мес",
     "roi_desc": "Разгрузка операторов колл-центра на 45%, устранение потерь пациентов в часы пик, рост записей на 18%.",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Европа | Многопрофильный Медицинский Центр",
+    "template_url": "https://globalteamgroup.github.io/europa-clinic/",
+    "template_badge": "Видеоряд клиники • Онлайн-запись • AI-Триаж симптомов",
+    "template_desc": "Премиальный медицинский портал: видеоряд операционных, онлайн-запись к докторам высшей категории, каталог диагностических услуг (МРТ, УЗИ)."
   },
   {
     "id": "nudelman-plastic-center",
@@ -925,10 +925,10 @@
     "price_retainer": "90 000 ₽/мес",
     "roi_desc": "Рост потока иногородних пациентов на пластические операции на 35% (средний чек операции от 250 000 ₽).",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Люмьер | Стоматология & Эстетическая Медицина",
+    "template_url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
+    "template_badge": "3D-Моделирование • Протоколы До/После • Запись VIP",
+    "template_desc": "Интерактивная демонстрация эстетических протоколов, 3D-моделирование улыбок, фотопротоколы До/После и запись на консультацию."
   },
   {
     "id": "zdorovie-365",
@@ -944,10 +944,10 @@
     "price_retainer": "85 000 ₽/мес",
     "roi_desc": "Увеличение повторных обращений к профильным врачам на 40%, рост пожизненной ценности пациента (LTV).",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Европа | Многопрофильный Медицинский Центр",
+    "template_url": "https://globalteamgroup.github.io/europa-clinic/",
+    "template_badge": "Видеоряд клиники • Онлайн-запись • AI-Триаж симптомов",
+    "template_desc": "Премиальный медицинский портал: видеоряд операционных, онлайн-запись к докторам высшей категории, каталог диагностических услуг (МРТ, УЗИ)."
   },
   {
     "id": "linline-clinics",
@@ -963,10 +963,10 @@
     "price_retainer": "70 000 ₽/мес",
     "roi_desc": "Повышение конверсии из консультации в оплату курса лазерных процедур на 32%.",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Люмьер | Стоматология & Эстетическая Медицина",
+    "template_url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
+    "template_badge": "3D-Моделирование • Протоколы До/После • Запись VIP",
+    "template_desc": "Интерактивная демонстрация эстетических протоколов, 3D-моделирование улыбок, фотопротоколы До/После и запись на консультацию."
   },
   {
     "id": "paracels-clinic",
@@ -982,10 +982,10 @@
     "price_retainer": "65 000 ₽/мес",
     "roi_desc": "Снижение срывов плановых операций из-за неполных анализов до нуля, рост доверия пациентов.",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Европа | Многопрофильный Медицинский Центр",
+    "template_url": "https://globalteamgroup.github.io/europa-clinic/",
+    "template_badge": "Видеоряд клиники • Онлайн-запись • AI-Триаж симптомов",
+    "template_desc": "Премиальный медицинский портал: видеоряд операционных, онлайн-запись к докторам высшей категории, каталог диагностических услуг (МРТ, УЗИ)."
   },
   {
     "id": "megadenta-clinic",
@@ -1001,10 +1001,10 @@
     "price_retainer": "60 000 ₽/мес",
     "roi_desc": "Рост согласий пациентов на тотальные планы лечения на 38%, окупаемость за 1 закрытый сложный кейс.",
     "demo_link": "demos/medical-demo/index.html",
-    "template_name": "Aesthetic Clinic & Medical Beauty",
-    "template_url": "https://globalteampartners.github.io/aesthetic-clinic-demo/",
-    "template_badge": "Кинематографичный портал клиники & онлайн-запись",
-    "template_desc": "Премиальный видеофон, презентация врачей, интерактивный калькулятор процедур, адаптивная форма онлайн-записи и триажа."
+    "template_name": "Клиника Люмьер | Стоматология & Эстетическая Медицина",
+    "template_url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
+    "template_badge": "3D-Моделирование • Протоколы До/После • Запись VIP",
+    "template_desc": "Интерактивная демонстрация эстетических протоколов, 3D-моделирование улыбок, фотопротоколы До/После и запись на консультацию."
   },
   {
     "id": "avtoban-group",
@@ -1020,10 +1020,10 @@
     "price_retainer": "130 000 ₽/мес",
     "roi_desc": "Увеличение доли прямых выкупов и продаж авто с пробегом на 22%, экономия на классифайдах до 300 000 ₽/мес.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "planeta-avto-ekb",
@@ -1039,10 +1039,10 @@
     "price_retainer": "75 000 ₽/мес",
     "roi_desc": "Рост загрузки сервисных станций гарантийным и постгарантийным обслуживанием на 30%.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "porsche-center-ekb",
@@ -1058,10 +1058,10 @@
     "price_retainer": "75 000 ₽/мес",
     "roi_desc": "100% удержание клиентов на фирменное техническое обслуживание, рост продажи оригинального тюнинга Tequipment.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "detailing-alarm-ekb",
@@ -1077,10 +1077,10 @@
     "price_retainer": "35 000 ₽/мес",
     "roi_desc": "Рост среднего чека оклейки до 180 000 ₽, заполнение боксов на 2 месяца вперед.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "restyle-detailing-ekb",
@@ -1096,10 +1096,10 @@
     "price_retainer": "30 000 ₽/мес",
     "roi_desc": "Освобождение 3 часов рабочего времени управляющего в день, фиксация броней с гарантированным депозитом.",
     "demo_link": "demos/machinery-demo/index.html",
-    "template_name": "Auto Shine | Premium Detailing Studio",
-    "template_url": "https://globalteampartners.github.io/auto-shine-demo/",
-    "template_badge": "60fps скролл авто & калькулятор бронепленки",
-    "template_desc": "Покадровая анимация оклейки авто, расчет стоимости пакетов керамики/пленки, экспресс-запись в боксы через Telegram."
+    "template_name": "Elite Detailing | Центр Премиального Автоухода",
+    "template_url": "https://globalteamgroup.github.io/elite-detailing/",
+    "template_badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
+    "template_desc": "Покадровый скролл автомобиля с подсветкой защитных зон кузова, калькулятор пакетов оклейки полиуретаном и моментальная запись в бокс."
   },
   {
     "id": "cherkashin-meat",
@@ -1117,8 +1117,8 @@
     "demo_link": "demos/service-demo/index.html",
     "template_name": "Геоточка — Сеть фирменных точек на Яндекс Картах",
     "template_url": "https://globalteampartners.github.io/geotochka/",
-    "template_badge": "Геоприсутствие & карта точек свежих поставок",
-    "template_desc": "Интерактивная карта фирменных точек ритейла, привлечение локального трафика через Яндекс Карты и онлайн-заказ."
+    "template_badge": "Локальное SEO • Яндекс Карты • Сеть баз",
+    "template_desc": "Геолокационная платформа сети: интерактивная карта присутствия продукции, захват трафика из карт и навигация оптовых закупщиков к складам."
   },
   {
     "id": "smak-bakery",
@@ -1136,8 +1136,8 @@
     "demo_link": "demos/service-demo/index.html",
     "template_name": "Геоточка — Сеть фирменных точек на Яндекс Картах",
     "template_url": "https://globalteampartners.github.io/geotochka/",
-    "template_badge": "Геоприсутствие & карта точек свежих поставок",
-    "template_desc": "Интерактивная карта фирменных точек ритейла, привлечение локального трафика через Яндекс Карты и онлайн-заказ."
+    "template_badge": "Локальное SEO • Яндекс Карты • Сеть баз",
+    "template_desc": "Геолокационная платформа сети: интерактивная карта присутствия продукции, захват трафика из карт и навигация оптовых закупщиков к складам."
   },
   {
     "id": "talitskoe-moloko",
@@ -1155,8 +1155,8 @@
     "demo_link": "demos/service-demo/index.html",
     "template_name": "Геоточка — Сеть фирменных точек на Яндекс Картах",
     "template_url": "https://globalteampartners.github.io/geotochka/",
-    "template_badge": "Геоприсутствие & карта точек свежих поставок",
-    "template_desc": "Интерактивная карта фирменных точек ритейла, привлечение локального трафика через Яндекс Карты и онлайн-заказ."
+    "template_badge": "Локальное SEO • Яндекс Карты • Сеть баз",
+    "template_desc": "Геолокационная платформа сети: интерактивная карта присутствия продукции, захват трафика из карт и навигация оптовых закупщиков к складам."
   },
   {
     "id": "sverdlovskaya-pticefabrika",
@@ -1172,9 +1172,9 @@
     "price_retainer": "80 000 ₽/мес",
     "roi_desc": "Сокращение времени оформления оптовой отгрузки с 50 минут до 2 минут, ликвидация очередей рефрижераторов на КПП.",
     "demo_link": "demos/service-demo/index.html",
-    "template_name": "Tentorium Presentation | Производство & Дистрибуция",
-    "template_url": "https://globalteampartners.github.io/tentorium-presentation/",
-    "template_badge": "3D-презентация фабрики & оптовый B2B-заказ",
-    "template_desc": "Интерактивная демонстрация чистоты производства, экологических сертификатов, личный кабинет оптовых поставок в ритейл и HoReCa."
+    "template_name": "Тенториум: Презентация Производства & B2B Сеть",
+    "template_url": "https://globalteamgroup.github.io/tentorium-presentation/",
+    "template_badge": "3D-Производство • Личный кабинет B2B • Франшиза",
+    "template_desc": "Интерактивная 3D-демонстрация промышленного цеха, стандартов чистоты ISO/HACCP, оптовых дилерских условий и маржинальности."
   }
 ]
