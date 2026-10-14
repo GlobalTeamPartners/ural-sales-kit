@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог Шаблонов Сайтов & Кейсов | Global Plus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0B0E14;
+            --bg-surface: #121721;
+            --bg-card: #18202E;
+            --gold: #C5A059;
+            --gold-light: #E0C07A;
+            --red: #D32F2F;
+            --green: #10B981;
+            --blue: #2563EB;
+            --white: #F8FAFC;
+            --text-dim: #94A3B8;
+            --border: rgba(197, 160, 89, 0.2);
+            --border-card: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            padding: 30px 20px 80px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            color: var(--gold);
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn-back:hover {
+            background: var(--gold);
+            color: #000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(197,160,89,0.12) 0%, rgba(18,23,33,0.8) 100%);
+            border: 1px solid var(--gold);
+            border-radius: 16px;
+            padding: 35px 40px;
+            margin-bottom: 35px;
+        }
+        .brand-badge {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-light);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            max-width: 850px;
+        }
+        .filter-panel {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+            background: var(--bg-surface);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border-card);
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            color: var(--text-dim);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+        .templates-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .template-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .template-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .template-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border-card);
+            padding-bottom: 18px;
+        }
+        .tpl-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .tpl-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+        .tpl-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #6EE7B7;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .btn-open-live {
+            background: var(--gold);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn-open-live:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+        .tpl-desc {
+            color: #CBD5E1;
+            font-size: 1rem;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        .tpl-body-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .tpl-features, .tpl-targets {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-card);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .tpl-features h4, .tpl-targets h4 {
+            font-size: 0.95rem;
+            color: var(--gold-light);
+            margin-bottom: 12px;
+        }
+        .tpl-features ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #94A3B8;
+        }
+        .tpl-features li {
+            margin-bottom: 6px;
+        }
+        .targets-text {
+            font-size: 0.9rem;
+            color: #E2E8F0;
+            line-height: 1.6;
+        }
+        .pitch-quote {
+            background: rgba(197, 160, 89, 0.08);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        .quote-label {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .pitch-quote p {
+            color: #F1F5F9;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        .card-footer-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-tpl-action {
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-live {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6EE7B7;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+        .btn-live:hover {
+            background: var(--green);
+            color: #000;
+        }
+        .btn-leads {
+            background: rgba(37, 99, 235, 0.2);
+            color: #93C5FD;
+            border: 1px solid rgba(37, 99, 235, 0.4);
+        }
+        .btn-leads:hover {
+            background: var(--blue);
+            color: #fff;
+        }
+        .btn-copy {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid var(--border-card);
+        }
+        .btn-copy:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
+    <div style="color: var(--gold); font-size: 0.85rem; font-weight: 600;">Global Plus &times; GlobalTeamPartners</div>
+</div>
+
+<div class="container">
+    <div class="hero-banner">
+        <span class="brand-badge">ОФИЦИАЛЬНЫЙ ПУЛ ШАБЛОНОВ GLOBALPLUS.TECH</span>
+        <h1>🔥 Каталог Боевых Шаблонов Сайтов & Кейсов</h1>
+        <p class="subtitle">Кинематографичные сайты с видеофоном, 60fps-скроллом и ИИ-модулями, разработанные студией Global Plus. Открывай прямо на планшете перед уральскими директорами или отправляй ссылку в WhatsApp.</p>
+    </div>
+
+    <!-- ФИЛЬТРЫ ПО ОТРАСЛЯМ -->
+    <div class="filter-panel">
+        <button class="filter-btn active" data-filter="all">Все шаблоны (9)</button>
+        <button class="filter-btn" data-filter="Медицина, Стоматология & Эстетика">Медицина & Стоматология</button>
+        <button class="filter-btn" data-filter="Автобизнес, Детейлинг & Спецтехника">Авто & Детейлинг</button>
+        <button class="filter-btn" data-filter="Девелопмент, ЖК & Клубные Дома">Девелопмент & ЖК</button>
+        <button class="filter-btn" data-filter="Премиум HoReCa, Рестораны & Отели">HoReCa & Рестораны</button>
+        <button class="filter-btn" data-filter="Гео-Маркетинг, Сетевой Ритейл & Дилеры">Гео-Маркетинг</button>
+        <button class="filter-btn" data-filter="Франчайзинг, B2B-Дистрибуция & Фабрики">Производство & Фабрики</button>
+        <button class="filter-btn" data-filter="VIP-Транспорт, Туризм & Спецперевозки">Транспорт & Туризм</button>
+        <button class="filter-btn" data-filter="Машиностроение, Спецтехника & Металл">Машиностроение</button>
+        <button class="filter-btn" data-filter="Лесопромышленность & Деревообработка">Лесопром & Фанера</button>
+    </div>
+
+    <!-- СЕТКА КАРТОЧЕК ШАБЛОНОВ -->
+    <div class="templates-grid" id="templatesGrid">
+        
+    <div class="template-card" data-category="Медицина, Стоматология & Эстетика">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Медицина, Стоматология & Эстетика</span>
+                <h3 class="tpl-title">Aesthetic Clinic & Medical Beauty</h3>
+                <span class="tpl-badge">Видеофон 60fps • AI-Триаж • Онлайн-запись</span>
+            </div>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Премиальный медицинский портал с динамическим видеофоном, презентацией врачей, защищенной формой записи и умным триажем симптомов пациента.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Кинематографичный видеофон без задержек на мобильных устройствах</li><li>✓ Интерактивный прейскурант и калькулятор комплексного плана лечения</li><li>✓ Многоканальный AI-триаж в Telegram и на сайте</li><li>✓ Презентация врачей высшей категории и оборудования</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">УГМК-Здоровье, Центр косметологии им. Нудельмана, Здоровье 365, Линлайн, Парацельс, Мегадента Клиник, Клиника «Здоровье» & «Дента-Люкс» (Алапаевск)</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Посмотрите на сайт вашей клиники: в 8 утра пациент видит статичную страницу и ждет ответа колл-центра. В нашем решении он за 15 секунд выбирает доктора, видит живую клинику и оставляет бронь через Telegram с подтверждением явки 98%».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/aesthetic-clinic-demo/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Автобизнес, Детейлинг & Спецтехника">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Автобизнес, Детейлинг & Спецтехника</span>
+                <h3 class="tpl-title">Auto Shine | Premium Detailing & Protection</h3>
+                <span class="tpl-badge">Canvas-скролл авто • Калькулятор бронепленки</span>
+            </div>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Покадровая анимация оклейки спорткара полиуретановой пленкой SunTek, 3D-демонстрация гидрофобного эффекта керамики, расчет сметы оклейки.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Плавный 60fps скролл автомобиля с подсветкой защитных зон</li><li>✓ Калькулятор пакетов: Оклейка переда, Тотальная защита, Керамика 9H</li><li>✓ Моментальная запись в бокс с бронированием даты</li><li>✓ Галерея макро-съемки качества швов и реставрации кожи</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Detailing Alarm Ekb, Restyle, Порше Центр Екатеринбург, ГК «Автобан», Планета Авто, СТО спецтехники (Синячиха), АвтоЛидер (Алапаевск)</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Владельцы премиальных авто выбирают глазами. Когда клиент видит, как на экране интерактивно натягивается пленка и играет свет на кузове — он не спорит о цене, а сразу бронирует бокс на детейлинг».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/auto-shine-demo/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Девелопмент, ЖК & Клубные Дома">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Девелопмент, ЖК & Клубные Дома</span>
+                <h3 class="tpl-title">Belgrade Waterfront | Premium Real Estate</h3>
+                <span class="tpl-badge">Архитектурный скролл • 3D-Планировки • Ипотека</span>
+            </div>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Сайт клубной архитектуры с демонстрацией высотных башен, панорамных видов из окон, виртуальным туром по террасам и AI-ипотечным брокером.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Кинематографичный скролл высоток и фасадных линий</li><li>✓ Интерактивная карта жилых кварталов и инфраструктуры</li><li>✓ AI-брокер подбора планировок под сценарии жизни семьи</li><li>✓ Приватная бронь пентхаусов и коммерческих помещений</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Брусника, Атомстройкомплекс, УГМК-Застройщик (Макаровский, Исеть), Forum Group (Тихвинъ), PRINZIP (Мельница), КОРТРОС Академический, Синара-Девелопмент</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Вы тратите миллионы на рекламу жилья, но страницы типовые. Наш портал за 3 секунды влюбляет покупателя: кинематографичный ракурс набережной, 3D-раскладка террасы и закрытый брокерский чат в Telegram».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/belgrade-waterfront-demo/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Премиум HoReCa, Рестораны & Отели">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Премиум HoReCa, Рестораны & Отели</span>
+                <h3 class="tpl-title">Salon 1905 | Fine Dining & VIP Gastronomy</h3>
+                <span class="tpl-badge">Видеоряд зала • Выбор столиков • Депозиты</span>
+            </div>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Атмосферный кинематографичный портал высокой кухни, винной коллекции, банкетных залов и системы депозитного бронирования столов.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Атмосферный видеоряд подачи авторских блюд шефом</li><li>✓ Интерактивная карта рассадки с выбором панорамных столиков</li><li>✓ Модуль внесения депозитов онлайн (ликвидация no-show)</li><li>✓ Расчет банкетного меню и предварительный заказ вин</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Ресторан Троекуровъ, Kitchen (24 этаж), Сойка, Гастроли, Momo Pan Asian, Небоскреб Высоцкий, Отель & Ресторан «Эрмитаж» (Алапаевск), Гостиница «Металлург», База «Чистые пруды»</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«В пятницу вечером хостес разрывается между звонками, а 20% броней срываются. В нашей системе гость выбирает столик с видом, вносит депозит за 1 минуту и получает персональное приглашение».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/salon-1905-demo/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Гео-Маркетинг, Сетевой Ритейл & Дилеры">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Гео-Маркетинг, Сетевой Ритейл & Дилеры</span>
+                <h3 class="tpl-title">Геоточка — Сеть Точек на Яндекс Картах</h3>
+                <span class="tpl-badge">Локальное SEO • Яндекс Карты • Сеть баз</span>
+            </div>
+            <a href="https://globalteampartners.github.io/geotochka/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Сайт-система управления и продвижения точек присутствия, складов, фирменных магазинов и сервисных центров по всей территории России.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Интерактивная карта присутствия с автоопределением геопозиции</li><li>✓ Модуль захвата трафика из Яндекс Карт, 2ГИС и поисковиков</li><li>✓ Интеграция с локальными акциями и каталогом свежей продукции</li><li>✓ Автоматический маршрутизатор оптовиков к ближайшему складу</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Талицкое молоко (карта «Где купить свежее сегодня»), Черкашин и Партнеры, СМАК, Алапаевский молочный комбинат (АМК), сеть складов СВЕЗА и Лестех</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Покупатели в Екатеринбурге и области ищут вашу свежую продукцию в шаговой доступности. Наша система показывает ближайшие магазины с наличием и приводит покупателей прямо к прилавку».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/geotochka/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/geotochka/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Франчайзинг, B2B-Дистрибуция & Фабрики">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Франчайзинг, B2B-Дистрибуция & Фабрики</span>
+                <h3 class="tpl-title">Тенториум: Презентация Производства & B2B Сеть</h3>
+                <span class="tpl-badge">3D-Производство • Личный кабинет B2B • Франшиза</span>
+            </div>
+            <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Интерактивная 3D-демонстрация чистоты промышленного производства, экологических лабораторий, условий открытия франшизы и дистрибьюторских оптовых цен.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ 3D-тур по производственным линиям и лабораториям завода</li><li>✓ Презентация условий B2B-дистрибуции и маржинальности для дилеров</li><li>✓ Калькулятор окупаемости франшизы / оптового склада</li><li>✓ Личный кабинет партнера с автоматическим формированием заказа</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Птицефабрика Свердловская, АМК Алапаевск, Alma Ceramica (плитка), АДОЗ (спецтара), АЛХ (шпалы), Лестех, Верхнесинячихинский лесохим</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Когда крупный федеральный закупщик выбирает поставщика, ему мало прайса в Excel. Мы показываем ему цифровой интерактивный завод: мощности, контроль качества и форму заказа партии за 3 клика».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/tentorium-presentation/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="VIP-Транспорт, Туризм & Спецперевозки">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">VIP-Транспорт, Туризм & Спецперевозки</span>
+                <h3 class="tpl-title">Визуализированный Трансфер (VT-VIP)</h3>
+                <span class="tpl-badge">Парк техники • Бронирование рейсов • Туризм</span>
+            </div>
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Цифровая платформа заказа представительского трансфера, туристических маршрутов, спецтехники и экскурсионных пакетов с выбором класса обслуживания.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Визуализированный каталог автопарка и подвижного состава</li><li>✓ Конструктор туристических маршрутов с остановками и гидом</li><li>✓ Моментальный расчет стоимости по километражу и классу комфорта</li><li>✓ Онлайн-оплата билетов с получением посадочного талона в мессенджер</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">Алапаевская узкоколейная ж/д (АУЖД туризм), Музей деревянного зодчества (Нижняя Синячиха), ООО «Синячиха-Лес» (лесотранспорт), трансферные парки отелей</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«На АУЖД и в музей Нижней Синячихи едут туристы со всей страны, но они не могут купить билет и выбрать вагон онлайн. Наша система позволяет москвичу или екатеринбуржцу забронировать ретропоезд с телефона за 1 минуту».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('https://globalteampartners.github.io/vt-vip/', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Машиностроение, Спецтехника & Металл">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Машиностроение, Спецтехника & Металл</span>
+                <h3 class="tpl-title">B2B Heavy Machinery & Equipment Configurator</h3>
+                <span class="tpl-badge">3D-Селектор бурилок • Подбор шнеков • Выгрузка КП</span>
+            </div>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Интерактивный селектор бурильно-крановых машин, подбор бурового инструмента по категориям грунта, кросс-подбор гидромоторов PSM-Hydraulics.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Интерактивный 3D-подбор машин под глубину бурения и тип грунта</li><li>✓ Кросс-подбор отечественных аналогов импортной гидравлики</li><li>✓ Моментальная генерация заказной спецификации и ТЗ за 15 секунд</li><li>✓ Прямая интеграция заявок с отделом сбыта завода и 1С</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">АО «Стройдормаш», ООО «ЗИСТ», ООО «Бурмаш», ПАО «Уралмашзавод», УЗГА, Синара СТМ, PSM-Hydraulics, Уральский турбинный завод, СТЗ/ТМК, ВИЗ-Сталь, Котельный завод</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Главный конструктор и отдел сбыта тратят недели на согласование опросных листов. В нашей системе энергетик или строитель выбирает категорию грунта, а система сама подбирает бурилку и выкатывает готовое КП».</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('demos/machinery-demo/index.html', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    <div class="template-card" data-category="Лесопромышленность & Деревообработка">
+        <div class="template-header">
+            <div>
+                <span class="tpl-category">Лесопромышленность & Деревообработка</span>
+                <h3 class="tpl-title">УралЛесПром | Оптовый B2B-Портал Древесины</h3>
+                <span class="tpl-badge">Калькулятор партий ГОСТ • Вагонные нормы • 1С</span>
+            </div>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+        </div>
+        <p class="tpl-desc">Интерактивный калькулятор кубатуры, веса и оптовой стоимости партий березовой фанеры (ФК/ФСФ) и пиломатериалов по ГОСТ с проверкой остатков на складах.</p>
+        
+        <div class="tpl-body-grid">
+            <div class="tpl-features">
+                <h4>⚡ Ключевые возможности решения:</h4>
+                <ul><li>✓ Калькулятор вагонных и фурных партий по ГОСТ 3916.1-96</li><li>✓ Автоматический пересчет веса, кубатуры и стоимости с НДС</li><li>✓ Моментальная выписка спецификации со счетом для строительных трестов</li><li>✓ Прямой трекинг железнодорожных накладных РЖД</li></ul>
+            </div>
+            <div class="tpl-targets">
+                <h4>🎯 Кому предлагать на Урале:</h4>
+                <p class="targets-text">НАО «СВЕЗА Верхняя Синячиха», ООО «Лестех», Верхнесинячихинский лесохим, ООО «Алапаевский ДОЗ» (АДОЗ), Алапаевский лесопромышленный холдинг (АЛХ)</p>
+            </div>
+        </div>
+
+        <div class="pitch-quote">
+            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+            <p>«Снабженец из Тюмени или ХМАО хочет заказать 3 фуры фанеры 18 мм в субботу вечером. Вместо ожидания понедельника он вводит объем, видит точный вес партии и получает счет за 10 секунд. Сделка закрыта!»</p>
+        </div>
+
+        <div class="card-footer-actions">
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+            <button class="btn-tpl-action btn-copy" onclick="copyLink('demos/wood-industry-demo/index.html', this)">🔗 Скопировать ссылку для WhatsApp</button>
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+<script>
+    function copyLink(url, btn) {
+        navigator.clipboard.writeText(url).then(() => {
+            const orig = btn.innerText;
+            btn.innerText = "✓ Ссылка скопирована!";
+            btn.style.background = "#10B981";
+            btn.style.color = "#000";
+            setTimeout(() => {
+                btn.innerText = orig;
+                btn.style.background = "";
+                btn.style.color = "";
+            }, 2000);
+        }).catch(err => {
+            alert("Ссылка: " + url);
+        });
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cat = btn.getAttribute('data-filter');
+            document.querySelectorAll('.template-card').forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

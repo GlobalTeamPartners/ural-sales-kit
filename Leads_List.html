@@ -28,7 +28,7 @@
             line-height: 1.5;
         }
         .top-nav {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto 24px;
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
             color: #000;
         }
         .container {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
         }
         h1 {
@@ -79,9 +79,6 @@
             flex-direction: column;
             gap: 16px;
         }
-        .search-box {
-            width: 100%;
-        }
         .search-box input {
             width: 100%;
             background: rgba(0, 0, 0, 0.4);
@@ -98,17 +95,15 @@
         }
         .filter-group {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
             align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .filter-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
             color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            margin-right: 8px;
+            min-width: 90px;
         }
         .filter-btn {
             background: rgba(255, 255, 255, 0.05);
@@ -129,29 +124,29 @@
 
         /* ТАБЛИЦА */
         .table-responsive {
-            overflow-x: auto;
             background: var(--bg-surface);
             border: 1px solid var(--border-card);
             border-radius: 12px;
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
+        }
+        th, td {
+            padding: 16px 18px;
+            border-bottom: 1px solid var(--border-card);
             font-size: 0.9rem;
+            vertical-align: top;
         }
         th {
             background: #18202E;
-            color: var(--gold-light);
-            padding: 14px 16px;
+            color: var(--gold);
             font-weight: 600;
-            border-bottom: 2px solid var(--border);
-            white-space: nowrap;
-        }
-        td {
-            padding: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            vertical-align: middle;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
         }
         tr:hover td {
             background: rgba(255, 255, 255, 0.02);
@@ -159,59 +154,69 @@
         .badge {
             display: inline-block;
             padding: 4px 10px;
-            border-radius: 6px;
+            border-radius: 12px;
             font-size: 0.75rem;
             font-weight: 600;
-            white-space: nowrap;
         }
-        .bg-wood { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .bg-wood { background: rgba(34, 197, 94, 0.15); color: #4ADE80; border: 1px solid rgba(34, 197, 94, 0.3); }
         .bg-machine { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
         .bg-realestate { background: rgba(234, 179, 8, 0.15); color: #FACC15; border: 1px solid rgba(234, 179, 8, 0.3); }
-        .bg-horeca { background: rgba(217, 70, 239, 0.15); color: #E879F9; border: 1px solid rgba(217, 70, 239, 0.3); }
-        .bg-medical { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3); }
-        .bg-auto { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border: 1px solid rgba(20, 184, 166, 0.3); }
-        .bg-food { background: rgba(249, 115, 22, 0.15); color: #FB923C; border: 1px solid rgba(249, 115, 22, 0.3); }
-        .bg-service { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .bg-horeca { background: rgba(236, 72, 153, 0.15); color: #F472B6; border: 1px solid rgba(236, 72, 153, 0.3); }
+        .bg-medical { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .bg-auto { background: rgba(249, 115, 22, 0.15); color: #FB923C; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .bg-food { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border: 1px solid rgba(20, 184, 166, 0.3); }
+        .bg-service { background: rgba(148, 163, 184, 0.15); color: #CBD5E1; border: 1px solid rgba(148, 163, 184, 0.3); }
 
         .region-pill {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            background: rgba(255, 255, 255, 0.05);
             padding: 3px 8px;
             border-radius: 4px;
-            font-size: 0.75rem;
-            white-space: nowrap;
+            display: inline-block;
         }
         .persona-tag {
-            color: var(--gold-light);
             font-size: 0.8rem;
+            color: #E2E8F0;
             font-weight: 500;
         }
+
         .btn-action {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
             padding: 6px 10px;
-            border-radius: 4px;
+            border-radius: 6px;
             text-decoration: none;
             font-size: 0.75rem;
             font-weight: 600;
             margin-right: 4px;
+            margin-bottom: 4px;
             transition: all 0.2s;
         }
         .btn-deck {
-            background: rgba(197, 160, 89, 0.2);
-            color: var(--gold-light);
-            border: 1px solid rgba(197, 160, 89, 0.4);
-        }
-        .btn-deck:hover {
             background: var(--gold);
             color: #000;
         }
+        .btn-deck:hover {
+            background: var(--gold-light);
+        }
         .btn-pager {
             background: rgba(255, 255, 255, 0.08);
-            color: #fff;
             border: 1px solid var(--border-card);
+            color: #fff;
         }
         .btn-pager:hover {
             background: #fff;
+            color: #000;
+        }
+        .btn-tpl {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #6EE7B7;
+        }
+        .btn-tpl:hover {
+            background: var(--green);
             color: #000;
         }
     </style>
@@ -220,17 +225,17 @@
 
 <div class="top-nav">
     <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
-    <div style="font-size: 0.85rem; color: var(--gold);">Региональный охват: 62 ключевых предприятия</div>
+    <div style="font-size: 0.85rem; color: var(--gold);">Региональный охват: 62 ключевых предприятия &bull; 9 шаблонов сайтов</div>
 </div>
 
 <div class="container">
     <h1>📋 Единая База 62 Целевых Предприятий</h1>
-    <p class="subtitle">Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург | Готовые точки входа, ЛПР и персонализированные предложения</p>
+    <p class="subtitle">Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург | Готовые точки входа, ЛПР, презентации и прикрепленные шаблоны сайтов Global Plus</p>
 
     <!-- ПАНЕЛЬ ПОИСКА И ФИЛЬТРАЦИИ -->
     <div class="controls-panel">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Быстрый поиск по названию, специализации или предложению...">
+            <input type="text" id="searchInput" placeholder="🔍 Быстрый поиск по названию, специализации, ЛПР или шаблону сайта...">
         </div>
         
         <div class="filter-group">
@@ -251,6 +256,7 @@
             <button class="filter-btn" data-sector="Медицина & Эстетика">Медицина</button>
             <button class="filter-btn" data-sector="Авто & Детейлинг">Авто & Спецтехника</button>
             <button class="filter-btn" data-sector="Пищепром & Агро">Пищепром & Агро</button>
+            <button class="filter-btn" data-sector="Туризм, Спорт & Услуги">Туризм & Сервисы</button>
         </div>
     </div>
 
@@ -259,12 +265,12 @@
         <table id="leadsTable">
             <thead>
                 <tr>
-                    <th style="min-width: 240px;">Предприятие / Бренд</th>
+                    <th style="min-width: 220px;">Предприятие / Бренд</th>
                     <th>Локация</th>
                     <th>Отрасль</th>
                     <th>Целевое ЛПР</th>
-                    <th style="min-width: 300px;">Питч "Троянского коня"</th>
-                    <th>Инструменты Димы</th>
+                    <th style="min-width: 280px;">Питч "Троянского коня" & Шаблон Сайта</th>
+                    <th style="min-width: 210px;">Инструменты Димы</th>
                 </tr>
             </thead>
             <tbody>
@@ -277,10 +283,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Директор комбината / Директор по персоналу и логистике</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-портал оптовых дилеров с онлайн-калькулятором партий + HR-бот в Telegram для автонайма и тестирования рабочих.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-портал оптовых дилеров с онлайн-калькулятором партий + HR-бот в Telegram для автонайма и тестирования рабочих.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром B2B + Tentorium Фабрика</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sveza-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sveza-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sveza-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -292,10 +304,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Коммерческий директор / Собственник</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный B2B-каталог пиломатериалов с калькулятором кубатуры и автогенерацией коммерческих предложений за 10 секунд.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный B2B-каталог пиломатериалов с калькулятором кубатуры и автогенерацией коммерческих предложений за 10 секунд.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром B2B + Tentorium Фабрика</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=lestech-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=lestech-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=lestech-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -307,10 +325,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Технический директор / Начальник сбыта</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Умная воронка приема заявок 24/7 с автоквалификацией объема поставки в Telegram и интеграцией с 1С.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Умная воронка приема заявок 24/7 с автоквалификацией объема поставки в Telegram и интеграцией с 1С.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром | Оптовый B2B-Портал Древесины</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=leshim-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=leshim-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=leshim-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -322,10 +346,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
         <td><span class="persona-tag">Руководитель комплекса</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-бот онлайн-расписания, покупки абонементов через СБП и авторассылки напоминаний о занятиях.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Telegram-бот онлайн-расписания, покупки абонементов через СБП и авторассылки напоминаний о занятиях.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" style="color:#E0C07A; text-decoration:underline;">VT-VIP & Geotochka | Логистика, Туризм & Геоприсутствие</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=fok-orion" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=fok-orion" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=fok-orion" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -337,10 +367,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
         <td><span class="persona-tag">Директор музея / Руководитель туристического отдела</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный туристический лендинг + Telegram-аудиогид по экспозициям с QR-кодами на объектах зодчества.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный туристический лендинг + Telegram-аудиогид по экспозициям с QR-кодами на объектах зодчества.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" style="color:#E0C07A; text-decoration:underline;">VT-VIP — Туристический маршрут & онлайн-билеты</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=nizhnyaya-sinichikha-museum" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -352,10 +388,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Главный инженер / Директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Мобильный диспетчерский бот учета рейсов лесовозов, фиксации простоев и заявок на запчасти для механиков.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Мобильный диспетчерский бот учета рейсов лесовозов, фиксации простоев и заявок на запчасти для механиков.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром | Оптовый B2B-Портал Древесины</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-les-trans" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-les-trans" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sinichikha-les-trans" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -367,10 +409,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
         <td><span class="persona-tag">Директор МУП / Главный инженер</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-приемная ЖКХ: автоматический сбор показаний, регистрация заявок жителей и экстренные оповещения.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Telegram-приемная ЖКХ: автоматический сбор показаний, регистрация заявок жителей и экстренные оповещения.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" style="color:#E0C07A; text-decoration:underline;">VT-VIP & Geotochka | Логистика, Туризм & Геоприсутствие</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=mup-energoresurs-sinichikha" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -382,10 +430,16 @@
         <td><span class="region-pill">Верхняя Синячиха</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Собственник СТО</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Электронный журнал загрузки постов ремонта + отправка фотоотчетов дефектовки и актов в WhatsApp/Telegram.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Электронный журнал загрузки постов ремонта + отправка фотоотчетов дефектовки и актов в WhatsApp/Telegram.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-autotech" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sinichikha-autotech" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sinichikha-autotech" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -397,10 +451,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Генеральный директор / Директор по продажам и маркетингу</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный 3D-конфигуратор бурильных установок + система автоматической генерации ТЗ и коммерческих предложений.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный 3D-конфигуратор бурильных установок + система автоматической генерации ТЗ и коммерческих предложений.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=stroydormash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=stroydormash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=stroydormash-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -412,10 +472,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по сбыту / Собственник</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Умный онлайн-подборщик бурового инструмента по типу грунта и модели машины с моментальной выгрузкой счета.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Умный онлайн-подборщик бурового инструмента по типу грунта и модели машины с моментальной выгрузкой счета.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=zist-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=zist-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=zist-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -427,10 +493,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой экспресс-сервис оценки ремонта бурилок по фото/видео через бота с интеграцией в CRM.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Цифровой экспресс-сервис оценки ремонта бурилок по фото/видео через бота с интеграцией в CRM.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=burmash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=burmash-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=burmash-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -442,10 +514,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Генеральный директор / Собственник</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-презентация спецтары по ГОСТу для промышленных предприятий с калькулятором партий и гарантией сроков.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-презентация спецтары по ГОСТу для промышленных предприятий с калькулятором партий и гарантией сроков.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром B2B + Tentorium Фабрика</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=adoz-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=adoz-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=adoz-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -457,10 +535,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-wood">Лесопромышленность & Деревообработка</span></td>
         <td><span class="persona-tag">Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Клиентский кабинет B2B-заказчика шпалопродукции с трекингом партий, сертификатов и железнодорожных накладных.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Клиентский кабинет B2B-заказчика шпалопродукции с трекингом партий, сертификатов и железнодорожных накладных.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/wood-industry-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">УралЛесПром | Оптовый B2B-Портал Древесины</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=alh-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=alh-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=alh-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/wood-industry-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -472,10 +556,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по продажам цветного проката</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Динамический онлайн-прайс с автоматической привязкой формулы цен к котировкам металлов и онлайн-бронированием слитков/партий.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Динамический онлайн-прайс с автоматической привязкой формулы цен к котировкам металлов и онлайн-бронированием слитков/партий.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=asm-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=asm-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=asm-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -487,10 +577,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-food">Пищепром & Агро</span></td>
         <td><span class="persona-tag">Коммерческий директор / Начальник отдела ритейла</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-портал для ресторанов, пекарен и локальных магазинов с заказом свежих молочных партий напрямую с комбината.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-портал для ресторанов, пекарен и локальных магазинов с заказом свежих молочных партий напрямую с комбината.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Tentorium Presentation | Производство & Дистрибуция</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=amk-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=amk-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=amk-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -502,10 +598,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Генеральный директор / Главный конструктор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой мастер подбора мощности котельной и генерации предпроектного решения за 5 минут.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный цифровой мастер подбора мощности котельной и генерации предпроектного решения за 5 минут.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=kotel-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=kotel-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=kotel-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -517,10 +619,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Собственник / Директор по развитию</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Калькулятор фундамента по габаритам дома с моментальным расчетом количества свай и бронированием монтажа.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Калькулятор фундамента по габаритам дома с моментальным расчетом количества свай и бронированием монтажа.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=svai-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=svai-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=svai-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -532,10 +640,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Парсинг и мониторинг коммерческих тендеров на ЖБИ шпалы + цифровое портфолио завода для промышленных карьеров.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Парсинг и мониторинг коммерческих тендеров на ЖБИ шпалы + цифровое портфолио завода для промышленных карьеров.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=zhbi-shpaly-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -547,10 +661,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Управляющий гостиницей</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Модуль прямого бронирования номеров без комиссии + корпоративный раздел для быстрой безналичной оплаты предприятиями.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Модуль прямого бронирования номеров без комиссии + корпоративный раздел для быстрой безналичной оплаты предприятиями.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=hotel-metallurg-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -562,10 +682,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Собственник / Управляющий</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Элегантный сайт с 3D-туром банкетного зала и Telegram-ботом предварительного расчета меню на банкет.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Элегантный сайт с 3D-туром банкетного зала и Telegram-ботом предварительного расчета меню на банкет.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=hermitage-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=hermitage-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=hermitage-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -577,10 +703,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-service">Туризм, Спорт & Услуги</span></td>
         <td><span class="persona-tag">Директор туристических программ / Администрация</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровая платформа продажи турпакетов на ретропоезд АУЖД с выбором вагона, гида и ночевки на маршруте.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Цифровая платформа продажи турпакетов на ретропоезд АУЖД с выбором вагона, гида и ночевки на маршруте.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" style="color:#E0C07A; text-decoration:underline;">VT-VIP — Туристический маршрут & онлайн-билеты</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=auzhd-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=auzhd-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=auzhd-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/vt-vip/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -592,10 +724,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Владелец базы отдыха</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Автоматизированная шахматка бронирования коттеджей с мгновенной онлайн-оплатой задатка и WhatsApp-подтверждением.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Автоматизированная шахматка бронирования коттеджей с мгновенной онлайн-оплатой задатка и WhatsApp-подтверждением.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=chistye-prudy-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -607,10 +745,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Собственник автоцентра</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">CRM-система с Telegram-ботом автосервиса: запись на подъемник за 3 клика + автоматические напоминания о сезонном ТО.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            CRM-система с Telegram-ботом автосервиса: запись на подъемник за 3 клика + автоматические напоминания о сезонном ТО.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=autolider-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=autolider-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=autolider-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -622,10 +766,16 @@
         <td><span class="region-pill">Алапаевск и район</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Главный врач / Собственник</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный калькулятор плана лечения зубов + автозапись к профильным докторам с напоминаниями за 24 часа.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный калькулятор плана лечения зубов + автозапись к профильным докторам с напоминаниями за 24 часа.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=zdorovie-denta-alapaevsk" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -637,10 +787,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по цифровизации / Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой портал оборудования с 3D-демонстрацией узлов и закрытым кабинетом заказа оригинальных запчастей.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный цифровой портал оборудования с 3D-демонстрацией узлов и закрытым кабинетом заказа оригинальных запчастей.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=uralmashplant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=uralmashplant" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=uralmashplant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -652,10 +808,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по коммуникациям / HR-директор завода</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Высокотехнологичный карьерный портал УЗГА с геймифицированным тестированием компетенций молодых инженеров.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Высокотехнологичный карьерный портал УЗГА с геймифицированным тестированием компетенций молодых инженеров.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=uzga-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=uzga-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=uzga-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -667,10 +829,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по маркетингу и клиентскому сервису</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Сервисный AI-ассистент сервисных бригад для мгновенного поиска регламентов обслуживания локомотивов на путях.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Сервисный AI-ассистент сервисных бригад для мгновенного поиска регламентов обслуживания локомотивов на путях.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sinara-transport-machines" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sinara-transport-machines" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sinara-transport-machines" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -682,10 +850,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Коммерческий директор / Начальник управления сбыта</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Онлайн-сервис подбора отечественных гидравлических аналогов импортных гидронасосов по артикулу и параметрам.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Онлайн-сервис подбора отечественных гидравлических аналогов импортных гидронасосов по артикулу и параметрам.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=pnevmostroymashina-psm" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=pnevmostroymashina-psm" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=pnevmostroymashina-psm" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -697,10 +871,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по продажам энергетического оборудования</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровая презентационная платформа для проектных институтов энергетики с расчетными модулями тепловой мощности.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Цифровая презентационная платформа для проектных институтов энергетики с расчетными модулями тепловой мощности.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=ural-turbine-plant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=ural-turbine-plant" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=ural-turbine-plant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -712,10 +892,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Руководитель B2B-направления</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интеллектуальная система верификации и подбора складских остатков трубной продукции для срочных поставок.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интеллектуальная система верификации и подбора складских остатков трубной продукции для срочных поставок.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=tmk-sintz" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=tmk-sintz" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=tmk-sintz" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -727,10 +913,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Директор по стратегическому маркетингу</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный интерактивный портал стали высших марок с калькулятором снижения энергопотерь трансформаторов.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный интерактивный портал стали высших марок с калькулятором снижения энергопотерь трансформаторов.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=viz-steel" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=viz-steel" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=viz-steel" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -742,10 +934,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-machine">Машиностроение & Металл</span></td>
         <td><span class="persona-tag">Коммерческий директор / Директор по работе с застройщиками</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-платформа для девелоперов и архитекторов: моментальная 3D-примерка керамогранита в интерьере + заказ образцов в 1 клик.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-платформа для девелоперов и архитекторов: моментальная 3D-примерка керамогранита в интерьере + заказ образцов в 1 клик.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="demos/machinery-demo/index.html" target="_blank" style="color:#E0C07A; text-decoration:underline;">B2B Heavy Machinery & Equipment Configurator</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=alma-ceramica" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=alma-ceramica" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=alma-ceramica" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="demos/machinery-demo/index.html" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -757,10 +955,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Директор по цифровому маркетингу / Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">AI-брокер по подбору планировок под сценарии жизни клиента (работа из дома, дети, террасы) с расчетом платежей.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            AI-брокер по подбору планировок под сценарии жизни клиента (работа из дома, дети, террасы) с расчетом платежей.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=brusnika-developer" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=brusnika-developer" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=brusnika-developer" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -772,10 +976,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Коммерческий директор агентства недвижимости АТОМ</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта жилых кварталов с умным фильтром инфраструктуры (школы, парки, транспорт) и бронированием онлайн.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивная карта жилых кварталов с умным фильтром инфраструктуры (школы, парки, транспорт) и бронированием онлайн.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=atomstroykomplex" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=atomstroykomplex" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=atomstroykomplex" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -787,10 +997,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Директор по продажам элитной недвижимости</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный портал клубного дома с видеотурами 4K, консьерж-ботом закрытого доступа и приватными показами.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный портал клубного дома с видеотурами 4K, консьерж-ботом закрытого доступа и приватными показами.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=ugmk-zastroyschik" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=ugmk-zastroyschik" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=ugmk-zastroyschik" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -802,10 +1018,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Директор по развитию и продажам</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Единая экосистема жителя/арендатора с интерактивной витриной свободных коммерческих и жилых площадей.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Единая экосистема жителя/арендатора с интерактивной витриной свободных коммерческих и жилых площадей.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=forum-group-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=forum-group-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=forum-group-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -817,10 +1039,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Директор по маркетингу</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный скролл-лендинг с эмоциональным повествованием об архитектуре и виртуальным тест-драйвом планировок.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный скролл-лендинг с эмоциональным повествованием об архитектуре и виртуальным тест-драйвом планировок.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=prinzip-developer" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=prinzip-developer" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=prinzip-developer" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -832,10 +1060,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Коммерческий директор проекта</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Автоматизированный семейный ипотечный консультант в Telegram с расчетом субсидированных ставок и подбором квартир.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Автоматизированный семейный ипотечный консультант в Telegram с расчетом субсидированных ставок и подбором квартир.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=kortros-akademichesky" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=kortros-akademichesky" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=kortros-akademichesky" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -847,10 +1081,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-realestate">Девелопмент & Недвижимость</span></td>
         <td><span class="persona-tag">Директор по маркетингу</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный 3D-генплан района с таймлайном запуска спортивных, университетских и транспортных объектов.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный 3D-генплан района с таймлайном запуска спортивных, университетских и транспортных объектов.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Belgrade Waterfront | Premium Real Estate</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sinara-development" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sinara-development" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sinara-development" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -862,10 +1102,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Генеральный менеджер / F&B Director</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Двуязычный VIP-консьерж бот в Telegram/WhatsApp для бронирования столиков, СПА-услуг и согласования меню банкетов.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Двуязычный VIP-консьерж бот в Telegram/WhatsApp для бронирования столиков, СПА-услуг и согласования меню банкетов.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=hyatt-regency-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=hyatt-regency-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=hyatt-regency-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -877,10 +1123,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Управляющий отелем</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой калькулятор аренды залов с кейтерингом и мгновенной выгрузкой счета для юрлиц.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Цифровой калькулятор аренды залов с кейтерингом и мгновенной выгрузкой счета для юрлиц.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=hyatt-place-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=hyatt-place-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=hyatt-place-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -892,10 +1144,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Собственник / Управляющий</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный сайт-музей ресторана с виртуальным гидом по залам и закрытой системой бронирования VIP-кабинетов.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный сайт-музей ресторана с виртуальным гидом по залам и закрытой системой бронирования VIP-кабинетов.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=troekurov-restaurant" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=troekurov-restaurant" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=troekurov-restaurant" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -907,10 +1165,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Бренд-шеф / Управляющий</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта рассадки с выбором конкретного панорамного столика и онлайн-депозитом для гарантии явки.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивная карта рассадки с выбором конкретного панорамного столика и онлайн-депозитом для гарантии явки.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=kitchen-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -922,10 +1186,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Управляющий партнер</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичное мобильное меню с видеопрезентацией подачи блюд шефом и предзаказом к определенному времени.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичное мобильное меню с видеопрезентацией подачи блюд шефом и предзаказом к определенному времени.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=soyka-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=soyka-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=soyka-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -937,10 +1207,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Владелец / Шеф-повар</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Умный цифровой лист ожидания: гость получает уведомление в Telegram, когда освобождается столик, и гуляет по центру.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Умный цифровой лист ожидания: гость получает уведомление в Telegram, когда освобождается столик, и гуляет по центру.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=gastroli-restaurant-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -952,10 +1228,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Управляющий рестораном</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Собственное мобильное приложение и веб-витрина премиум-доставки с бонусной программой и нулевой комиссией агрегаторам.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Собственное мобильное приложение и веб-витрина премиум-доставки с бонусной программой и нулевой комиссией агрегаторам.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=momo-pan-asian" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=momo-pan-asian" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=momo-pan-asian" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -967,10 +1249,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-horeca">HoReCa & Отели</span></td>
         <td><span class="persona-tag">Генеральный директор комплекса</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Единый туристический портал 'Высоцкий SuperApp' с онлайн-покупкой билетов на смотровую по тайм-слотам и бронью спа.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Единый туристический портал 'Высоцкий SuperApp' с онлайн-покупкой билетов на смотровую по тайм-слотам и бронью спа.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Salon 1905 | Fine Dining & Gastronomy</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=vysotsky-complex" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=vysotsky-complex" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=vysotsky-complex" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -982,10 +1270,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Коммерческий директор / Главный врач</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Многоканальный AI-триаж в Telegram и на сайте: распознавание симптомов пациента и мгновенная запись к свободному доктору.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Многоканальный AI-триаж в Telegram и на сайте: распознавание симптомов пациента и мгновенная запись к свободному доктору.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=ugmk-health-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=ugmk-health-clinic" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=ugmk-health-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -997,10 +1291,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Директор по развитию / Главный врач</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Защищенный сервис дистанционной предоперационной консультации: безопасная загрузка фото, заключение хирурга и бронь палаты.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Защищенный сервис дистанционной предоперационной консультации: безопасная загрузка фото, заключение хирурга и бронь палаты.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=nudelman-plastic-center" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=nudelman-plastic-center" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=nudelman-plastic-center" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1012,10 +1312,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Директор по маркетингу сети</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интеллектуальная система оповещения о готовности результатов анализов с предложением консультации врача в 1 клик.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интеллектуальная система оповещения о готовности результатов анализов с предложением консультации врача в 1 клик.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-365" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=zdorovie-365" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=zdorovie-365" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1027,10 +1333,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Директор по цифровому развитию</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный атлас эстетических результатов 'До / После' с фильтром по возрасту и типу кожи, доказывающий ценность методики.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный атлас эстетических результатов 'До / После' с фильтром по возрасту и типу кожи, доказывающий ценность методики.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=linline-clinics" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=linline-clinics" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=linline-clinics" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1042,10 +1354,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Главный врач клиники</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Цифровой персональный трекер подготовки к операции: пошаговый чеклист анализов с датами и напоминаниями в Telegram.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Цифровой персональный трекер подготовки к операции: пошаговый чеклист анализов с датами и напоминаниями в Telegram.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=paracels-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=paracels-clinic" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=paracels-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1057,10 +1375,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-medical">Медицина & Эстетика</span></td>
         <td><span class="persona-tag">Управляющий / Главный врач</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивный цифровой паспорт улыбки: 3D-моделирование итогового прикуса и пошаговый финансовый график оплат.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивный цифровой паспорт улыбки: 3D-моделирование итогового прикуса и пошаговый финансовый график оплат.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Aesthetic Clinic & Medical Beauty</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=megadenta-clinic" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=megadenta-clinic" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=megadenta-clinic" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1072,10 +1396,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Директор по маркетингу автохолдинга</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Собственный мобильный автомолл с AI-оценщиком трейд-ин по VIN-номеру и мгновенным бронированием авто с гарантией цены.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Собственный мобильный автомолл с AI-оценщиком трейд-ин по VIN-номеру и мгновенным бронированием авто с гарантией цены.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=avtoban-group" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=avtoban-group" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=avtoban-group" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1087,10 +1417,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Умный онлайн-подборщик оригинальных запчастей и расходников по китайским брендам с записью в сервис за минуту.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Умный онлайн-подборщик оригинальных запчастей и расходников по китайским брендам с записью в сервис за минуту.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=planeta-avto-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=planeta-avto-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=planeta-avto-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1102,10 +1438,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Руководитель отдела продаж / Сервис-директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Закрытый Telegram-клуб владельцев Porsche: бронь сервиса, подменный автомобиль к порогу и история обслуживания спорткара.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Закрытый Telegram-клуб владельцев Porsche: бронь сервиса, подменный автомобиль к порогу и история обслуживания спорткара.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=porsche-center-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=porsche-center-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=porsche-center-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1117,10 +1459,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Собственник студии</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Кинематографичный сайт с макросъемкой гидрофобного эффекта и онлайн-калькулятором зон оклейки под модель авто.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Кинематографичный сайт с макросъемкой гидрофобного эффекта и онлайн-калькулятором зон оклейки под модель авто.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=detailing-alarm-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=detailing-alarm-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=detailing-alarm-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1132,10 +1480,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-auto">Авто & Детейлинг</span></td>
         <td><span class="persona-tag">Владелец детейлинг-центра</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Telegram-бот автоматического расчета стоимости полировки/пленки по марке авто с внесением предоплаты за слот.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Telegram-бот автоматического расчета стоимости полировки/пленки по марке авто с внесением предоплаты за слот.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Auto Shine | Premium Detailing Studio</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=restyle-detailing-ekb" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=restyle-detailing-ekb" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=restyle-detailing-ekb" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1147,10 +1501,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-food">Пищепром & Агро</span></td>
         <td><span class="persona-tag">Коммерческий директор / Директор по маркетингу</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-витрина для рестораторов 'Черкашин HoReCa': заказ стейков, ветчин и деликатесов со специальными калибрами и фасовкой.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-витрина для рестораторов 'Черкашин HoReCa': заказ стейков, ветчин и деликатесов со специальными калибрами и фасовкой.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/geotochka/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Геоточка — Сеть фирменных точек на Яндекс Картах</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=cherkashin-meat" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=cherkashin-meat" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=cherkashin-meat" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/geotochka/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1162,10 +1522,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-food">Пищепром & Агро</span></td>
         <td><span class="persona-tag">Директор по сбыту / Директор по логистике</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">B2B-система автоматического подтверждения суточных заявок на свежую выпечку через бота с интеграцией в систему отгрузки 1С.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            B2B-система автоматического подтверждения суточных заявок на свежую выпечку через бота с интеграцией в систему отгрузки 1С.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/geotochka/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Геоточка — Сеть фирменных точек на Яндекс Картах</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=smak-bakery" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=smak-bakery" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=smak-bakery" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/geotochka/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1177,10 +1543,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-food">Пищепром & Агро</span></td>
         <td><span class="persona-tag">Директор по маркетингу и продажам</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Интерактивная карта 'Где купить свежее сегодня' + специальный оптовый портал для кофеен 'Талицкое Бариста' с автозаказом.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Интерактивная карта 'Где купить свежее сегодня' + специальный оптовый портал для кофеен 'Талицкое Бариста' с автозаказом.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/geotochka/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Геоточка — Сеть фирменных точек на Яндекс Картах</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=talitskoe-moloko" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=talitskoe-moloko" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=talitskoe-moloko" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/geotochka/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     
@@ -1192,10 +1564,16 @@
         <td><span class="region-pill">Екатеринбург</span></td>
         <td><span class="badge bg-food">Пищепром & Агро</span></td>
         <td><span class="persona-tag">Коммерческий директор</span></td>
-        <td style="font-size:0.85rem; color:#E2E8F0;">Личный кабинет оптового закупщика птицефабрики: бронирование партий, ветеринарные свидетельства 'Меркурий' онлайн.</td>
+        <td style="font-size:0.85rem; color:#E2E8F0;">
+            Личный кабинет оптового закупщика птицефабрики: бронирование партий, ветеринарные свидетельства 'Меркурий' онлайн.
+            <div style="margin-top:6px; font-size:0.8rem; color:#C5A059;">
+                <strong>Шаблон сайта:</strong> <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" style="color:#E0C07A; text-decoration:underline;">Tentorium Presentation | Производство & Дистрибуция</a>
+            </div>
+        </td>
         <td style="white-space:nowrap;">
-            <a href="Dynamic_Pitch_Deck.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-action btn-deck" title="Открыть презентацию">📊 Слайды</a>
+            <a href="Dynamic_Pitch_Deck.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-action btn-deck" title="Открыть интерактивную презентацию">📊 Слайды</a>
             <a href="Dynamic_One_Pager.html?id=sverdlovskaya-pticefabrika" target="_blank" class="btn-action btn-pager" title="Открыть КП-одностраничник">📄 1-Pager</a>
+            <a href="https://globalteampartners.github.io/tentorium-presentation/" target="_blank" class="btn-action btn-tpl" title="Открыть живой шаблон сайта Global Plus">🌐 Шаблон</a>
         </td>
     </tr>
     

@@ -150,29 +150,35 @@
             border: 1px solid var(--border-card);
             border-radius: 16px;
             padding: 32px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-        .hub-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(197, 160, 89, 0.1);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
         }
         .hub-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
+            width: 100%;
             height: 4px;
             background: var(--card-accent, var(--gold));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .hub-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(197, 160, 89, 0.5);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        }
+        .hub-card:hover::before {
+            opacity: 1;
         }
         .hub-card.lead-database { --card-accent: var(--gold); }
         .hub-card.strategy { --card-accent: var(--red); }
+        .hub-card.templates { --card-accent: #EAB308; }
         .hub-card.scripts { --card-accent: var(--green); }
         .hub-card.pitches { --card-accent: var(--purple); }
         .hub-card.brand { --card-accent: linear-gradient(90deg, var(--gold), var(--red)); }
@@ -291,7 +297,7 @@
 <header>
     <div class="brand-pill">GLOBAL PLUS &times; GLOBAL TEAM PARTNERS</div>
     <h1>Уральский Центр Продаж <span class="cross">&times;</span> <span class="highlight">Штаб Димы</span></h1>
-    <p class="subtitle">Интегрированная система экспансии и коммерческих предложений: Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург</p>
+    <p class="subtitle">Интегрированная система экспансии, коммерческих предложений и готовых сайтов: Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург</p>
     <div class="partner-badge">🎯 Региональный партнер: Дмитрий | Свердловская область</div>
 </header>
 
@@ -304,16 +310,16 @@
             <div class="stat-label">Отобранных предприятия</div>
         </div>
         <div class="stat-card">
+            <div class="stat-num">9</div>
+            <div class="stat-label">Шаблонов сайтов Global Plus</div>
+        </div>
+        <div class="stat-card">
             <div class="stat-num">3</div>
             <div class="stat-label">Географических пояса</div>
         </div>
         <div class="stat-card">
             <div class="stat-num">48 ч</div>
             <div class="stat-label">Запуск прототипа</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-num">100%</div>
-            <div class="stat-label">Ориентация на результат</div>
         </div>
     </div>
 
@@ -327,7 +333,7 @@
             <div>
                 <span class="card-icon">📋</span>
                 <h3 class="card-title">Единая База 62 Предприятий</h3>
-                <p class="card-desc">Полный реестр целевых заводов, комбинатов, девелоперов, клиник и ресторанов Синячихи, Алапаевска и Екатеринбурга. Точные ЛПР, выявленные боли, готовые питчи "Троянского коня".</p>
+                <p class="card-desc">Полный реестр целевых заводов, комбинатов, девелоперов, клиник и ресторанов Синячихи, Алапаевска и Екатеринбурга. Точные ЛПР, выявленные боли, готовые питчи и прикрепленные шаблоны сайтов.</p>
             </div>
             <a href="Leads_List.html" class="btn-card">
                 <span>Открыть Базу Лидов (62 компании)</span>
@@ -335,7 +341,20 @@
             </a>
         </div>
 
-        <!-- КАРТОЧКА 2: ПЛЕЙБУК ДИМЫ -->
+        <!-- КАРТОЧКА 2: ШАБЛОНЫ САЙТОВ GLOBAL PLUS -->
+        <div class="hub-card templates">
+            <div>
+                <span class="card-icon">🔥</span>
+                <h3 class="card-title">Каталог Шаблонов Global Plus <span class="badge-hot">НОВОЕ</span></h3>
+                <p class="card-desc">Реальные кинематографичные сайты с видеофоном, скроллом и формами по отраслям (Медицина, Детейлинг, Девелопмент, HoReCa, Гео-карты, Заводы). Открывай на планшете перед директорами.</p>
+            </div>
+            <a href="Templates_Catalog.html" class="btn-card">
+                <span>Смотреть 9 Шаблонов Сайтов</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <!-- КАРТОЧКА 3: ПЛЕЙБУК ДИМЫ -->
         <div class="hub-card strategy">
             <div>
                 <span class="card-icon">🐺</span>
@@ -348,7 +367,7 @@
             </a>
         </div>
 
-        <!-- КАРТОЧКА 3: БЫСТРЫЕ СКРИПТЫ -->
+        <!-- КАРТОЧКА 4: БЫСТРЫЕ СКРИПТЫ -->
         <div class="hub-card scripts">
             <div>
                 <span class="card-icon">🚀</span>
@@ -361,7 +380,7 @@
             </a>
         </div>
 
-        <!-- КАРТОЧКА 4: 62 ПИТЧА И ЦЕНЫ -->
+        <!-- КАРТОЧКА 5: 62 ПИТЧА И ЦЕНЫ -->
         <div class="hub-card pitches">
             <div>
                 <span class="card-icon">🔍</span>
@@ -374,7 +393,7 @@
             </a>
         </div>
 
-        <!-- КАРТОЧКА 5: СТРАТЕГИЯ БРЕНДОВ -->
+        <!-- КАРТОЧКА 6: СТРАТЕГИЯ БРЕНДОВ -->
         <div class="hub-card brand">
             <div>
                 <span class="card-icon">👑</span>
@@ -387,7 +406,7 @@
             </a>
         </div>
 
-        <!-- КАРТОЧКА 6: АНАЛИЗ РЫНКА -->
+        <!-- КАРТОЧКА 7: АНАЛИЗ РЫНКА -->
         <div class="hub-card intel">
             <div>
                 <span class="card-icon">🧠</span>
@@ -402,17 +421,71 @@
 
     </div>
 
-    <!-- ГОТОВЫЕ ИНТЕРАКТИВНЫЕ ДЕМО-ОБРАЗЦЫ -->
-    <h2 class="section-heading">🌐 Живые Демо-Прототипы Для Показа На Встречах</h2>
-    <p style="color: var(--text-dim); margin-top: -15px; margin-bottom: 25px;">Открывай прямо со смартфона или планшета перед директором — это снимает 90% сомнений за 30 секунд.</p>
+    <!-- ГОТОВЫЕ ИНТЕРАКТИВНЫЕ ДЕМО-ОБРАЗЦЫ & ШАБЛОНЫ САЙТОВ -->
+    <h2 class="section-heading">🌐 Живые Сайты &amp; Демо-Прототипы Для Встреч</h2>
+    <p style="color: var(--text-dim); margin-top: -15px; margin-bottom: 25px;">Открывай прямо со смартфона или планшета перед директором — покажи уровень визуализации и B2B-функционал за 30 секунд.</p>
 
     <div class="demo-grid">
+
+        <div class="demo-card">
+            <div class="demo-title">💉 Медицина &amp; Эстетика</div>
+            <div class="demo-subtitle">УГМК-Здоровье, Нудельман — кинематографичный портал клиники с видеофоном</div>
+            <a href="https://globalteampartners.github.io/aesthetic-clinic-demo/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Aesthetic Clinic</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        <div class="demo-card">
+            <div class="demo-title">🏎️ Авто &amp; Детейлинг</div>
+            <div class="demo-subtitle">Detailing Alarm, Порше Центр, Автобан — 60fps скролл авто и бронепленка</div>
+            <a href="https://globalteampartners.github.io/auto-shine-demo/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Auto Shine</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        <div class="demo-card">
+            <div class="demo-title">🏙️ Девелопмент &amp; Премиум ЖК</div>
+            <div class="demo-subtitle">Брусника, Атом, УГМК-Застройщик — кинематографичный архитектурный портал</div>
+            <a href="https://globalteampartners.github.io/belgrade-waterfront-demo/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Belgrade Waterfront</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        <div class="demo-card">
+            <div class="demo-title">🍷 Премиум HoReCa &amp; Отели</div>
+            <div class="demo-subtitle">Троекуров, Kitchen, Высоцкий — видеоряд залов и VIP-бронь столов</div>
+            <a href="https://globalteampartners.github.io/salon-1905-demo/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Salon 1905</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        <div class="demo-card">
+            <div class="demo-title">📍 Геоточка &amp; Ритейл</div>
+            <div class="demo-subtitle">Талицкое молоко, СМАК, Черкашин — карта точек на Яндекс Картах</div>
+            <a href="https://globalteampartners.github.io/geotochka/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Геоточка</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
+
+        <div class="demo-card">
+            <div class="demo-title">🏭 Заводы &amp; Дистрибуция</div>
+            <div class="demo-subtitle">Птицефабрика, АМК, Alma Ceramica — 3D-презентация производства</div>
+            <a href="https://globalteampartners.github.io/tentorium-presentation/" class="demo-link" target="_blank">
+                <span>Открыть Сайт Тенториум</span>
+                <span>&nearr;</span>
+            </a>
+        </div>
 
         <div class="demo-card">
             <div class="demo-title">🌲 Лесопромышленный B2B-Портал</div>
             <div class="demo-subtitle">СВЕЗА, Лестех, АДОЗ, АЛХ — калькулятор партий фанеры и пиломатериалов</div>
             <a href="demos/wood-industry-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
+                <span>Открыть Калькулятор Фанеры</span>
                 <span>&nearr;</span>
             </a>
         </div>
@@ -421,43 +494,16 @@
             <div class="demo-title">⚙️ Спецтехника &amp; Машиностроение</div>
             <div class="demo-subtitle">Стройдормаш, ЗИСТ, PSM — 3D-конфигуратор бурилок и подбор гидромоторов</div>
             <a href="demos/machinery-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
+                <span>Открыть 3D-Конфигуратор</span>
                 <span>&nearr;</span>
             </a>
         </div>
 
         <div class="demo-card">
-            <div class="demo-title">🏙️ Девелопмент &amp; Премиум ЖК</div>
-            <div class="demo-subtitle">Брусника, Атом, УГМК-Застройщик — 3D-планировки, ипотека и бронирование</div>
-            <a href="demos/real-estate-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
-                <span>&nearr;</span>
-            </a>
-        </div>
-
-        <div class="demo-card">
-            <div class="demo-title">🍷 Премиум HoReCa &amp; Отели</div>
-            <div class="demo-subtitle">Троекуров, Kitchen, Hyatt — VIP-бронь столов, залов и AI-депозиты</div>
-            <a href="demos/horeca-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
-                <span>&nearr;</span>
-            </a>
-        </div>
-
-        <div class="demo-card">
-            <div class="demo-title">💉 Медицина &amp; Эстетика</div>
-            <div class="demo-subtitle">УГМК-Здоровье, Нудельман — онлайн-триаж, запись и калькулятор лечения</div>
-            <a href="demos/medical-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
-                <span>&nearr;</span>
-            </a>
-        </div>
-
-        <div class="demo-card">
-            <div class="demo-title">📦 B2B Поставки &amp; Сервисы</div>
-            <div class="demo-subtitle">Черкашин, СМАК, АУЖД, ФОК — личные кабинеты оптовиков и онлайн-касса</div>
-            <a href="demos/service-demo/index.html" class="demo-link" target="_blank">
-                <span>Открыть Интерактивное Демо</span>
+            <div class="demo-title">🚂 Туризм &amp; VIP-Трансфер</div>
+            <div class="demo-subtitle">АУЖД, Музей Синячихи, отели — интерактивная продажа турпакетов онлайн</div>
+            <a href="https://globalteampartners.github.io/vt-vip/" class="demo-link" target="_blank">
+                <span>Открыть Сайт VT-VIP</span>
                 <span>&nearr;</span>
             </a>
         </div>
