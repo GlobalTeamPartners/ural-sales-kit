@@ -24,6 +24,7 @@ TEMPLATES_CATALOG = [
         "category": "Лесопромышленность & Деревообработка",
         "badge": "Калькулятор партий ГОСТ • Вагонные нормы • 1С",
         "url": "demos/wood-industry-demo/index.html",
+        "video": "assets/videos/wood.mp4",
         "demo_type": "B2B-портал оптовых поставок фанеры и леса",
         "desc": "Интерактивный калькулятор кубатуры, веса и оптовой стоимости партий березовой фанеры (ФК/ФСФ) и пиломатериалов по ГОСТ с проверкой остатков на складах Верхней Синячихи.",
         "features": [
@@ -41,6 +42,7 @@ TEMPLATES_CATALOG = [
         "category": "Машиностроение & Металл",
         "badge": "3D-Каркасы • Расчет металлоемкости • 500K м²",
         "url": "https://globalteamgroup.github.io/zksk-sample/",
+        "video": "assets/videos/machinery.mp4",
         "demo_type": "Кинематографичный портал завода металлоконструкций",
         "desc": "Полнофункциональный портал завода быстровозводимых зданий, промышленных каркасов, ангаров и металлоконструкций полного цикла с инженерным калькулятором.",
         "features": [
@@ -58,6 +60,7 @@ TEMPLATES_CATALOG = [
         "category": "Машиностроение & Металл",
         "badge": "3D-Селектор бурилок • Подбор шнеков • Выгрузка КП",
         "url": "demos/machinery-demo/index.html",
+        "video": "assets/videos/machinery.mp4",
         "demo_type": "B2B-конфигуратор промышленного оборудования",
         "desc": "Интерактивный селектор бурильно-крановых машин, подбор бурового инструмента по категориям грунта, кросс-подбор гидромоторов PSM-Hydraulics.",
         "features": [
@@ -75,6 +78,7 @@ TEMPLATES_CATALOG = [
         "category": "Девелопмент & Недвижимость",
         "badge": "Допуски СРО • Парк техники • Сметный калькулятор",
         "url": "https://globalteamgroup.github.io/stroyka-pro/",
+        "video": "assets/videos/stroyka.mp4",
         "demo_type": "Премиальный портал генерального подрядчика",
         "desc": "Цифровой портал крупной строительной компании: каталог генподрядных проектов, лицензии СРО, презентация парка собственной спецтехники и калькулятор этапов СМР.",
         "features": [
@@ -92,6 +96,7 @@ TEMPLATES_CATALOG = [
         "category": "Девелопмент & Недвижимость",
         "badge": "Интерактивный генплан • 3D-Виллы • Чат инвесторов",
         "url": "https://globalteamgroup.github.io/luxury-estate-sample/",
+        "video": "assets/videos/estate.mp4",
         "demo_type": "Кинематографичный портал элитного девелопмента",
         "desc": "Сайт клубной загородной и городской недвижимости: интерактивный выбор участков на генплане, 3D-архитектурные резиденции, видовые панорамы и закрытый брокерский чат.",
         "features": [
@@ -109,6 +114,7 @@ TEMPLATES_CATALOG = [
         "category": "Медицина & Эстетика",
         "badge": "Видеоряд клиники • Онлайн-запись • AI-Триаж симптомов",
         "url": "https://globalteamgroup.github.io/europa-clinic/",
+        "video": "assets/videos/clinic.mp4",
         "demo_type": "Кинематографичный портал многопрофильной клиники",
         "desc": "Премиальный медицинский портал: видеоэкскурсия по отделениям, защищенная запись на приём к врачам высшей категории, каталог МРТ/КТ диагностики и личный кабинет.",
         "features": [
@@ -126,6 +132,7 @@ TEMPLATES_CATALOG = [
         "category": "Медицина & Эстетика",
         "badge": "3D-Улыбка • Имплантация All-on-4 • План лечения",
         "url": "https://globalteamgroup.github.io/lumiere-clinic-sample/",
+        "video": "assets/videos/dental.mp4",
         "demo_type": "Интерактивный портал эстетической стоматологии",
         "desc": "Презентация премиальной стоматологии и косметологии: 3D-моделирование улыбки, фотопротоколы До/После, протоколы имплантации All-on-4/6 и запись на консультацию.",
         "features": [
@@ -143,6 +150,7 @@ TEMPLATES_CATALOG = [
         "category": "Авто & Детейлинг",
         "badge": "60fps Скролл авто • Калькулятор бронепленки • Керамика 9H",
         "url": "https://globalteamgroup.github.io/elite-detailing/",
+        "video": "assets/videos/auto.mp4",
         "demo_type": "Покадровый интерактивный скролл автокомплекса",
         "desc": "Покадровая 60fps анимация премиального автомобиля с интерактивным выбором зон оклейки антигравийной полиуретановой пленкой, керамикой и записью в бокс.",
         "features": [
@@ -160,6 +168,7 @@ TEMPLATES_CATALOG = [
         "category": "Авто & Детейлинг",
         "badge": "Парк спецтехники • Заказ запчастей • Выездные бригады",
         "url": "demos/service-demo/index.html",
+        "video": "assets/videos/auto.mp4",
         "demo_type": "B2B-портал сервисного обслуживания спецтехники",
         "desc": "Специализированная B2B-система технического обслуживания лесовозов, тягачей, кранов и строительной техники: вызов дежурного механика и заказ запчастей.",
         "features": [
@@ -177,6 +186,7 @@ TEMPLATES_CATALOG = [
         "category": "HoReCa & Отели",
         "badge": "Видеоряд курорта • Бронь номеров & коттеджей • Спа-клуб",
         "url": "https://globalteamgroup.github.io/horeca-grand-sample/",
+        "video": "assets/videos/horeca.mp4",
         "demo_type": "Кинематографичный портал загородного курорта",
         "desc": "Атмосферный кинематографичный портал: бронирование номеров и коттеджей напрямую без комиссии агрегаторов, банный комплекс, ресторан и банкетные залы.",
         "features": [
@@ -194,6 +204,7 @@ TEMPLATES_CATALOG = [
         "category": "HoReCa & Отели",
         "badge": "Панорамный вид • Банкетный калькулятор • Депозиты",
         "url": "demos/horeca-demo/index.html",
+        "video": "assets/videos/horeca.mp4",
         "demo_type": "Премиальный ресторанный портал",
         "desc": "Интерактивный портал ресторанной группы: выбор панорамных столиков на схеме зала, банкетный калькулятор меню и внесение депозита онлайн.",
         "features": [
@@ -211,6 +222,7 @@ TEMPLATES_CATALOG = [
         "category": "Пищепром & Агро",
         "badge": "Локальное SEO • Яндекс Карты • Сеть баз",
         "url": "https://globalteampartners.github.io/geotochka/",
+        "video": "assets/videos/agro.mp4",
         "demo_type": "Геолокационная платформа сети",
         "desc": "Сайт-система управления и продвижения точек присутствия, складов, фирменных магазинов и сервисных центров по всей территории России.",
         "features": [
@@ -228,6 +240,7 @@ TEMPLATES_CATALOG = [
         "category": "Пищепром & Агро",
         "badge": "3D-Производство • Личный кабинет B2B • Франшиза",
         "url": "https://globalteampartners.github.io/tentorium-presentation/",
+        "video": "assets/videos/agro.mp4",
         "demo_type": "Презентация фабрики и партнерской сети",
         "desc": "Интерактивная 3D-демонстрация чистоты промышленного производства, экологических лабораторий, условий открытия франшизы и дистрибьюторских оптовых цен.",
         "features": [
@@ -245,6 +258,7 @@ TEMPLATES_CATALOG = [
         "category": "Туризм, Спорт & Услуги",
         "badge": "АУЖД туры • Музей Нижней Синячихи • Бронирование онлайн",
         "url": "https://globalteamgroup.github.io/tourism-sample/",
+        "video": "assets/videos/tourism.mp4",
         "demo_type": "Туристический региональный портал",
         "desc": "Цифровая платформа бронирования путешествий по историческим местам Свердловской области: поездки по Алапаевской узкоколейке, Музей в Нижней Синячихе, спорткомплекс Орион и самоцветные копи.",
         "features": [
@@ -262,6 +276,7 @@ TEMPLATES_CATALOG = [
         "category": "Шоурил Global Plus",
         "badge": "Cinematic Scroll • Разработка за 48 часов • B2B-Лидогенерация",
         "url": "https://globalteamgroup.github.io/global-plus/",
+        "video": "assets/videos/machinery.mp4",
         "demo_type": "Официальный презентационный портал агентства",
         "desc": "Официальный сайт агентства Global Plus: демонстрация возможностей кинематографичного дизайна, архитектура быстрой разработки за 48 часов, кейсы роста конверсий и контакты.",
         "features": [
@@ -284,37 +299,44 @@ template_cards_html = []
 for t in TEMPLATES_CATALOG:
     feats = "".join([f"<li>✓ {f}</li>" for f in t["features"]])
     card = f"""
-    <div class="template-card" data-category="{t['category']}">
-        <div class="template-header">
-            <div>
-                <span class="tpl-category">{t['category']}</span>
-                <h3 class="tpl-title">{t['title']}</h3>
-                <span class="tpl-badge">{t['badge']}</span>
-            </div>
-            <a href="{t['url']}" target="_blank" class="btn-open-live">Открыть сайт во весь экран ↗</a>
+    <div class="case-card" data-category="{t['category']}">
+        <div class="case-video-wrap">
+            <video src="{t['video']}" muted loop playsinline preload="metadata"></video>
+            <div class="video-overlay"></div>
+            <div class="case-category">{t['category']}</div>
+            <div class="case-type-badge">{t['demo_type']}</div>
         </div>
-        <p class="tpl-desc">{t['desc']}</p>
-        
-        <div class="tpl-body-grid">
-            <div class="tpl-features">
-                <h4>⚡ Ключевые возможности решения:</h4>
-                <ul>{feats}</ul>
+        <div class="case-info">
+            <div class="template-header">
+                <div>
+                    <h3 class="tpl-title">{t['title']}</h3>
+                    <span class="tpl-badge">{t['badge']}</span>
+                </div>
+                <a href="{t['url']}" target="_blank" class="btn-open-live">Открыть во весь экран ↗</a>
             </div>
-            <div class="tpl-targets">
-                <h4>🎯 Кому предлагать на Урале:</h4>
-                <p class="targets-text">{t['target_leads']}</p>
+            <p class="tpl-desc">{t['desc']}</p>
+            
+            <div class="tpl-body-grid">
+                <div class="tpl-features">
+                    <h4>⚡ Ключевые возможности решения:</h4>
+                    <ul>{feats}</ul>
+                </div>
+                <div class="tpl-targets">
+                    <h4>🎯 Кому предлагать на Урале:</h4>
+                    <p class="targets-text">{t['target_leads']}</p>
+                </div>
             </div>
-        </div>
 
-        <div class="pitch-quote">
-            <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
-            <p>{t['pitch_talk']}</p>
-        </div>
+            <div class="pitch-quote">
+                <div class="quote-label">🐺 Что Диме говорить директору при показе на планшете:</div>
+                <p>{t['pitch_talk']}</p>
+            </div>
 
-        <div class="card-footer-actions">
-            <a href="{t['url']}" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
-            <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
-            <button class="btn-tpl-action btn-copy" onclick="copyLink('{t['url']}', this)">🔗 Скопировать ссылку для WhatsApp</button>
+            <div class="card-footer-actions">
+                <a href="{t['url']}" target="_blank" class="btn-tpl-action btn-live">🌐 Протестировать Live-Сайт</a>
+                <a href="Leads_List.html" class="btn-tpl-action btn-leads">📋 Показать клиентов в базе</a>
+                <button class="btn-tpl-action btn-copy" onclick="copyLink('{t['url']}', this)">🔗 Скопировать ссылку для WhatsApp</button>
+            </div>
         </div>
     </div>
     """
@@ -435,18 +457,81 @@ templates_page_html = f"""<!DOCTYPE html>
         .templates-grid {{
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 35px;
         }}
-        .template-card {{
-            background: var(--bg-surface);
+        .case-card {{
+            background: rgba(18, 23, 33, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--border-card);
-            border-radius: 16px;
-            padding: 32px;
-            transition: all 0.3s;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }}
-        .template-card:hover {{
+        .case-card:hover {{
             border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(197, 160, 89, 0.2), 0 0 30px rgba(0,0,0,0.7);
+            transform: translateY(-4px);
+        }}
+        .case-video-wrap {{
+            position: relative;
+            width: 100%;
+            height: 260px;
+            background: #000;
+            overflow: hidden;
+        }}
+        .case-video-wrap video {{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.85);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+        }}
+        .case-card:hover .case-video-wrap video {{
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }}
+        .video-overlay {{
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(18, 23, 33, 0.95) 100%);
+            pointer-events: none;
+        }}
+        .case-category {{
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+        }}
+        .case-type-badge {{
+            position: absolute;
+            bottom: 18px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #E2E8F0;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 6px;
+            z-index: 2;
+        }}
+        .case-info {{
+            padding: 28px 32px 32px;
         }}
         .template-header {{
             display: flex;
@@ -660,7 +745,7 @@ templates_page_html = f"""<!DOCTYPE html>
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const cat = btn.getAttribute('data-filter');
-            document.querySelectorAll('.template-card').forEach(card => {{
+            document.querySelectorAll('.case-card').forEach(card => {{
                 if (cat === 'all' || card.getAttribute('data-category') === cat) {{
                     card.style.display = 'block';
                 }} else {{
@@ -669,6 +754,30 @@ templates_page_html = f"""<!DOCTYPE html>
             }});
         }});
     }});
+
+    // Автовоспроизведение превью-видео при появлении в зоне видимости или наведении
+    const cardVideos = document.querySelectorAll('.case-video-wrap video');
+    if ('IntersectionObserver' in window) {{
+        const observer = new IntersectionObserver((entries) => {{
+            entries.forEach(entry => {{
+                const vid = entry.target;
+                if (entry.isIntersecting) {{
+                    vid.muted = true;
+                    vid.defaultMuted = true;
+                    vid.play().catch(() => {{}});
+                }} else {{
+                    vid.pause();
+                }}
+            }});
+        }}, {{ threshold: 0.2 }});
+        cardVideos.forEach(v => observer.observe(v));
+    }} else {{
+        cardVideos.forEach(v => {{
+            v.muted = true;
+            v.defaultMuted = true;
+            v.play().catch(() => {{}});
+        }});
+    }}
 </script>
 
 </body>
@@ -924,15 +1033,51 @@ index_html = f"""<!DOCTYPE html>
             margin-bottom: 60px;
         }}
         .demo-card {{
-            background: var(--bg-surface);
+            background: rgba(18, 23, 33, 0.85);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border-card);
-            border-radius: 12px;
-            padding: 24px;
-            transition: all 0.3s;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }}
         .demo-card:hover {{
-            border-color: rgba(197, 160, 89, 0.5);
+            border-color: var(--gold);
             transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+        }}
+        .demo-thumb {{
+            position: relative;
+            width: 100%;
+            height: 140px;
+            background: #000;
+            overflow: hidden;
+        }}
+        .demo-thumb video {{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.8);
+            transition: transform 0.5s ease;
+        }}
+        .demo-card:hover .demo-thumb video {{
+            transform: scale(1.06);
+            filter: brightness(1.0);
+        }}
+        .demo-thumb-overlay {{
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(18, 23, 33, 0.9) 100%);
+            pointer-events: none;
+        }}
+        .demo-content {{
+            padding: 18px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
         }}
         .demo-title {{
             font-size: 1.15rem;
@@ -1001,7 +1146,7 @@ index_html = f"""<!DOCTYPE html>
             <div class="stat-label">Отобранных предприятия</div>
         </div>
         <div class="stat-card">
-            <div class="stat-num">9</div>
+            <div class="stat-num">15</div>
             <div class="stat-label">Шаблонов сайтов Global Plus</div>
         </div>
         <div class="stat-card">
@@ -1036,11 +1181,37 @@ index_html = f"""<!DOCTYPE html>
         <div class="hub-card templates">
             <div>
                 <span class="card-icon">🔥</span>
-                <h3 class="card-title">Каталог Шаблонов Global Plus <span class="badge-hot">НОВОЕ</span></h3>
+                <h3 class="card-title">Каталог Шаблонов Global Plus <span class="badge-hot">15 РЕШЕНИЙ</span></h3>
                 <p class="card-desc">Реальные кинематографичные сайты с видеофоном, скроллом и формами по отраслям (Медицина, Детейлинг, Девелопмент, HoReCa, Гео-карты, Заводы). Открывай на планшете перед директорами.</p>
             </div>
             <a href="Templates_Catalog.html" class="btn-card">
-                <span>Смотреть 9 Шаблонов Сайтов</span>
+                <span>Смотреть 15 Шаблонов Сайтов</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <!-- КАРТОЧКА: ИНТЕРАКТИВНАЯ ПРЕЗЕНТАЦИЯ (PITCH DECK) -->
+        <div class="hub-card deck-card" style="--card-accent: #C5A059;">
+            <div>
+                <span class="card-icon">📊</span>
+                <h3 class="card-title">Интерактивный Pitch Deck <span class="badge-hot">ДЛЯ IPAD</span></h3>
+                <p class="card-desc">Динамическая презентация со скроллом, анимацией и видеофоном под любую компанию из 62 в базе. Полноэкранный показ 4 ключевых слайдов на встречах с уральскими директорами.</p>
+            </div>
+            <a href="Dynamic_Pitch_Deck.html?id=sveza-vs" class="btn-card">
+                <span>Запустить Интерактивные Слайды</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <!-- КАРТОЧКА: ДИНАМИЧЕСКИЙ 1-PAGER (КП ДЛЯ ПЕЧАТИ) -->
+        <div class="hub-card pager-card" style="--card-accent: #10B981;">
+            <div>
+                <span class="card-icon">📄</span>
+                <h3 class="card-title">Динамический 1-Pager (А4) <span class="badge-hot">В РУКИ</span></h3>
+                <p class="card-desc">Готовый стратегический меморандум под каждую компанию: боли, решение за 48 часов, 3 фазы цен и расчет ROI. Готов к распечатке на А4 или отправке в PDF директору в руки.</p>
+            </div>
+            <a href="Dynamic_One_Pager.html?id=sveza-vs" class="btn-card">
+                <span>Открыть Одностраничник А4</span>
                 <span>&rarr;</span>
             </a>
         </div>
@@ -1119,142 +1290,171 @@ index_html = f"""<!DOCTYPE html>
     <div class="demo-grid">
 
         <div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/wood.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🌲 Лесопромышленный B2B-Портал</div>
             <div class="demo-subtitle">СВЕЗА, Лестех, АДОЗ, АЛХ — калькулятор вагонных партий фанеры и леса по ГОСТ</div>
             <a href="demos/wood-industry-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Калькулятор Фанеры</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏭 Завод Металлоконструкций ЗКСК</div>
             <div class="demo-subtitle">ВСЗ, Уралмаш, Стройдормаш — 3D-каркасы цехов, ангаров и расчет металлоемкости</div>
             <a href="https://globalteamgroup.github.io/zksk-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Завода ЗКСК</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">⚙️ Спецтехника &amp; Машиностроение</div>
             <div class="demo-subtitle">Стройдормаш, ЗИСТ, PSM — 3D-конфигуратор бурилок и подбор гидромоторов</div>
             <a href="demos/machinery-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть 3D-Конфигуратор</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/stroyka.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏗️ Строительство &amp; Генподряд</div>
             <div class="demo-subtitle">Алапаевск-Строй, Атомстройкомплекс, Брусника — СРО, парк техники и сметы</div>
             <a href="https://globalteamgroup.github.io/stroyka-pro/" class="demo-link" target="_blank">
                 <span>Открыть Сайт «Стройка-Про»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/estate.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏙️ Девелопмент &amp; Клубные Дома</div>
             <div class="demo-subtitle">Брусника, УГМК-Застройщик, Forum Group — интерактивный генплан и 3D-резиденции</div>
             <a href="https://globalteamgroup.github.io/luxury-estate-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Luxury Estate</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/clinic.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">💉 Медицинский Центр «Клиника Европа»</div>
             <div class="demo-subtitle">УГМК-Здоровье, Здоровье 365, Парацельс — видеоряд клиники и онлайн-запись к врачам</div>
             <a href="https://globalteamgroup.github.io/europa-clinic/" class="demo-link" target="_blank">
                 <span>Открыть Сайт «Клиника Европа»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/dental.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🦷 Стоматология &amp; Эстетика «Люмьер»</div>
             <div class="demo-subtitle">Мегадента Клиник, Нудельман — 3D-моделирование улыбок и планы лечения</div>
             <a href="https://globalteamgroup.github.io/lumiere-clinic-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Клиники «Люмьер»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/auto.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏎️ Автоуход &amp; Детейлинг «Elite Detailing»</div>
             <div class="demo-subtitle">Detailing Alarm, Порше Центр, Автобан — 60fps скролл авто и бронепленка</div>
             <a href="https://globalteamgroup.github.io/elite-detailing/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Elite Detailing</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/auto.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🚜 Сервис Спецтехники &amp; Автоколонн</div>
             <div class="demo-subtitle">СТО Синячихи, автобазы лесовозов — вызов мобильного механика и заказ запчастей</div>
             <a href="demos/service-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Сервисный Портал</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/horeca.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏨 Загородный Курорт &amp; Спа «HoReCa Grand»</div>
             <div class="demo-subtitle">Отель Эрмитаж, Металлург, Высоцкий, Чистые пруды — видеоряд курорта и бронь номеров</div>
             <a href="https://globalteamgroup.github.io/horeca-grand-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт HoReCa Grand</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/horeca.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🍷 Ресторан Авторской Кухни &amp; Банкеты</div>
             <div class="demo-subtitle">Троекуровъ, Kitchen, Сойка, Гастроли — интерактивная карта столов и депозиты</div>
             <a href="demos/horeca-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Ресторанное Демо</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/agro.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">📍 Геоточка &amp; Ритейл</div>
             <div class="demo-subtitle">Талицкое молоко, СМАК, Черкашин — карта точек на Яндекс Картах</div>
             <a href="https://globalteampartners.github.io/geotochka/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Геоточка</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/agro.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏭 Заводы &amp; Дистрибуция «Тенториум»</div>
             <div class="demo-subtitle">Птицефабрика, АМК, Alma Ceramica — 3D-презентация цеха и B2B-дистрибуция</div>
             <a href="https://globalteampartners.github.io/tentorium-presentation/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Тенториум</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/tourism.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🚂 Туризм &amp; АУЖД Урала</div>
             <div class="demo-subtitle">АУЖД, Музей Синячихи, отели — интерактивная продажа турпакетов и билетов</div>
             <a href="https://globalteamgroup.github.io/tourism-sample/" class="demo-link" target="_blank">
                 <span>Открыть Туристический Портал</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🌐 Global Plus | Шоурил (globalplus.tech)</div>
             <div class="demo-subtitle">Официальный презентационный портал агентства — разработка B2B-систем за 48 часов</div>
             <a href="https://globalteamgroup.github.io/global-plus/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Global Plus</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-    </div></div>
+</div></div>
 
 </div>
 
@@ -1262,6 +1462,26 @@ index_html = f"""<!DOCTYPE html>
     <p>&copy; 2026 Глобал Плюс &times; Global Team Partners. Конфиденциальный комплект регионального развития.</p>
     <p style="margin-top: 8px; opacity: 0.7;">Разработано для стратегического партнера в Свердловской области (Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург).</p>
 </footer>
+
+<script>
+    // Автовоспроизведение превью-видео при появлении в зоне видимости
+    const thumbs = document.querySelectorAll('.demo-thumb video');
+    if ('IntersectionObserver' in window) {{
+        const obs = new IntersectionObserver((entries) => {{
+            entries.forEach(entry => {{
+                const v = entry.target;
+                if (entry.isIntersecting) {{
+                    v.muted = true;
+                    v.defaultMuted = true;
+                    v.play().catch(() => {{}});
+                }} else {{
+                    v.pause();
+                }}
+            }});
+        }}, {{ threshold: 0.25 }});
+        thumbs.forEach(v => obs.observe(v));
+    }}
+</script>
 
 </body>
 </html>
@@ -1527,7 +1747,7 @@ leads_html = f"""<!DOCTYPE html>
 
 <div class="top-nav">
     <a href="index.html" class="btn-back">&larr; Вернуться в Центр Продаж</a>
-    <div style="font-size: 0.85rem; color: var(--gold);">Региональный охват: 62 ключевых предприятия &bull; 9 шаблонов сайтов</div>
+    <div style="font-size: 0.85rem; color: var(--gold);">Региональный охват: 62 ключевых предприятия &bull; 15 шаблонов сайтов</div>
 </div>
 
 <div class="container">
@@ -2287,8 +2507,28 @@ deck_html = f"""<!DOCTYPE html>
 
     const bgVid = document.getElementById('bgVideo');
     if (bgVid) {{
+        bgVid.muted = true;
+        bgVid.defaultMuted = true;
+        bgVid.playsInline = true;
+        bgVid.setAttribute('playsinline', '');
+        bgVid.setAttribute('muted', '');
         bgVid.src = videoFile;
-        bgVid.play().catch(e => console.log('Autoplay:', e));
+        bgVid.load();
+        const p = bgVid.play();
+        if (p !== undefined) {{
+            p.catch(e => {{
+                console.log('Autoplay muted fallback:', e);
+                const unlock = () => {{
+                    bgVid.play();
+                    window.removeEventListener('click', unlock);
+                    window.removeEventListener('touchstart', unlock);
+                    window.removeEventListener('keydown', unlock);
+                }};
+                window.addEventListener('click', unlock);
+                window.addEventListener('touchstart', unlock);
+                window.addEventListener('keydown', unlock);
+            }});
+        }}
     }}
 
     // Слайдер
@@ -2619,8 +2859,28 @@ pager_html = f"""<!DOCTYPE html>
 
     const bgVid = document.getElementById('bgVideo');
     if (bgVid) {{
+        bgVid.muted = true;
+        bgVid.defaultMuted = true;
+        bgVid.playsInline = true;
+        bgVid.setAttribute('playsinline', '');
+        bgVid.setAttribute('muted', '');
         bgVid.src = videoFile;
-        bgVid.play().catch(e => console.log('Autoplay:', e));
+        bgVid.load();
+        const p = bgVid.play();
+        if (p !== undefined) {{
+            p.catch(e => {{
+                console.log('Autoplay muted fallback:', e);
+                const unlock = () => {{
+                    bgVid.play();
+                    window.removeEventListener('click', unlock);
+                    window.removeEventListener('touchstart', unlock);
+                    window.removeEventListener('keydown', unlock);
+                }};
+                window.addEventListener('click', unlock);
+                window.addEventListener('touchstart', unlock);
+                window.addEventListener('keydown', unlock);
+            }});
+        }}
     }}
 </script>
 

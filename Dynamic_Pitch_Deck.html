@@ -319,8 +319,28 @@
 
     const bgVid = document.getElementById('bgVideo');
     if (bgVid) {
+        bgVid.muted = true;
+        bgVid.defaultMuted = true;
+        bgVid.playsInline = true;
+        bgVid.setAttribute('playsinline', '');
+        bgVid.setAttribute('muted', '');
         bgVid.src = videoFile;
-        bgVid.play().catch(e => console.log('Autoplay:', e));
+        bgVid.load();
+        const p = bgVid.play();
+        if (p !== undefined) {
+            p.catch(e => {
+                console.log('Autoplay muted fallback:', e);
+                const unlock = () => {
+                    bgVid.play();
+                    window.removeEventListener('click', unlock);
+                    window.removeEventListener('touchstart', unlock);
+                    window.removeEventListener('keydown', unlock);
+                };
+                window.addEventListener('click', unlock);
+                window.addEventListener('touchstart', unlock);
+                window.addEventListener('keydown', unlock);
+            });
+        }
     }
 
     // Слайдер

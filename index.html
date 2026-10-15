@@ -240,15 +240,51 @@
             margin-bottom: 60px;
         }
         .demo-card {
-            background: var(--bg-surface);
+            background: rgba(18, 23, 33, 0.85);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border-card);
-            border-radius: 12px;
-            padding: 24px;
-            transition: all 0.3s;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .demo-card:hover {
-            border-color: rgba(197, 160, 89, 0.5);
+            border-color: var(--gold);
             transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+        }
+        .demo-thumb {
+            position: relative;
+            width: 100%;
+            height: 140px;
+            background: #000;
+            overflow: hidden;
+        }
+        .demo-thumb video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.8);
+            transition: transform 0.5s ease;
+        }
+        .demo-card:hover .demo-thumb video {
+            transform: scale(1.06);
+            filter: brightness(1.0);
+        }
+        .demo-thumb-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(18, 23, 33, 0.9) 100%);
+            pointer-events: none;
+        }
+        .demo-content {
+            padding: 18px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
         }
         .demo-title {
             font-size: 1.15rem;
@@ -317,7 +353,7 @@
             <div class="stat-label">Отобранных предприятия</div>
         </div>
         <div class="stat-card">
-            <div class="stat-num">9</div>
+            <div class="stat-num">15</div>
             <div class="stat-label">Шаблонов сайтов Global Plus</div>
         </div>
         <div class="stat-card">
@@ -352,11 +388,37 @@
         <div class="hub-card templates">
             <div>
                 <span class="card-icon">🔥</span>
-                <h3 class="card-title">Каталог Шаблонов Global Plus <span class="badge-hot">НОВОЕ</span></h3>
+                <h3 class="card-title">Каталог Шаблонов Global Plus <span class="badge-hot">15 РЕШЕНИЙ</span></h3>
                 <p class="card-desc">Реальные кинематографичные сайты с видеофоном, скроллом и формами по отраслям (Медицина, Детейлинг, Девелопмент, HoReCa, Гео-карты, Заводы). Открывай на планшете перед директорами.</p>
             </div>
             <a href="Templates_Catalog.html" class="btn-card">
-                <span>Смотреть 9 Шаблонов Сайтов</span>
+                <span>Смотреть 15 Шаблонов Сайтов</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <!-- КАРТОЧКА: ИНТЕРАКТИВНАЯ ПРЕЗЕНТАЦИЯ (PITCH DECK) -->
+        <div class="hub-card deck-card" style="--card-accent: #C5A059;">
+            <div>
+                <span class="card-icon">📊</span>
+                <h3 class="card-title">Интерактивный Pitch Deck <span class="badge-hot">ДЛЯ IPAD</span></h3>
+                <p class="card-desc">Динамическая презентация со скроллом, анимацией и видеофоном под любую компанию из 62 в базе. Полноэкранный показ 4 ключевых слайдов на встречах с уральскими директорами.</p>
+            </div>
+            <a href="Dynamic_Pitch_Deck.html?id=sveza-vs" class="btn-card">
+                <span>Запустить Интерактивные Слайды</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <!-- КАРТОЧКА: ДИНАМИЧЕСКИЙ 1-PAGER (КП ДЛЯ ПЕЧАТИ) -->
+        <div class="hub-card pager-card" style="--card-accent: #10B981;">
+            <div>
+                <span class="card-icon">📄</span>
+                <h3 class="card-title">Динамический 1-Pager (А4) <span class="badge-hot">В РУКИ</span></h3>
+                <p class="card-desc">Готовый стратегический меморандум под каждую компанию: боли, решение за 48 часов, 3 фазы цен и расчет ROI. Готов к распечатке на А4 или отправке в PDF директору в руки.</p>
+            </div>
+            <a href="Dynamic_One_Pager.html?id=sveza-vs" class="btn-card">
+                <span>Открыть Одностраничник А4</span>
                 <span>&rarr;</span>
             </a>
         </div>
@@ -435,142 +497,171 @@
     <div class="demo-grid">
 
         <div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/wood.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🌲 Лесопромышленный B2B-Портал</div>
             <div class="demo-subtitle">СВЕЗА, Лестех, АДОЗ, АЛХ — калькулятор вагонных партий фанеры и леса по ГОСТ</div>
             <a href="demos/wood-industry-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Калькулятор Фанеры</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏭 Завод Металлоконструкций ЗКСК</div>
             <div class="demo-subtitle">ВСЗ, Уралмаш, Стройдормаш — 3D-каркасы цехов, ангаров и расчет металлоемкости</div>
             <a href="https://globalteamgroup.github.io/zksk-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Завода ЗКСК</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">⚙️ Спецтехника &amp; Машиностроение</div>
             <div class="demo-subtitle">Стройдормаш, ЗИСТ, PSM — 3D-конфигуратор бурилок и подбор гидромоторов</div>
             <a href="demos/machinery-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть 3D-Конфигуратор</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/stroyka.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏗️ Строительство &amp; Генподряд</div>
             <div class="demo-subtitle">Алапаевск-Строй, Атомстройкомплекс, Брусника — СРО, парк техники и сметы</div>
             <a href="https://globalteamgroup.github.io/stroyka-pro/" class="demo-link" target="_blank">
                 <span>Открыть Сайт «Стройка-Про»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/estate.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏙️ Девелопмент &amp; Клубные Дома</div>
             <div class="demo-subtitle">Брусника, УГМК-Застройщик, Forum Group — интерактивный генплан и 3D-резиденции</div>
             <a href="https://globalteamgroup.github.io/luxury-estate-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Luxury Estate</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/clinic.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">💉 Медицинский Центр «Клиника Европа»</div>
             <div class="demo-subtitle">УГМК-Здоровье, Здоровье 365, Парацельс — видеоряд клиники и онлайн-запись к врачам</div>
             <a href="https://globalteamgroup.github.io/europa-clinic/" class="demo-link" target="_blank">
                 <span>Открыть Сайт «Клиника Европа»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/dental.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🦷 Стоматология &amp; Эстетика «Люмьер»</div>
             <div class="demo-subtitle">Мегадента Клиник, Нудельман — 3D-моделирование улыбок и планы лечения</div>
             <a href="https://globalteamgroup.github.io/lumiere-clinic-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Клиники «Люмьер»</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/auto.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏎️ Автоуход &amp; Детейлинг «Elite Detailing»</div>
             <div class="demo-subtitle">Detailing Alarm, Порше Центр, Автобан — 60fps скролл авто и бронепленка</div>
             <a href="https://globalteamgroup.github.io/elite-detailing/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Elite Detailing</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/auto.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🚜 Сервис Спецтехники &amp; Автоколонн</div>
             <div class="demo-subtitle">СТО Синячихи, автобазы лесовозов — вызов мобильного механика и заказ запчастей</div>
             <a href="demos/service-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Сервисный Портал</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/horeca.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏨 Загородный Курорт &amp; Спа «HoReCa Grand»</div>
             <div class="demo-subtitle">Отель Эрмитаж, Металлург, Высоцкий, Чистые пруды — видеоряд курорта и бронь номеров</div>
             <a href="https://globalteamgroup.github.io/horeca-grand-sample/" class="demo-link" target="_blank">
                 <span>Открыть Сайт HoReCa Grand</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/horeca.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🍷 Ресторан Авторской Кухни &amp; Банкеты</div>
             <div class="demo-subtitle">Троекуровъ, Kitchen, Сойка, Гастроли — интерактивная карта столов и депозиты</div>
             <a href="demos/horeca-demo/index.html" class="demo-link" target="_blank">
                 <span>Открыть Ресторанное Демо</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/agro.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">📍 Геоточка &amp; Ритейл</div>
             <div class="demo-subtitle">Талицкое молоко, СМАК, Черкашин — карта точек на Яндекс Картах</div>
             <a href="https://globalteampartners.github.io/geotochka/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Геоточка</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/agro.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🏭 Заводы &amp; Дистрибуция «Тенториум»</div>
             <div class="demo-subtitle">Птицефабрика, АМК, Alma Ceramica — 3D-презентация цеха и B2B-дистрибуция</div>
             <a href="https://globalteampartners.github.io/tentorium-presentation/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Тенториум</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/tourism.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🚂 Туризм &amp; АУЖД Урала</div>
             <div class="demo-subtitle">АУЖД, Музей Синячихи, отели — интерактивная продажа турпакетов и билетов</div>
             <a href="https://globalteamgroup.github.io/tourism-sample/" class="demo-link" target="_blank">
                 <span>Открыть Туристический Портал</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-        <div class="demo-card">
+<div class="demo-card">
+            <div class="demo-thumb"><video src="assets/videos/machinery.mp4" muted loop playsinline preload="metadata"></video><div class="demo-thumb-overlay"></div></div>
+            <div class="demo-content">
             <div class="demo-title">🌐 Global Plus | Шоурил (globalplus.tech)</div>
             <div class="demo-subtitle">Официальный презентационный портал агентства — разработка B2B-систем за 48 часов</div>
             <a href="https://globalteamgroup.github.io/global-plus/" class="demo-link" target="_blank">
                 <span>Открыть Сайт Global Plus</span>
                 <span>&nearr;</span>
             </a>
+            </div>
         </div>
-
-    </div></div>
+</div></div>
 
 </div>
 
@@ -578,6 +669,26 @@
     <p>&copy; 2026 Глобал Плюс &times; Global Team Partners. Конфиденциальный комплект регионального развития.</p>
     <p style="margin-top: 8px; opacity: 0.7;">Разработано для стратегического партнера в Свердловской области (Верхняя Синячиха &bull; Алапаевск &bull; Екатеринбург).</p>
 </footer>
+
+<script>
+    // Автовоспроизведение превью-видео при появлении в зоне видимости
+    const thumbs = document.querySelectorAll('.demo-thumb video');
+    if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const v = entry.target;
+                if (entry.isIntersecting) {
+                    v.muted = true;
+                    v.defaultMuted = true;
+                    v.play().catch(() => {});
+                } else {
+                    v.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+        thumbs.forEach(v => obs.observe(v));
+    }
+</script>
 
 </body>
 </html>
